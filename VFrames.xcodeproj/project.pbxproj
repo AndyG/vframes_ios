@@ -13,6 +13,7 @@
 		A13876D71C59ABD800EA1413 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A13876D61C59ABD800EA1413 /* Assets.xcassets */; };
 		A13876DA1C59ABD800EA1413 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A13876D81C59ABD800EA1413 /* LaunchScreen.storyboard */; };
 		A13876E31C59AC9400EA1413 /* CharacterID.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13876E21C59AC9400EA1413 /* CharacterID.swift */; };
+		A13876EC1C59B7E800EA1413 /* vframes_data.json in Resources */ = {isa = PBXBuildFile; fileRef = A13876EB1C59B7E800EA1413 /* vframes_data.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		A13876D91C59ABD800EA1413 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A13876DB1C59ABD800EA1413 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A13876E21C59AC9400EA1413 /* CharacterID.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterID.swift; sourceTree = "<group>"; };
+		A13876EB1C59B7E800EA1413 /* vframes_data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = vframes_data.json; path = Assets.xcassets/vframes_data.dataset/vframes_data.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 		A13876CE1C59ABD800EA1413 /* VFrames */ = {
 			isa = PBXGroup;
 			children = (
+				A13876E81C59B7B900EA1413 /* TestData */,
 				A13876E11C59AC3700EA1413 /* DataStructure */,
 				A13876CF1C59ABD800EA1413 /* AppDelegate.swift */,
 				A13876D11C59ABD800EA1413 /* ViewController.swift */,
@@ -73,6 +76,14 @@
 				A13876E21C59AC9400EA1413 /* CharacterID.swift */,
 			);
 			name = DataStructure;
+			sourceTree = "<group>";
+		};
+		A13876E81C59B7B900EA1413 /* TestData */ = {
+			isa = PBXGroup;
+			children = (
+				A13876EB1C59B7E800EA1413 /* vframes_data.json */,
+			);
+			name = TestData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,6 +146,7 @@
 			files = (
 				A13876DA1C59ABD800EA1413 /* LaunchScreen.storyboard in Resources */,
 				A13876D71C59ABD800EA1413 /* Assets.xcassets in Resources */,
+				A13876EC1C59B7E800EA1413 /* vframes_data.json in Resources */,
 				A13876D51C59ABD800EA1413 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

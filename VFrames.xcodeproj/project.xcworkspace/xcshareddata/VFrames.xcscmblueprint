@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "801ABB0253C9A76B2C72566DF18729B1C2DCC973",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "D773DFD4E29510464287C2E7DF81123C7F889055" : 0,
+    "801ABB0253C9A76B2C72566DF18729B1C2DCC973" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "BFDE2A53-5390-409F-854E-FCE0CC3BFD8A",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "D773DFD4E29510464287C2E7DF81123C7F889055" : "..\/garron-portfolio",
+    "801ABB0253C9A76B2C72566DF18729B1C2DCC973" : "VFrames\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "VFrames",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "VFrames.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/bitbucket.org\/angarron\/vframes_ios.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "801ABB0253C9A76B2C72566DF18729B1C2DCC973"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "heroku.com:garron-portfolio.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "D773DFD4E29510464287C2E7DF81123C7F889055"
+    }
+  ]
+}
