@@ -10,5 +10,19 @@ import Foundation
 
 enum CharacterID {
     case RYU,
-    CHUN
+    CHUN,
+    DICTATOR,
+    BIRDIE,
+    NASH,
+    CAMMY,
+    CLAW,
+    LAURA,
+    KEN,
+    NECALLI,
+    RASHID,
+    MIKA,
+    ZANGIEF,
+    FANG,
+    DHALSIM,
+    KARIN
 }
