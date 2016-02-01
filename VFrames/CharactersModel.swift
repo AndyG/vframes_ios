@@ -19,4 +19,12 @@ class CharactersModel {
     func getCharacter(characterId:CharacterID) -> SFCharacter {
         return characters[characterId]!
     }
+    
+    func toString() -> String {
+        var stringRepresentation = String()
+        for (characterId, sfCharacter) in characters {
+            stringRepresentation += String(characterId) + "\n\(sfCharacter.getStringRepresentation())"
+        }
+        return stringRepresentation
+    }
 }

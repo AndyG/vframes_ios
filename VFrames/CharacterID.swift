@@ -8,21 +8,21 @@
 
 import Foundation
 
-enum CharacterID {
-    case RYU,
-    CHUN,
-    DICTATOR,
-    BIRDIE,
-    NASH,
-    CAMMY,
-    CLAW,
-    LAURA,
-    KEN,
-    NECALLI,
-    RASHID,
-    MIKA,
-    ZANGIEF,
-    FANG,
-    DHALSIM,
-    KARIN
+enum CharacterID: String {
+    case RYU = "Ryu",
+    CHUN = "Chun",
+    DICTATOR = "Dictator",
+    BIRDIE = "Birdie",
+    NASH = "Nash",
+    CAMMY = "Cammy",
+    CLAW = "Claw",
+    LAURA = "Laura",
+    KEN = "Ken",
+    NECALLI = "Necalli",
+    RASHID = "Rashid",
+    MIKA = "Mika",
+    ZANGIEF = "Zangief",
+    FANG = "FANG",
+    DHALSIM = "Dhalsim",
+    KARIN = "Karin"
 }

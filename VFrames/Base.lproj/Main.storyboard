@@ -16,35 +16,7 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" tag="1" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jXy-sN-d7b">
-                                <rect key="frame" x="273" y="131" width="55" height="30"/>
-                                <state key="normal" title="Chun-Li"/>
-                                <connections>
-                                    <action selector="characterButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rnV-yb-pmY"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a0A-LN-KXv">
-                                <rect key="frame" x="285" y="78" width="30" height="30"/>
-                                <state key="normal" title="Ryu"/>
-                                <connections>
-                                    <action selector="characterButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9k5-LR-IzV"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WdV-zS-X8f">
-                                <rect key="frame" x="265" y="178" width="70" height="30"/>
-                                <state key="normal" title="Load Data"/>
-                                <connections>
-                                    <action selector="loadDataPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SBf-pL-seA"/>
-                                </connections>
-                            </button>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="jXy-sN-d7b" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6R3-rx-6rG"/>
-                            <constraint firstItem="WdV-zS-X8f" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Z2C-N2-ugR"/>
-                            <constraint firstItem="a0A-LN-KXv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kbf-4N-bLg"/>
-                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
