@@ -107,10 +107,10 @@
 		A13876CE1C59ABD800EA1413 /* VFrames */ = {
 			isa = PBXGroup;
 			children = (
+				A16454581C64479200201417 /* UI */,
 				A13876E81C59B7B900EA1413 /* TestData */,
 				A13876E11C59AC3700EA1413 /* DataStructure */,
 				A13876CF1C59ABD800EA1413 /* AppDelegate.swift */,
-				A13876D11C59ABD800EA1413 /* ViewController.swift */,
 				A13876D31C59ABD800EA1413 /* Main.storyboard */,
 				A13876D61C59ABD800EA1413 /* Assets.xcassets */,
 				A13876D81C59ABD800EA1413 /* LaunchScreen.storyboard */,
@@ -167,6 +167,14 @@
 				A13876F91C5DBB4400EA1413 /* CharactersModel.swift */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		A16454581C64479200201417 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				A13876D11C59ABD800EA1413 /* ViewController.swift */,
+			);
+			name = UI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

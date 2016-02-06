@@ -18,7 +18,6 @@ class ViewController: UIViewController {
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         charactersModel = appDelegate.charactersModel
         print(charactersModel.toString())
-    }
-
+    }    
 }
 
