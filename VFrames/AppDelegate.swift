@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  VFrames
 //
-//  Created by Andy Garron on 1/27/16.
+//  Created by Andy 'BigDick69' Garron aka on 1/27/16.
 //  Copyright © 2016 VFrames. All rights reserved.
 //
 

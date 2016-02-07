@@ -52,15 +52,15 @@ class DataSource {
         let pretextId = jsonData["pretextID"].string
         let posttextId = jsonData["posttextID"].string
         let descriptionId = jsonData["descriptionID"].string
-        let input = loadInputArray(jsonData["input"])
+        let input = loadInputArray(jsonData["input"].string)
         
         let moveListEntry = MoveListEntry(nameId: name, pretextId: pretextId, posttextId: posttextId, descriptionId: descriptionId, inputElementList: input)
         
         return moveListEntry
     }
     
-    private func loadInputArray (inputArray: JSON) -> Array<InputElement>? {
-        if let inputString = inputArray.string {
+    private func loadInputArray (inputArray: String?) -> Array<InputElement>? {
+        if let inputString = inputArray {
             var inputArray = Array<InputElement>()
             let inputComponents = inputString.componentsSeparatedByString("|")
             for inputElementString in inputComponents {

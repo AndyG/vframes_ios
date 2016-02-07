@@ -9,47 +9,47 @@
 /* Begin PBXBuildFile section */
 		2126B52AEEF9D9711CF300E1 /* Pods_VFrames.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77FD0C2D238DB39A348EA825 /* Pods_VFrames.framework */; };
 		A13876D01C59ABD800EA1413 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13876CF1C59ABD800EA1413 /* AppDelegate.swift */; };
-		A13876D21C59ABD800EA1413 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13876D11C59ABD800EA1413 /* ViewController.swift */; };
+		A13876D21C59ABD800EA1413 /* CharacterSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13876D11C59ABD800EA1413 /* CharacterSelectViewController.swift */; };
 		A13876D51C59ABD800EA1413 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A13876D31C59ABD800EA1413 /* Main.storyboard */; };
 		A13876D71C59ABD800EA1413 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A13876D61C59ABD800EA1413 /* Assets.xcassets */; };
 		A13876DA1C59ABD800EA1413 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A13876D81C59ABD800EA1413 /* LaunchScreen.storyboard */; };
 		A13876E31C59AC9400EA1413 /* CharacterID.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13876E21C59AC9400EA1413 /* CharacterID.swift */; };
-		A13876EC1C59B7E800EA1413 /* vframes_data.json in Resources */ = {isa = PBXBuildFile; fileRef = A13876EB1C59B7E800EA1413 /* vframes_data.json */; };
 		A13876EF1C5DB0F400EA1413 /* InputElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13876EE1C5DB0F400EA1413 /* InputElement.swift */; };
 		A13876F11C5DB18E00EA1413 /* MoveListEntryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13876F01C5DB18E00EA1413 /* MoveListEntryProtocol.swift */; };
 		A13876F31C5DB34D00EA1413 /* MoveListEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13876F21C5DB34D00EA1413 /* MoveListEntry.swift */; };
 		A13876F61C5DB7AF00EA1413 /* SFCharacter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13876F51C5DB7AF00EA1413 /* SFCharacter.swift */; };
 		A13876F81C5DB8CB00EA1413 /* MoveCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13876F71C5DB8CB00EA1413 /* MoveCategory.swift */; };
 		A13876FA1C5DBB4400EA1413 /* CharactersModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13876F91C5DBB4400EA1413 /* CharactersModel.swift */; };
-		A13876FE1C5EB07100EA1413 /* single_move.json in Resources */ = {isa = PBXBuildFile; fileRef = A13876FD1C5EB07100EA1413 /* single_move.json */; };
 		A13877001C5EB3BF00EA1413 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = A13876FF1C5EB3BF00EA1413 /* Podfile */; };
 		A16454531C5EB55A00201417 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A16454521C5EB55A00201417 /* SwiftyJSON.framework */; };
 		A16454551C5EC1B600201417 /* whole_move_list.json in Resources */ = {isa = PBXBuildFile; fileRef = A16454541C5EC1B600201417 /* whole_move_list.json */; };
 		A16454571C5F15EA00201417 /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16454561C5F15EA00201417 /* DataSource.swift */; };
+		A164545C1C66A74F00201417 /* CharacterSelectCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A164545B1C66A74F00201417 /* CharacterSelectCell.swift */; };
+		A164545E1C66B24B00201417 /* CharacterInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A164545D1C66B24B00201417 /* CharacterInfoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		77FD0C2D238DB39A348EA825 /* Pods_VFrames.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VFrames.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A13876CC1C59ABD800EA1413 /* VFrames.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VFrames.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A13876CF1C59ABD800EA1413 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A13876D11C59ABD800EA1413 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A13876D11C59ABD800EA1413 /* CharacterSelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterSelectViewController.swift; sourceTree = "<group>"; };
 		A13876D41C59ABD800EA1413 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A13876D61C59ABD800EA1413 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A13876D91C59ABD800EA1413 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A13876DB1C59ABD800EA1413 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A13876E21C59AC9400EA1413 /* CharacterID.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterID.swift; sourceTree = "<group>"; };
-		A13876EB1C59B7E800EA1413 /* vframes_data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = vframes_data.json; path = Assets.xcassets/vframes_data.dataset/vframes_data.json; sourceTree = "<group>"; };
 		A13876EE1C5DB0F400EA1413 /* InputElement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputElement.swift; sourceTree = "<group>"; };
 		A13876F01C5DB18E00EA1413 /* MoveListEntryProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoveListEntryProtocol.swift; sourceTree = "<group>"; };
 		A13876F21C5DB34D00EA1413 /* MoveListEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoveListEntry.swift; sourceTree = "<group>"; };
 		A13876F51C5DB7AF00EA1413 /* SFCharacter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SFCharacter.swift; sourceTree = "<group>"; };
 		A13876F71C5DB8CB00EA1413 /* MoveCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoveCategory.swift; sourceTree = "<group>"; };
 		A13876F91C5DBB4400EA1413 /* CharactersModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharactersModel.swift; sourceTree = "<group>"; };
-		A13876FD1C5EB07100EA1413 /* single_move.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = single_move.json; sourceTree = "<group>"; };
 		A13876FF1C5EB3BF00EA1413 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
 		A16454521C5EB55A00201417 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = "Pods/../build/Debug-iphoneos/SwiftyJSON.framework"; sourceTree = "<group>"; };
 		A16454541C5EC1B600201417 /* whole_move_list.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = whole_move_list.json; sourceTree = "<group>"; };
 		A16454561C5F15EA00201417 /* DataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
+		A164545B1C66A74F00201417 /* CharacterSelectCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterSelectCell.swift; sourceTree = "<group>"; };
+		A164545D1C66B24B00201417 /* CharacterInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterInfoViewController.swift; sourceTree = "<group>"; };
 		A5F217F5A277D683BC0E80A7 /* Pods-VFrames.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VFrames.release.xcconfig"; path = "Pods/Target Support Files/Pods-VFrames/Pods-VFrames.release.xcconfig"; sourceTree = "<group>"; };
 		F0233CC4B1F3255D7BD8B48B /* Pods-VFrames.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VFrames.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VFrames/Pods-VFrames.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -131,8 +131,6 @@
 		A13876E81C59B7B900EA1413 /* TestData */ = {
 			isa = PBXGroup;
 			children = (
-				A13876EB1C59B7E800EA1413 /* vframes_data.json */,
-				A13876FD1C5EB07100EA1413 /* single_move.json */,
 				A16454541C5EC1B600201417 /* whole_move_list.json */,
 			);
 			name = TestData;
@@ -172,7 +170,9 @@
 		A16454581C64479200201417 /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				A13876D11C59ABD800EA1413 /* ViewController.swift */,
+				A13876D11C59ABD800EA1413 /* CharacterSelectViewController.swift */,
+				A164545B1C66A74F00201417 /* CharacterSelectCell.swift */,
+				A164545D1C66B24B00201417 /* CharacterInfoViewController.swift */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -240,10 +240,8 @@
 			files = (
 				A13877001C5EB3BF00EA1413 /* Podfile in Resources */,
 				A13876DA1C59ABD800EA1413 /* LaunchScreen.storyboard in Resources */,
-				A13876FE1C5EB07100EA1413 /* single_move.json in Resources */,
 				A16454551C5EC1B600201417 /* whole_move_list.json in Resources */,
 				A13876D71C59ABD800EA1413 /* Assets.xcassets in Resources */,
-				A13876EC1C59B7E800EA1413 /* vframes_data.json in Resources */,
 				A13876D51C59ABD800EA1413 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -304,11 +302,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				A13876FA1C5DBB4400EA1413 /* CharactersModel.swift in Sources */,
+				A164545C1C66A74F00201417 /* CharacterSelectCell.swift in Sources */,
 				A13876F61C5DB7AF00EA1413 /* SFCharacter.swift in Sources */,
 				A13876F11C5DB18E00EA1413 /* MoveListEntryProtocol.swift in Sources */,
+				A164545E1C66B24B00201417 /* CharacterInfoViewController.swift in Sources */,
 				A13876F81C5DB8CB00EA1413 /* MoveCategory.swift in Sources */,
 				A13876F31C5DB34D00EA1413 /* MoveListEntry.swift in Sources */,
-				A13876D21C59ABD800EA1413 /* ViewController.swift in Sources */,
+				A13876D21C59ABD800EA1413 /* CharacterSelectViewController.swift in Sources */,
 				A13876D01C59ABD800EA1413 /* AppDelegate.swift in Sources */,
 				A13876E31C59AC9400EA1413 /* CharacterID.swift in Sources */,
 				A16454571C5F15EA00201417 /* DataSource.swift in Sources */,
