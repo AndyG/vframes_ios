@@ -17,4 +17,25 @@ enum MoveCategory: String {
     CRITICAL_ARTS = "critical_arts",
     UNIQUE_MOVES = "unique_attacks",
     THROWS = "throws"
+    
+    static func toString(moveCategory: MoveCategory) -> String {
+        switch(moveCategory) {
+            case .NORMALS:
+                return "Normals"
+            case .SPECIALS:
+                return "Specials"
+            case .VSKILL:
+                return "V-Skill"
+            case .VTRIGGER:
+                return "V-Trigger"
+            case .VREVERSAL:
+                return "V-Reversal"
+            case .CRITICAL_ARTS:
+                return "Critical Arts"
+            case .UNIQUE_MOVES:
+                return "Unique Moves"
+            case .THROWS:
+                return "Throws"
+        }
+    }
 }

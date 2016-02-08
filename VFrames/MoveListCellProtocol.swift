@@ -6,8 +6,8 @@
 //  Copyright © 2016 VFrames. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 protocol MoveListCellProtocol {
-    func setMove(move: MoveListEntryProtocol)
+    func setMove(move: MoveListEntryProtocol, indexPath: NSIndexPath)
 }

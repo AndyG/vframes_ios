@@ -45,6 +45,8 @@
 		A16454801C68577000201417 /* DescriptionMoveListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A164547F1C68577000201417 /* DescriptionMoveListCell.swift */; };
 		A16454821C68625100201417 /* SimpleMoveListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16454811C68625100201417 /* SimpleMoveListCell.swift */; };
 		A16454841C68658600201417 /* MoveListCellProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16454831C68658600201417 /* MoveListCellProtocol.swift */; };
+		A16454881C68692700201417 /* InputElementCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16454871C68692700201417 /* InputElementCell.swift */; };
+		A164548A1C6876C200201417 /* InputCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16454891C6876C200201417 /* InputCollectionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -88,6 +90,8 @@
 		A164547F1C68577000201417 /* DescriptionMoveListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DescriptionMoveListCell.swift; sourceTree = "<group>"; };
 		A16454811C68625100201417 /* SimpleMoveListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleMoveListCell.swift; sourceTree = "<group>"; };
 		A16454831C68658600201417 /* MoveListCellProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoveListCellProtocol.swift; sourceTree = "<group>"; };
+		A16454871C68692700201417 /* InputElementCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputElementCell.swift; sourceTree = "<group>"; };
+		A16454891C6876C200201417 /* InputCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputCollectionView.swift; sourceTree = "<group>"; };
 		A5F217F5A277D683BC0E80A7 /* Pods-VFrames.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VFrames.release.xcconfig"; path = "Pods/Target Support Files/Pods-VFrames/Pods-VFrames.release.xcconfig"; sourceTree = "<group>"; };
 		F0233CC4B1F3255D7BD8B48B /* Pods-VFrames.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VFrames.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VFrames/Pods-VFrames.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -230,6 +234,8 @@
 				A164547F1C68577000201417 /* DescriptionMoveListCell.swift */,
 				A16454811C68625100201417 /* SimpleMoveListCell.swift */,
 				A16454831C68658600201417 /* MoveListCellProtocol.swift */,
+				A16454871C68692700201417 /* InputElementCell.swift */,
+				A16454891C6876C200201417 /* InputCollectionView.swift */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -384,7 +390,9 @@
 				A13876F81C5DB8CB00EA1413 /* MoveCategory.swift in Sources */,
 				A13876F31C5DB34D00EA1413 /* MoveListEntry.swift in Sources */,
 				A13876D21C59ABD800EA1413 /* CharacterSelectViewController.swift in Sources */,
+				A164548A1C6876C200201417 /* InputCollectionView.swift in Sources */,
 				A13876D01C59ABD800EA1413 /* AppDelegate.swift in Sources */,
+				A16454881C68692700201417 /* InputElementCell.swift in Sources */,
 				A13876E31C59AC9400EA1413 /* CharacterID.swift in Sources */,
 				A16454571C5F15EA00201417 /* DataSource.swift in Sources */,
 				A16454841C68658600201417 /* MoveListCellProtocol.swift in Sources */,

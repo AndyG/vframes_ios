@@ -9,13 +9,13 @@
 import UIKit
 
 class DescriptionMoveListCell: UITableViewCell, MoveListCellProtocol {
+    @IBOutlet weak var inputCollectionView: InputCollectionView!
     @IBOutlet weak var moveNameLabel: UILabel!
-    @IBOutlet weak var moveInputLabel: UILabel!
     @IBOutlet weak var moveDescriptionLabel: UILabel!
     
-    func setMove(move: MoveListEntryProtocol) {
+    func setMove(move: MoveListEntryProtocol, indexPath: NSIndexPath) {
         moveNameLabel.text = move.getNameId()
-        moveInputLabel.text = "description input"
         moveDescriptionLabel.text = move.getDescriptionId()
+        inputCollectionView.setInput(move.getInput()!)
     }
 }

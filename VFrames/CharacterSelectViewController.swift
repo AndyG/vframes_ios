@@ -41,5 +41,7 @@ class CharacterSelectViewController: UIViewController, UICollectionViewDelegate,
         let selectedCell = collectionView.cellForItemAtIndexPath(indexPath) as! CharacterSelectCell
         performSegueWithIdentifier("showCharacterInfo", sender: selectedCell.targetCharacter!.rawValue)
     }
+    
+    coll
 }
 

@@ -10,10 +10,13 @@ import UIKit
 
 class SimpleMoveListCell: UITableViewCell, MoveListCellProtocol {
     @IBOutlet weak var moveNameLabel: UILabel!
-    @IBOutlet weak var moveInputLabel: UILabel!
+    @IBOutlet weak var inputCollectionView: InputCollectionView!
     
-    func setMove(move: MoveListEntryProtocol) {
-        moveNameLabel.text = move.getNameId()        
-        moveInputLabel.text = "simple input"
+    var move: MoveListEntryProtocol!
+    
+    func setMove(move: MoveListEntryProtocol, indexPath: NSIndexPath) {
+        self.move = move
+        moveNameLabel.text = move.getNameId()
+        inputCollectionView.setInput(move.getInput()!)
     }
 }

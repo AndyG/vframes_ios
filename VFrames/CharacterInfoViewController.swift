@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CharacterInfoViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class CharacterInfoViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UICollectionViewDataSource, UICollectionViewDelegate {
     
     let moveListHeadersOrder: Array<MoveCategory> = [
         MoveCategory.UNIQUE_MOVES,
@@ -52,7 +52,7 @@ class CharacterInfoViewController: UIViewController, UITableViewDataSource, UITa
         
         let cell = tableView.dequeueReusableCellWithIdentifier(cellReuseId)
         let moveListEntryCell = cell as! MoveListCellProtocol
-        moveListEntryCell.setMove(move)
+        moveListEntryCell.setMove(move, indexPath: indexPath)
         return cell!
     }
 
@@ -61,7 +61,31 @@ class CharacterInfoViewController: UIViewController, UITableViewDataSource, UITa
     }
     
     func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return moveListHeaders[section].rawValue
+        return MoveCategory.toString(moveListHeaders[section])
+    }
+    
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        let category = moveListHeaders[indexPath.section]
+        let move = targetCharacter.getMoveList()[category]![indexPath.item]
+        if (move.getDescriptionId() != nil) {
+            return CGFloat(tableView.rowHeight + 50)
+        } else {
+            return tableView.rowHeight
+        }
+    }
+    
+    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {        
+        let inputCollectionView = collectionView as! InputCollectionView
+        return inputCollectionView.getInputArray().count
+    }
+    
+    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("inputCell", forIndexPath: indexPath) as! InputElementCell
+        
+        let inputCollectionView = collectionView as! InputCollectionView
+        cell.setInput(inputCollectionView.getInputArray()[indexPath.item])
+        
+        return cell
     }
     
     private func setupMoveListHeaders() {
