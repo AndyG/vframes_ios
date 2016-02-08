@@ -34,7 +34,7 @@ class CharacterSelectViewController: UIViewController, UICollectionViewDelegate,
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         let destination = segue.destinationViewController as! CharacterInfoViewController
-        destination.targetCharacter = CharacterID(rawValue: sender as! String)
+        destination.targetCharacterId = CharacterID(rawValue: sender as! String)
     }
     
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {

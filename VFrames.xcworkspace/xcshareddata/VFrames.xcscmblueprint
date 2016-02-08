@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "801ABB0253C9A76B2C72566DF18729B1C2DCC973",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "D566535A2E1DFD60D4ECB9FDE095DEEE1BEFDF61" : 0,
+    "801ABB0253C9A76B2C72566DF18729B1C2DCC973" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "34EC7450-9CF5-4FE0-B39B-3E889F3CEB2E",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "D566535A2E1DFD60D4ECB9FDE095DEEE1BEFDF61" : "..\/..\/AndroidStudioProjects\/sfv_framedata_android",
+    "801ABB0253C9A76B2C72566DF18729B1C2DCC973" : "VFrames\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "VFrames",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "VFrames.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/bitbucket.org\/angarron\/vframes_ios.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "801ABB0253C9A76B2C72566DF18729B1C2DCC973"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/bitbucket.org\/angarron\/sfv_framedata_android.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "D566535A2E1DFD60D4ECB9FDE095DEEE1BEFDF61"
+    }
+  ]
+}

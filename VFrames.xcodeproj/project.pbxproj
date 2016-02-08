@@ -26,6 +26,25 @@
 		A16454571C5F15EA00201417 /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16454561C5F15EA00201417 /* DataSource.swift */; };
 		A164545C1C66A74F00201417 /* CharacterSelectCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A164545B1C66A74F00201417 /* CharacterSelectCell.swift */; };
 		A164545E1C66B24B00201417 /* CharacterInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A164545D1C66B24B00201417 /* CharacterInfoViewController.swift */; };
+		A164546F1C68523D00201417 /* birdie_data.json in Resources */ = {isa = PBXBuildFile; fileRef = A164545F1C68523D00201417 /* birdie_data.json */; };
+		A16454701C68523D00201417 /* cammy_data.json in Resources */ = {isa = PBXBuildFile; fileRef = A16454601C68523D00201417 /* cammy_data.json */; };
+		A16454711C68523D00201417 /* chun_data.json in Resources */ = {isa = PBXBuildFile; fileRef = A16454611C68523D00201417 /* chun_data.json */; };
+		A16454721C68523D00201417 /* claw_data.json in Resources */ = {isa = PBXBuildFile; fileRef = A16454621C68523D00201417 /* claw_data.json */; };
+		A16454731C68523D00201417 /* dhalsim_data.json in Resources */ = {isa = PBXBuildFile; fileRef = A16454631C68523D00201417 /* dhalsim_data.json */; };
+		A16454741C68523D00201417 /* dictator_data.json in Resources */ = {isa = PBXBuildFile; fileRef = A16454641C68523D00201417 /* dictator_data.json */; };
+		A16454751C68523D00201417 /* fang_data.json in Resources */ = {isa = PBXBuildFile; fileRef = A16454651C68523D00201417 /* fang_data.json */; };
+		A16454761C68523D00201417 /* karin_data.json in Resources */ = {isa = PBXBuildFile; fileRef = A16454661C68523D00201417 /* karin_data.json */; };
+		A16454771C68523D00201417 /* ken_data.json in Resources */ = {isa = PBXBuildFile; fileRef = A16454671C68523D00201417 /* ken_data.json */; };
+		A16454781C68523D00201417 /* laura_data.json in Resources */ = {isa = PBXBuildFile; fileRef = A16454681C68523D00201417 /* laura_data.json */; };
+		A16454791C68523D00201417 /* mika_data.json in Resources */ = {isa = PBXBuildFile; fileRef = A16454691C68523D00201417 /* mika_data.json */; };
+		A164547A1C68523D00201417 /* nash_data.json in Resources */ = {isa = PBXBuildFile; fileRef = A164546A1C68523D00201417 /* nash_data.json */; };
+		A164547B1C68523D00201417 /* necalli_data.json in Resources */ = {isa = PBXBuildFile; fileRef = A164546B1C68523D00201417 /* necalli_data.json */; };
+		A164547C1C68523D00201417 /* rashid_data.json in Resources */ = {isa = PBXBuildFile; fileRef = A164546C1C68523D00201417 /* rashid_data.json */; };
+		A164547D1C68523D00201417 /* ryu_data.json in Resources */ = {isa = PBXBuildFile; fileRef = A164546D1C68523D00201417 /* ryu_data.json */; };
+		A164547E1C68523D00201417 /* zangief_data.json in Resources */ = {isa = PBXBuildFile; fileRef = A164546E1C68523D00201417 /* zangief_data.json */; };
+		A16454801C68577000201417 /* DescriptionMoveListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A164547F1C68577000201417 /* DescriptionMoveListCell.swift */; };
+		A16454821C68625100201417 /* SimpleMoveListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16454811C68625100201417 /* SimpleMoveListCell.swift */; };
+		A16454841C68658600201417 /* MoveListCellProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16454831C68658600201417 /* MoveListCellProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +69,25 @@
 		A16454561C5F15EA00201417 /* DataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
 		A164545B1C66A74F00201417 /* CharacterSelectCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterSelectCell.swift; sourceTree = "<group>"; };
 		A164545D1C66B24B00201417 /* CharacterInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterInfoViewController.swift; sourceTree = "<group>"; };
+		A164545F1C68523D00201417 /* birdie_data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = birdie_data.json; path = ../../../../AndroidStudioProjects/sfv_framedata_android/app/src/main/res/raw/birdie_data.json; sourceTree = "<group>"; };
+		A16454601C68523D00201417 /* cammy_data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = cammy_data.json; path = ../../../../AndroidStudioProjects/sfv_framedata_android/app/src/main/res/raw/cammy_data.json; sourceTree = "<group>"; };
+		A16454611C68523D00201417 /* chun_data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = chun_data.json; path = ../../../../AndroidStudioProjects/sfv_framedata_android/app/src/main/res/raw/chun_data.json; sourceTree = "<group>"; };
+		A16454621C68523D00201417 /* claw_data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = claw_data.json; path = ../../../../AndroidStudioProjects/sfv_framedata_android/app/src/main/res/raw/claw_data.json; sourceTree = "<group>"; };
+		A16454631C68523D00201417 /* dhalsim_data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = dhalsim_data.json; path = ../../../../AndroidStudioProjects/sfv_framedata_android/app/src/main/res/raw/dhalsim_data.json; sourceTree = "<group>"; };
+		A16454641C68523D00201417 /* dictator_data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = dictator_data.json; path = ../../../../AndroidStudioProjects/sfv_framedata_android/app/src/main/res/raw/dictator_data.json; sourceTree = "<group>"; };
+		A16454651C68523D00201417 /* fang_data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = fang_data.json; path = ../../../../AndroidStudioProjects/sfv_framedata_android/app/src/main/res/raw/fang_data.json; sourceTree = "<group>"; };
+		A16454661C68523D00201417 /* karin_data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = karin_data.json; path = ../../../../AndroidStudioProjects/sfv_framedata_android/app/src/main/res/raw/karin_data.json; sourceTree = "<group>"; };
+		A16454671C68523D00201417 /* ken_data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = ken_data.json; path = ../../../../AndroidStudioProjects/sfv_framedata_android/app/src/main/res/raw/ken_data.json; sourceTree = "<group>"; };
+		A16454681C68523D00201417 /* laura_data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = laura_data.json; path = ../../../../AndroidStudioProjects/sfv_framedata_android/app/src/main/res/raw/laura_data.json; sourceTree = "<group>"; };
+		A16454691C68523D00201417 /* mika_data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = mika_data.json; path = ../../../../AndroidStudioProjects/sfv_framedata_android/app/src/main/res/raw/mika_data.json; sourceTree = "<group>"; };
+		A164546A1C68523D00201417 /* nash_data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = nash_data.json; path = ../../../../AndroidStudioProjects/sfv_framedata_android/app/src/main/res/raw/nash_data.json; sourceTree = "<group>"; };
+		A164546B1C68523D00201417 /* necalli_data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = necalli_data.json; path = ../../../../AndroidStudioProjects/sfv_framedata_android/app/src/main/res/raw/necalli_data.json; sourceTree = "<group>"; };
+		A164546C1C68523D00201417 /* rashid_data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = rashid_data.json; path = ../../../../AndroidStudioProjects/sfv_framedata_android/app/src/main/res/raw/rashid_data.json; sourceTree = "<group>"; };
+		A164546D1C68523D00201417 /* ryu_data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = ryu_data.json; path = ../../../../AndroidStudioProjects/sfv_framedata_android/app/src/main/res/raw/ryu_data.json; sourceTree = "<group>"; };
+		A164546E1C68523D00201417 /* zangief_data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = zangief_data.json; path = ../../../../AndroidStudioProjects/sfv_framedata_android/app/src/main/res/raw/zangief_data.json; sourceTree = "<group>"; };
+		A164547F1C68577000201417 /* DescriptionMoveListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DescriptionMoveListCell.swift; sourceTree = "<group>"; };
+		A16454811C68625100201417 /* SimpleMoveListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleMoveListCell.swift; sourceTree = "<group>"; };
+		A16454831C68658600201417 /* MoveListCellProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoveListCellProtocol.swift; sourceTree = "<group>"; };
 		A5F217F5A277D683BC0E80A7 /* Pods-VFrames.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VFrames.release.xcconfig"; path = "Pods/Target Support Files/Pods-VFrames/Pods-VFrames.release.xcconfig"; sourceTree = "<group>"; };
 		F0233CC4B1F3255D7BD8B48B /* Pods-VFrames.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VFrames.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VFrames/Pods-VFrames.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -131,6 +169,22 @@
 		A13876E81C59B7B900EA1413 /* TestData */ = {
 			isa = PBXGroup;
 			children = (
+				A164545F1C68523D00201417 /* birdie_data.json */,
+				A16454601C68523D00201417 /* cammy_data.json */,
+				A16454611C68523D00201417 /* chun_data.json */,
+				A16454621C68523D00201417 /* claw_data.json */,
+				A16454631C68523D00201417 /* dhalsim_data.json */,
+				A16454641C68523D00201417 /* dictator_data.json */,
+				A16454651C68523D00201417 /* fang_data.json */,
+				A16454661C68523D00201417 /* karin_data.json */,
+				A16454671C68523D00201417 /* ken_data.json */,
+				A16454681C68523D00201417 /* laura_data.json */,
+				A16454691C68523D00201417 /* mika_data.json */,
+				A164546A1C68523D00201417 /* nash_data.json */,
+				A164546B1C68523D00201417 /* necalli_data.json */,
+				A164546C1C68523D00201417 /* rashid_data.json */,
+				A164546D1C68523D00201417 /* ryu_data.json */,
+				A164546E1C68523D00201417 /* zangief_data.json */,
 				A16454541C5EC1B600201417 /* whole_move_list.json */,
 			);
 			name = TestData;
@@ -173,6 +227,9 @@
 				A13876D11C59ABD800EA1413 /* CharacterSelectViewController.swift */,
 				A164545B1C66A74F00201417 /* CharacterSelectCell.swift */,
 				A164545D1C66B24B00201417 /* CharacterInfoViewController.swift */,
+				A164547F1C68577000201417 /* DescriptionMoveListCell.swift */,
+				A16454811C68625100201417 /* SimpleMoveListCell.swift */,
+				A16454831C68658600201417 /* MoveListCellProtocol.swift */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -239,10 +296,26 @@
 			buildActionMask = 2147483647;
 			files = (
 				A13877001C5EB3BF00EA1413 /* Podfile in Resources */,
+				A16454791C68523D00201417 /* mika_data.json in Resources */,
+				A164547B1C68523D00201417 /* necalli_data.json in Resources */,
 				A13876DA1C59ABD800EA1413 /* LaunchScreen.storyboard in Resources */,
+				A164547C1C68523D00201417 /* rashid_data.json in Resources */,
+				A164547E1C68523D00201417 /* zangief_data.json in Resources */,
+				A164547A1C68523D00201417 /* nash_data.json in Resources */,
+				A16454741C68523D00201417 /* dictator_data.json in Resources */,
 				A16454551C5EC1B600201417 /* whole_move_list.json in Resources */,
 				A13876D71C59ABD800EA1413 /* Assets.xcassets in Resources */,
+				A16454731C68523D00201417 /* dhalsim_data.json in Resources */,
+				A16454761C68523D00201417 /* karin_data.json in Resources */,
+				A16454701C68523D00201417 /* cammy_data.json in Resources */,
+				A16454711C68523D00201417 /* chun_data.json in Resources */,
+				A164546F1C68523D00201417 /* birdie_data.json in Resources */,
+				A164547D1C68523D00201417 /* ryu_data.json in Resources */,
 				A13876D51C59ABD800EA1413 /* Main.storyboard in Resources */,
+				A16454721C68523D00201417 /* claw_data.json in Resources */,
+				A16454781C68523D00201417 /* laura_data.json in Resources */,
+				A16454771C68523D00201417 /* ken_data.json in Resources */,
+				A16454751C68523D00201417 /* fang_data.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,7 +374,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A16454801C68577000201417 /* DescriptionMoveListCell.swift in Sources */,
 				A13876FA1C5DBB4400EA1413 /* CharactersModel.swift in Sources */,
+				A16454821C68625100201417 /* SimpleMoveListCell.swift in Sources */,
 				A164545C1C66A74F00201417 /* CharacterSelectCell.swift in Sources */,
 				A13876F61C5DB7AF00EA1413 /* SFCharacter.swift in Sources */,
 				A13876F11C5DB18E00EA1413 /* MoveListEntryProtocol.swift in Sources */,
@@ -312,6 +387,7 @@
 				A13876D01C59ABD800EA1413 /* AppDelegate.swift in Sources */,
 				A13876E31C59AC9400EA1413 /* CharacterID.swift in Sources */,
 				A16454571C5F15EA00201417 /* DataSource.swift in Sources */,
+				A16454841C68658600201417 /* MoveListCellProtocol.swift in Sources */,
 				A13876EF1C5DB0F400EA1413 /* InputElement.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
