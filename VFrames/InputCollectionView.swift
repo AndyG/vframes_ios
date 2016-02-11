@@ -19,4 +19,5 @@ class InputCollectionView: UICollectionView {
     func getInputArray() -> Array<InputElement> {
         return inputArray
     }
+    
 }

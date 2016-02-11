@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CharacterSelectViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+class CharacterSelectViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     var charactersModel: CharactersModel!
     
@@ -42,6 +42,17 @@ class CharacterSelectViewController: UIViewController, UICollectionViewDelegate,
         performSegueWithIdentifier("showCharacterInfo", sender: selectedCell.targetCharacter!.rawValue)
     }
     
-    coll
+    //This method guarantees we have two columns for the character select screen.
+    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
+        
+        let screenSize: CGRect = UIScreen.mainScreen().bounds
+        let screenWidth = screenSize.width;
+        let cellWidth = screenWidth / 3.0; //Replace the divisor with the column count requirement + 1 (in float)
+        
+        let size = CGSizeMake(cellWidth, cellWidth);
+        
+        return size;
+    }
+    
 }
 

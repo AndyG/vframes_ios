@@ -9,10 +9,10 @@
 import UIKit
 
 class InputElementCell: UICollectionViewCell {
-    @IBOutlet weak var inputLabel: UILabel!
+    @IBOutlet weak var inputImage: UIImageView!
     
     func setInput(inputElement: InputElement) {
-        inputLabel.text = inputElement.rawValue
-    }    
+        inputImage.image = UIImage(named: "input_direction_down")
+    }
     
 }

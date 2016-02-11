@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  VFrames
 //
-//  Created by Andy 'BigDick69' Garron aka on 1/27/16.
+//  Created by Andy Garron aka on 1/27/16.
 //  Copyright © 2016 VFrames. All rights reserved.
 //
 
@@ -18,6 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         let dataSource = DataSource()
         charactersModel = dataSource.loadCharactersModel()
+        StringResolver.initialize()
         return true
     }
 

@@ -1,0 +1,310 @@
+/* 
+  localizedStrings.strings
+  VFrames
+
+  Created by Andy Garron on 2/9/16.
+  Copyright © 2016 VFrames. All rights reserved.
+*/
+
+//Character Names
+"ryu_name" = "Ryu";
+"chun_name" = "Chun-Li";
+"cammy_name" = "Cammy";
+"birdie_name" = "Birdie";
+"dictator_name" = "M. Bison";
+"nash_name" = "Nash";
+"mika_name" = "R. Mika";
+"necalli_name" = "Necalli";
+"claw_name" = "Vega";
+"rashid_name" = "Rashid";
+"karin_name" = "Karin";
+"ken_name" = "Ken";
+"laura_name" = "Laura";
+"zangief_name" = "Zangief";
+"dhalsim_name" = "Dhalsim";
+"fang_name" = "F.A.N.G";
+
+// Headers for Move List
+"normals_header" = "Normal Attacks";
+"throws_header" = "Throws";
+"unique_attacks_header" = "Unique Attacks";
+"specials_header" = "Special Moves";
+"critical_arts_header" = "Critical Arts";
+"vskill_header" = "V-Skill";
+"vtrigger_header" = "V-Trigger";
+"vreversal_header" = "V-Reversal";
+
+// Move List General Strings
+"close_to_opponent" = "(Close To Opponent)";
+"can_be_done_in_air" = "Can be done in air";
+"during_jump" = "(During Jump)";
+"during_forward_jump" = "(During Forward Jump)";
+"during_vertical_or_forward_jump" = "(During Vertical or Forward Jump)";
+"during_guard" = "(During Guard)";
+"hold_buttons_to_attack" = "Hold Buttons to Attack";
+"close_to_grounded_opponent" = "(Close to Grounded Opponent)";
+"close_to_airborne_opponent" = "(Close to Airborne Opponent)";
+"no_input" = "No Input";
+"or" = "Or";
+"hold_button" = "Hold Button";
+"during_jump_near_wall" = "(During Jump Near Wall)";
+"during_vtrigger" = "(During VTrigger)";
+"hold_and_release" = "Hold And Release";
+"close_to_crouching_opponent" = "(Close to Crouching Opponent)";
+"during_run" = "(During Run)";
+
+// Move Descriptions
+"hits_overhead" = "Hits overhead.";
+"hits_low" = "Hits low.";
+"command_grab" = "Command grab.";
+
+// Ryu Movelist
+"ryu_hadoken_description" = "Punch strength determines projectile speed.";
+"ryu_shoryuken_description" = "Startup invulnerability on MP and EX versions.";
+"ryu_tatsu_description" = "Has projectile invulnerability after startup.";
+"ryu_vtrigger_description" = "Powers up specials and gains ability to charge fireballs. Fully charged fireballs are unblockable.";
+"ryu_vskill_description" = "Parries an attack and builds some V-meter.";
+
+// Karin Movelist
+"karin_tenko_posttext" = "Press Punch immediately to perform enhanced version.";
+"karin_meioken_posttext" = "Hold buttons to change properties";
+"karin_kanzuki_ryu_hokojutsu_sappo_description" = "Kick strength determines dash length.";
+"karin_tenko_description" = "Enhanced version has faster startup and recovery, more damage, and higher launch height.";
+"karin_orochi_description" = "EX version crumples opponent.";
+"karin_senha_resshu_description" = "Command grab that misses on crouching opponents.";
+"karin_vskill_description" = "Destroys projectiles with a palm strike.";
+"karin_vtrigger_description" = "Karin gains access to Guren Ken, a new special move with a number of followups.";
+"karin_mujinkyaku_description" = "LK version: safe on block.\nMK version: does an overhead.\nHK version: frame traps.";
+
+// Claw Movelist
+"claw_claw_off_only" = "(Claw Off Only)";
+"claw_claw_on_only" = "(Claw On Only)";
+"claw_switch" = "Switch to Claw On/Off";
+"claw_flying_barcelona_attack_description" = "EX version launches opponent airborne on the way up.";
+"claw_vskill_description" = "Has upper-body invulnerability.";
+"claw_vtrigger_torero_description" = "Throws a rose straight forward. On hit or block, performs a follow-up attack.";
+"claw_vtrigger_rojo_description" = "Throws a rose at an upward angle. On hit or block, performs a follow-up attack.";
+"claw_vtrigger_azul_description" = "Throws a rose at a downward angle. On hit or block, performs a follow-up attack.";
+"claw_during_flying_barcelona_attack" = "(During Flying Barcelona Attack)";
+
+// Chun Movelist
+"chun_up_to_three_times" = "Up to 3 Times";
+"chun_vtrigger_description" = "Adds additional hits to most normals, which extends blockstun and hitstun and introduces new combo possibilities.";
+"chun_vskill_description" = "A diagonal jump which launches opponents on hit.";
+"chun_senenshu_description" = "Hits overhead. Leads to combo in V-Trigger.";
+"chun_kikoken_description" = "Punch strength determines speed and distance.";
+"chun_airborne_lightning_legs_description" = "Changes momentum in air.";
+"chun_spinning_bird_kick_description" = "EX version has startup invulnerability.";
+"chun_critical_art_description" = "Projectile invulnerable.";
+
+// Ken Movelist
+"ken_hadoken_description" = "Punch strength determines projectile speed.";
+"ken_shoryuken_description" = "Startup invulnerability.";
+"ken_tatsu_description" = "LK version launches opponent. HK and EX versions rise off the ground.";
+"ken_airborne_tatsu_description" = "EX version attacks diagonally downward.";
+"ken_vtrigger_description" = "Moves Ken forward, maintaining pressure or extending a combo. Afterward, Ken\'s special moves are faster and gain better hitboxes.";
+"ken_vskill_description" = "Moves Ken forward. Holding the buttons performs a step kick.";
+"ken_thunder_kick_posttext" = "Tap to feint, hold to attack";
+
+// Zangief Movelist
+"zangief_hold_buttons_for_special_lariat" = "Hold Buttons to Perform Special Lariat";
+"zangief_can_move_forward_while_holding_buttons" = "Can Move Forward While Holding Buttons";
+"zangief_siberian_express_description" = "EX version is armored.";
+"zangief_vtrigger_description" = "Vacuums opponent toward Zangief. By holding the buttons, Zangief will continue attacking and the lariat will gain hitboxes. V-Skill gains infinite armor.";
+"zangief_vskill_description" = "Zangief gains one hit of armor (infinite hits in V-Trigger). Zangief attacks when the buttons are released.";
+
+//Dictator Movelist
+"dictator_psycho_reflect_hold_buttons" = "Hold Buttons to Throw Back a Projectile";
+"dictator_after_head_press" = "(After Head Press Hits)";
+"dictator_before_head_press" = "(Before Head Press Hits)";
+"dictator_psycho_blast_description" = "EX version launches a projectile.";
+"dictator_devil_reverse_description" = "Crosses up while in V-Trigger";
+"dictator_vskill_description" = "Press buttons to absorb a projectile. Hold buttons to throw a projectile back.";
+"dictator_vtrigger_description" = "Special moves become cancellable into EX moves. Various special move properties change. Dashes gain ability to cross up.";
+
+// Birdie Movelist
+"birdie_hanging_chain_posttext" = "Chain Twirl: Hold Kick\nCancel: Press Punch";
+"birdie_bull_head_description" = "EX version gains armor.";
+"birdie_bull_horn_description" = "Has projectile invulnerability. EX version gains armor.";
+"birdie_hanging_chain_description" = "Chain goes through projectiles.\nLK version: opponent lands close.\nMK version: opponent lands far.\nHK version anti-airs.";
+"birdie_killing_head_description" = "Punch strength determines number of hits.";
+"birdie_bull_revenger_description" = "Has projectile invulnerability.";
+"birdie_vtrigger_description" = "Birdie deals more damage. Special moves become faster, multi-hitting, or gain armor.";
+
+// Mika Movelist
+"mika_shooting_peach_description" = "EX version has one hit of armor.";
+"mika_wingless_airplane_description" = "EX version has invulnerability.";
+"mika_typhoon_description" = "Leaves Mika behind the opponent.";
+"mika_brimstone_description" = "Leaves Mika in front of the opponent.";
+"mika_vtrigger_posttext" = "Hold buttons to delay Nadeshiko";
+"mika_vskill_posttext" = "Hold buttons to extend speech";
+"mika_vskill_description" = "Mika delivers a speech, ending with a mic spike which has a projectile hitbox. The speech powers up command throws more the longer it goes on.";
+"mika_passion_rope_throw_pretext" = "(After Passion Press)";
+"mika_passion_rope_throw_posttext" = "Input direction determines throw direction";
+
+// Rashid Movelist
+"rashid_repeat_buttons_to_extend" = "Repeat Button Presses to Extend";
+"rashid_vtrigger_description" = "Creates a tornado that locks the opponent down and changes the trajectory of Rashid\'s dash, jump, and attacks.";
+"rashid_vskill_divekick_pretext" = "(During Front Flip)";
+"rashid_vskill_rollkick_pretext" = "(During Rolling Assault)";
+"rashid_spinning_mixer_description" = "EX version has startup invulnerability.";
+"rashid_whirlwind_shot_description" = "HP and EX versions cancel into V-Skill and affect Rashid\'s trajectory.";
+
+// Rashid Frame Data
+"rashid_eagle_spike_on_block_description" = "Advantage on block based on a hit at opponent\'s feet.";
+
+// Nash Movelist
+"nash_press_for_second_boom" = "Press Punch During EX Version For A Second ;Projectile";
+"nash_sonic_boom_description" = "Punch strength determines projectile speed.";
+"nash_sonic_scythe_description" = "EX version has upper-body invulnerability.";
+"nash_tragedy_assault_description" = "HP version hits overhead. \nEX version drains health and meter.";
+"nash_sonic_move_hide_description" = "Teleports behind opponent.";
+"nash_sonic_move_blitz_air_description" = "Teleports above and behind opponent.";
+"nash_sonic_move_steel_air_description" = "Teleports in front of opponent.";
+"nash_critical_art_description" = "Projectile invulnerable.";
+"nash_vskill_description" = "A chop attack which can absorb a projectile, ;building V-Meter.";
+
+// Necalli Movelist
+"necalli_vskill_control_distance" = "Control Distance Using Direction";
+"necalli_disc_guidance_description" = "Has one hit of armor against projectiles.";
+"necalli_raging_light_description" = "Invulnerability on HP and EX versions.";
+"necalli_mask_of_tlalli_description" = "EX version wall-bounces, allowing a ;followup attack.";
+"necalli_vtrigger_description" = "Necalli gains improved frame advantage, more range on Raging Light, and no longer requires charge to cancel into Disc\'s Guidance.";
+"necalli_vskill_description" = "Builds V-Meter on hit.";
+"necalli_opening_dagger_description" = "Hits overhead. Crush counters.";
+
+// Laura Movelist
+"laura_after_mp_or_ex_bolt_charge" = "(After MP or EX Bolt Charge)";
+"laura_hold_buttons_to_power_up" = "Hold Buttons to Power Up";
+"laura_bolt_charge_description" = "MP and EX versions can be followed up.\nHP version anti-airs.";
+"laura_split_river_description" = "Leaves Laura behind opponent.";
+"laura_rodeo_break_description" = "Leaves Laura in front of opponent.";
+"laura_thunder_clap_description" = "Punch strength determines projectile speed and duration.";
+"laura_vtrigger_description" = "Adds stun and damage to Laura\'s attacks. Adds distance to V-Skill dash and increases hitstun and blockstun on V-Skill overhead.";
+"laura_vskill_overhead_description" = "Hits overhead.";
+"vskill_avante_description" = "Moves Laura forward.";
+"vskill_esquiva_description" = "Moves Laura backward. Can be cancelled into ;forward V-Skill.";
+
+// Cammy Movelist
+"cammy_during_hooligan" = "(During Hooligan)";
+"cammy_spiral_arrow_description" = "Kick strength determines distance.";
+"cammy_cannon_spike_description" = "Startup invulnerability.";
+"cammy_cannon_strike_description" = "Kick strength determines angle.";
+"cammy_hooligan_combination_description" = "Can travel through opponent. Followups attack towards opponent.";
+"cammy_vtrigger_description" = "Makes specials faster and safer.";
+"cammy_vskill_description" = "Moves Cammy forward with projectile invulnerability. Can combo on hit.";
+"hooligan_close_to_grounded_opponent" = "(During Hooligan, close to grounded opponent)";
+"hooligan_close_to_airborne_opponent" = "(During Hooligan, close to airborne opponent)";
+
+// Dhalsim Movelist
+"dhalsim_critical_art_posttext" = "Hold button to charge";
+"dhalsim_yoga_fire_description" = "Punch strength determines fire angle. EX version travels straight forward.";
+"dhalsim_yoga_flame_description" = "EX version launches opponent airborne.";
+"dhalsim_yoga_teleport_description" = "Input direction and type determines teleport location.";
+"dhalsim_vtrigger_description" = "Places fire on the ground that deals damage over time to opponents.";
+"dhalsim_vskill_description" = "Dhalsim floats. Duration can be shortened by performing an attack.";
+
+// Fang Movelist
+"fang_vskill_description" = "Shoots a projectile forward that applies poison if it touches the opponent. This attack causes no hitstun or blockstun.";
+"fang_vtrigger_description" = "A poisonous cloud surrounds F.A.N.G. Opponents in the cloud take damage over time.";
+"fang_critical_art_description" = "He turns into a bird.";
+
+// Frame Data Cell Entrie
+"frame_data_knockdown" = "K/D";
+"frame_data_not_applicable" = "-";
+"frame_data_missing_value" = "\?";
+"frame_data_guard_break" = "Guard Break";
+"frame_data_crumple" = "Crumple";
+
+// Alternate Frame Data Messages
+"showing_trigger_data" = "Showing V-Trigger Active frame data";
+"showing_non_trigger_data" = "Showing V-Trigger Inactive frame data";
+"showing_claw_off_data" = "Showing Claw Off frame data";
+"showing_claw_on_data" = "Showing Claw On frame data";
+"ken_vtrigger_framedata_not_ready" = "Sorry, Ken\'s V-Trigger frame data is not ;yet available.";
+"laura_vtrigger_framedata_not_ready" = "Sorry, Laura\'s V-Trigger frame data is ;not yet available.";
+
+// Character Banners
+"health_format" = "Health: %s";
+"stun_format" = "Stun: %s";
+"style_format" = "Style: %s";
+
+"ryu_title" = "Eternal Wanderer";
+"ryu_health" = "1000";
+"ryu_stun" = "1000";
+"ryu_style" = "Ansatsuken";
+
+"chun_title" = "Blue Jade";
+"chun_health" = "950";
+"chun_stun" = "1000";
+"chun_style" = "Chinese Martial Arts";
+
+"cammy_title" = "Killer Bee";
+"cammy_health" = "900";
+"cammy_stun" = "900";
+"cammy_style" = "Special Forces";
+
+"birdie_title" = "Punk Glutton";
+"birdie_health" = "1050";
+"birdie_stun" = "1000";
+"birdie_style" = "Bar Room Brawling";
+
+"nash_title" = "Returned Avenger";
+"nash_health" = "950";
+"nash_stun" = "950";
+"nash_style" = "Special Forces";
+
+"mika_title" = "Rainbow Bomber";
+"mika_health" = "950";
+"mika_stun" = "1000";
+"mika_style" = "Pro Wrestling";
+
+"dhalsim_title" = "Enlightened Flame";
+"dhalsim_health" = "900";
+"dhalsim_stun" = "950";
+"dhalsim_style" = "Esoteric Yoga";
+
+"claw_title" = "Crimson Ninja";
+"claw_health" = "1000";
+"claw_stun" = "950";
+"claw_style" = "Spanish Ninjutsu";
+
+"dictator_title" = "Psycho Emperor";
+"dictator_health" = "1000";
+"dictator_stun" = "950";
+"dictator_style" = "Psycho Power";
+
+"necalli_title" = "Ancient Emissary";
+"necalli_health" = "1000";
+"necalli_stun" = "1000";
+"necalli_style" = "Violent Instincts";
+
+"laura_title" = "Electric Judoka";
+"laura_health" = "1000";
+"laura_stun" = "1000";
+"laura_style" = "Brazilian Jiu-Jitsu";
+
+"fang_title" = "Cunning Trickster";
+"fang_health" = "\???";
+"fang_stun" = "\???";
+"fang_style" = "Chinese Kempo";
+
+"zangief_title" = "Iron Cyclone";
+"zangief_health" = "1050";
+"zangief_stun" = "1050";
+"zangief_style" = "Russian Wrestling";
+
+"rashid_title" = "Turbulent Wind";
+"rashid_health" = "950";
+"rashid_stun" = "1000";
+"rashid_style" = "High-flying Parkour";
+
+"karin_title" = "Smug Perfectionist";
+"karin_health" = "900";
+"karin_stun" = "950";
+"karin_style" = "Kanzuki-Ryu";
+
+"ken_title" = "Flaming Fist";
+"ken_health" = "1000";
+"ken_stun" = "1000";
+"ken_style" = "Ansatsuken";

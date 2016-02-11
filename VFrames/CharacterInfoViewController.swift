@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CharacterInfoViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UICollectionViewDataSource, UICollectionViewDelegate {
+class CharacterInfoViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
     let moveListHeadersOrder: Array<MoveCategory> = [
         MoveCategory.UNIQUE_MOVES,
@@ -19,7 +19,7 @@ class CharacterInfoViewController: UIViewController, UITableViewDataSource, UITa
         MoveCategory.CRITICAL_ARTS,
         MoveCategory.THROWS]
     
-    @IBOutlet weak var movesTable: UITableView!
+    @IBOutlet var movesTable: UITableView!
     
     var targetCharacterId : CharacterID!
     var targetCharacter: SFCharacter!
@@ -29,7 +29,8 @@ class CharacterInfoViewController: UIViewController, UITableViewDataSource, UITa
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        print(targetCharacterId)
+        movesTable.estimatedRowHeight = 150
+        movesTable.rowHeight = UITableViewAutomaticDimension
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         targetCharacter = appDelegate.charactersModel.getCharacter(targetCharacterId)
         
@@ -45,12 +46,7 @@ class CharacterInfoViewController: UIViewController, UITableViewDataSource, UITa
         let category = moveListHeaders[indexPath.section]
         let move = targetCharacter.getMoveList()[category]![indexPath.item]
         
-        var cellReuseId: String! = "simpleCell"
-        if move.getDescriptionId() != nil {
-            cellReuseId = "descriptionCell"
-        }
-        
-        let cell = tableView.dequeueReusableCellWithIdentifier(cellReuseId)
+        let cell = tableView.dequeueReusableCellWithIdentifier("descriptionCell")
         let moveListEntryCell = cell as! MoveListCellProtocol
         moveListEntryCell.setMove(move, indexPath: indexPath)
         return cell!
@@ -64,14 +60,24 @@ class CharacterInfoViewController: UIViewController, UITableViewDataSource, UITa
         return MoveCategory.toString(moveListHeaders[section])
     }
     
-    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        let category = moveListHeaders[indexPath.section]
-        let move = targetCharacter.getMoveList()[category]![indexPath.item]
+    //TODO: make this return actual height by subclassing the table
+    func tableView(tableView: UITableView, estimatedHeightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        let move = getMoveForIndexPath(indexPath)
+        var height = tableView.estimatedRowHeight
+        
         if (move.getDescriptionId() != nil) {
-            return CGFloat(tableView.rowHeight + 50)
-        } else {
-            return tableView.rowHeight
+            height += 30
         }
+        
+        if move.getPretextId() != nil {
+            height += 20
+        }
+        
+        if move.getPosttextId() != nil {
+            height += 20
+        }
+        
+        return height
     }
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {        
@@ -86,6 +92,29 @@ class CharacterInfoViewController: UIViewController, UITableViewDataSource, UITa
         cell.setInput(inputCollectionView.getInputArray()[indexPath.item])
         
         return cell
+    }
+    
+    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
+        
+        let inputArray = (collectionView as! InputCollectionView).getInputArray()
+        
+        //Add 1 to ensure we'll always fit!
+        let numInputElements = inputArray.count+1
+        
+        let collectionViewWidth = collectionView.frame.size.width
+        let cellPadding = CGFloat(5)
+        
+        let fitSize = (collectionViewWidth / CGFloat(numInputElements)) - cellPadding
+        let maxSize = CGFloat(40)
+        
+
+        let recommendedSize = min(fitSize, maxSize)
+        return CGSize(width: recommendedSize, height: recommendedSize)
+    }
+    
+    private func getMoveForIndexPath(indexPath: NSIndexPath) -> MoveListEntryProtocol {
+        let category = moveListHeaders[indexPath.section]
+        return targetCharacter.getMoveList()[category]![indexPath.item]
     }
     
     private func setupMoveListHeaders() {
