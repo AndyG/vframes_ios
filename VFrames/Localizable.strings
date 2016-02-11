@@ -168,7 +168,7 @@
 "necalli_vskill_control_distance" = "Control Distance Using Direction";
 "necalli_disc_guidance_description" = "Has one hit of armor against projectiles.";
 "necalli_raging_light_description" = "Invulnerability on HP and EX versions.";
-"necalli_mask_of_tlalli_description" = "EX version wall-bounces, allowing a ;followup attack.";
+"necalli_mask_of_tlalli_description" = "EX version wall-bounces, allowing a followup attack.";
 "necalli_vtrigger_description" = "Necalli gains improved frame advantage, more range on Raging Light, and no longer requires charge to cancel into Disc\'s Guidance.";
 "necalli_vskill_description" = "Builds V-Meter on hit.";
 "necalli_opening_dagger_description" = "Hits overhead. Crush counters.";

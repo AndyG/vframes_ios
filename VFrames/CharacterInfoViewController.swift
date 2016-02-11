@@ -99,17 +99,28 @@ class CharacterInfoViewController: UIViewController, UITableViewDataSource, UITa
         let inputArray = (collectionView as! InputCollectionView).getInputArray()
         
         //Add 1 to ensure we'll always fit!
-        let numInputElements = inputArray.count+1
+        let numInputElements = inputArray.count + 1
         
         let collectionViewWidth = collectionView.frame.size.width
         let cellPadding = CGFloat(5)
         
         let fitSize = (collectionViewWidth / CGFloat(numInputElements)) - cellPadding
         let maxSize = CGFloat(40)
-        
 
-        let recommendedSize = min(fitSize, maxSize)
-        return CGSize(width: recommendedSize, height: recommendedSize)
+        var recommendedWidth = min(fitSize, maxSize)
+        var recommendedHeight = recommendedWidth
+        
+        //If we're looking at an arrow or a plus, shrink them
+        let input = inputArray[indexPath.item]
+        if (input == InputElement.ARROW || input == InputElement.PLUS) {
+            recommendedWidth *= 0.5
+            recommendedHeight *= 0.5
+        } else if (input == InputElement.ALL_PUNCHES || input == InputElement.ALL_KICKS) {
+            //If we're looking at 3P or 3K, scale the width up a bit
+            recommendedWidth *= 1.7
+        }
+        
+        return CGSize(width: recommendedWidth, height: recommendedHeight)
     }
     
     private func getMoveForIndexPath(indexPath: NSIndexPath) -> MoveListEntryProtocol {
