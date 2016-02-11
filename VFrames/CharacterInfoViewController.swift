@@ -60,13 +60,12 @@ class CharacterInfoViewController: UIViewController, UITableViewDataSource, UITa
         return MoveCategory.toString(moveListHeaders[section])
     }
     
-    //TODO: make this return actual height by subclassing the table
     func tableView(tableView: UITableView, estimatedHeightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         let move = getMoveForIndexPath(indexPath)
         var height = tableView.estimatedRowHeight
         
         if (move.getDescriptionId() != nil) {
-            height += 30
+            height += 40
         }
         
         if move.getPretextId() != nil {
@@ -86,17 +85,31 @@ class CharacterInfoViewController: UIViewController, UITableViewDataSource, UITa
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("inputCell", forIndexPath: indexPath) as! InputElementCell
         
         let inputCollectionView = collectionView as! InputCollectionView
-        cell.setInput(inputCollectionView.getInputArray()[indexPath.item])
+        let inputElement = inputCollectionView.getInputArray()[indexPath.item]
         
-        return cell
+        var cellReuseId: String = "inputIconCell"
+        if (inputElement == InputElement.NO_INPUT || inputElement == InputElement.OR) {
+            cellReuseId = "inputTextCell"
+        }
+        
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(cellReuseId, forIndexPath: indexPath) as! InputElementCellProtocol
+        cell.setInputElement(inputElement)
+        
+        return cell as! UICollectionViewCell
     }
     
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
         
         let inputArray = (collectionView as! InputCollectionView).getInputArray()
+        let inputElement = inputArray[indexPath.item]
+        
+        if (inputElement == InputElement.OR) {
+            return CGSize(width: 25.0, height: 25.0)
+        } else if (inputElement == InputElement.NO_INPUT) {
+            return CGSize(width: 70.0, height: 20.0)
+        }
         
         //Add 1 to ensure we'll always fit!
         let numInputElements = inputArray.count + 1
@@ -111,11 +124,10 @@ class CharacterInfoViewController: UIViewController, UITableViewDataSource, UITa
         var recommendedHeight = recommendedWidth
         
         //If we're looking at an arrow or a plus, shrink them
-        let input = inputArray[indexPath.item]
-        if (input == InputElement.ARROW || input == InputElement.PLUS) {
+        if (inputElement == InputElement.ARROW || inputElement == InputElement.PLUS) {
             recommendedWidth *= 0.5
             recommendedHeight *= 0.5
-        } else if (input == InputElement.ALL_PUNCHES || input == InputElement.ALL_KICKS) {
+        } else if (inputElement == InputElement.ALL_PUNCHES || inputElement == InputElement.ALL_KICKS) {
             //If we're looking at 3P or 3K, scale the width up a bit
             recommendedWidth *= 1.7
         }

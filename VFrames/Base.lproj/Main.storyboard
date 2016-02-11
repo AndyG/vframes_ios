@@ -138,7 +138,7 @@
                                                 <inset key="sectionInset" minX="0.0" minY="12" maxX="0.0" maxY="0.0"/>
                                             </collectionViewFlowLayout>
                                             <cells>
-                                                <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="inputCell" id="Oho-LK-ULK" customClass="InputElementCell" customModule="VFrames" customModuleProvider="target">
+                                                <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="inputIconCell" id="Oho-LK-ULK" userLabel="inputIconCell" customClass="InputIconCell" customModule="VFrames" customModuleProvider="target">
                                                     <rect key="frame" x="0.0" y="12" width="40" height="40"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -159,6 +159,32 @@
                                                     </constraints>
                                                     <connections>
                                                         <outlet property="inputImage" destination="bcS-at-xoy" id="GTj-2w-a2L"/>
+                                                    </connections>
+                                                </collectionViewCell>
+                                                <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="inputTextCell" id="jLk-WM-QHI" customClass="InputTextCell" customModule="VFrames" customModuleProvider="target">
+                                                    <rect key="frame" x="43.5" y="12" width="40" height="40"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                                        <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Input" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Sef-Kc-Gc3">
+                                                                <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    </view>
+                                                    <constraints>
+                                                        <constraint firstAttribute="trailing" secondItem="Sef-Kc-Gc3" secondAttribute="trailing" id="9ss-nn-kZZ"/>
+                                                        <constraint firstItem="Sef-Kc-Gc3" firstAttribute="leading" secondItem="jLk-WM-QHI" secondAttribute="leading" id="g8P-v0-3gF"/>
+                                                        <constraint firstAttribute="bottom" secondItem="Sef-Kc-Gc3" secondAttribute="bottom" id="mkE-QK-si8"/>
+                                                        <constraint firstItem="Sef-Kc-Gc3" firstAttribute="top" secondItem="jLk-WM-QHI" secondAttribute="top" id="oy2-h3-W5n"/>
+                                                    </constraints>
+                                                    <connections>
+                                                        <outlet property="label" destination="Sef-Kc-Gc3" id="3OV-kC-Y1v"/>
                                                     </connections>
                                                 </collectionViewCell>
                                             </cells>

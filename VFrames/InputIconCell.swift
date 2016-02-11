@@ -8,10 +8,10 @@
 
 import UIKit
 
-class InputElementCell: UICollectionViewCell {
+class InputIconCell: UICollectionViewCell, InputElementCellProtocol {
     @IBOutlet weak var inputImage: UIImageView!
     
-    func setInput(inputElement: InputElement) {
+    func setInputElement(inputElement: InputElement) {
         var imageId: String
         switch(inputElement) {
         case .ALL_KICKS:
@@ -61,9 +61,9 @@ class InputElementCell: UICollectionViewCell {
         case .QCF:
             imageId = "input_direction_qcf"
         case .RELEASE_FORWARD:
-            imageId = "input_direction_release_forward"
+            imageId = "input_direction_forward"
         case .RELEASE_UP:
-            imageId = "input_direction_release_up"
+            imageId = "input_direction_up"
         case .SPD:
             imageId = "input_direction_spd"
         case .SRK:
