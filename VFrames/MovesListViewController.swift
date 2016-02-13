@@ -1,5 +1,5 @@
 //
-//  CharacterInfoViewController.swift
+//  MovesListViewController.swift
 //  VFrames
 //
 //  Created by Andy Garron on 2/6/16.
@@ -8,7 +8,9 @@
 
 import UIKit
 
-class CharacterInfoViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+class MovesListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+    
+    @IBOutlet var movesTable: UITableView!
     
     let moveListHeadersOrder: Array<MoveCategory> = [
         MoveCategory.UNIQUE_MOVES,
@@ -19,7 +21,6 @@ class CharacterInfoViewController: UIViewController, UITableViewDataSource, UITa
         MoveCategory.CRITICAL_ARTS,
         MoveCategory.THROWS]
     
-    @IBOutlet var movesTable: UITableView!
     
     var targetCharacterId : CharacterID!
     var targetCharacter: SFCharacter!
@@ -33,6 +34,7 @@ class CharacterInfoViewController: UIViewController, UITableViewDataSource, UITa
         movesTable.rowHeight = UITableViewAutomaticDimension
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         targetCharacter = appDelegate.charactersModel.getCharacter(targetCharacterId)
+        title = CharacterID.toString(targetCharacterId)
         
         setupMoveListHeaders()
     }

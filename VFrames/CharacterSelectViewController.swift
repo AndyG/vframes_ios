@@ -33,7 +33,7 @@ class CharacterSelectViewController: UIViewController, UICollectionViewDelegate,
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        let destination = segue.destinationViewController as! CharacterInfoViewController
+        let destination = segue.destinationViewController as! CharacterInfoPageViewController
         destination.targetCharacterId = CharacterID(rawValue: sender as! String)
     }
     

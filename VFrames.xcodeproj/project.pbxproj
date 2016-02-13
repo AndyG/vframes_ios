@@ -25,7 +25,7 @@
 		A16454551C5EC1B600201417 /* whole_move_list.json in Resources */ = {isa = PBXBuildFile; fileRef = A16454541C5EC1B600201417 /* whole_move_list.json */; };
 		A16454571C5F15EA00201417 /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16454561C5F15EA00201417 /* DataSource.swift */; };
 		A164545C1C66A74F00201417 /* CharacterSelectCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A164545B1C66A74F00201417 /* CharacterSelectCell.swift */; };
-		A164545E1C66B24B00201417 /* CharacterInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A164545D1C66B24B00201417 /* CharacterInfoViewController.swift */; };
+		A164545E1C66B24B00201417 /* MovesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A164545D1C66B24B00201417 /* MovesListViewController.swift */; };
 		A164546F1C68523D00201417 /* birdie_data.json in Resources */ = {isa = PBXBuildFile; fileRef = A164545F1C68523D00201417 /* birdie_data.json */; };
 		A16454701C68523D00201417 /* cammy_data.json in Resources */ = {isa = PBXBuildFile; fileRef = A16454601C68523D00201417 /* cammy_data.json */; };
 		A16454711C68523D00201417 /* chun_data.json in Resources */ = {isa = PBXBuildFile; fileRef = A16454611C68523D00201417 /* chun_data.json */; };
@@ -50,6 +50,9 @@
 		A164548F1C6B0EF900201417 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A164548E1C6B0EF900201417 /* Localizable.strings */; };
 		A16454911C6C60EF00201417 /* InputTextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16454901C6C60EF00201417 /* InputTextCell.swift */; };
 		A16454941C6C611F00201417 /* InputElementCellProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16454931C6C611F00201417 /* InputElementCellProtocol.swift */; };
+		A16454971C6D818900201417 /* CharacterInfoPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16454961C6D818900201417 /* CharacterInfoPageViewController.swift */; };
+		A164549A1C6FC0AF00201417 /* CustomColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16454991C6FC0AF00201417 /* CustomColors.swift */; };
+		A164549C1C6FC11400201417 /* ColorUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = A164549B1C6FC11400201417 /* ColorUtils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -73,7 +76,7 @@
 		A16454541C5EC1B600201417 /* whole_move_list.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = whole_move_list.json; sourceTree = "<group>"; };
 		A16454561C5F15EA00201417 /* DataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
 		A164545B1C66A74F00201417 /* CharacterSelectCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterSelectCell.swift; sourceTree = "<group>"; };
-		A164545D1C66B24B00201417 /* CharacterInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterInfoViewController.swift; sourceTree = "<group>"; };
+		A164545D1C66B24B00201417 /* MovesListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovesListViewController.swift; sourceTree = "<group>"; };
 		A164545F1C68523D00201417 /* birdie_data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = birdie_data.json; path = ../../../../AndroidStudioProjects/sfv_framedata_android/app/src/main/res/raw/birdie_data.json; sourceTree = "<group>"; };
 		A16454601C68523D00201417 /* cammy_data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = cammy_data.json; path = ../../../../AndroidStudioProjects/sfv_framedata_android/app/src/main/res/raw/cammy_data.json; sourceTree = "<group>"; };
 		A16454611C68523D00201417 /* chun_data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = chun_data.json; path = ../../../../AndroidStudioProjects/sfv_framedata_android/app/src/main/res/raw/chun_data.json; sourceTree = "<group>"; };
@@ -98,6 +101,9 @@
 		A164548E1C6B0EF900201417 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		A16454901C6C60EF00201417 /* InputTextCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputTextCell.swift; sourceTree = "<group>"; };
 		A16454931C6C611F00201417 /* InputElementCellProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputElementCellProtocol.swift; sourceTree = "<group>"; };
+		A16454961C6D818900201417 /* CharacterInfoPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterInfoPageViewController.swift; sourceTree = "<group>"; };
+		A16454991C6FC0AF00201417 /* CustomColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomColors.swift; sourceTree = "<group>"; };
+		A164549B1C6FC11400201417 /* ColorUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorUtils.swift; sourceTree = "<group>"; };
 		A5F217F5A277D683BC0E80A7 /* Pods-VFrames.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VFrames.release.xcconfig"; path = "Pods/Target Support Files/Pods-VFrames/Pods-VFrames.release.xcconfig"; sourceTree = "<group>"; };
 		F0233CC4B1F3255D7BD8B48B /* Pods-VFrames.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VFrames.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VFrames/Pods-VFrames.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -155,6 +161,7 @@
 		A13876CE1C59ABD800EA1413 /* VFrames */ = {
 			isa = PBXGroup;
 			children = (
+				A16454981C6FC09F00201417 /* Colors */,
 				A164548B1C6B07F800201417 /* Utils */,
 				A16454581C64479200201417 /* UI */,
 				A13876E81C59B7B900EA1413 /* TestData */,
@@ -236,13 +243,9 @@
 		A16454581C64479200201417 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				A164549D1C6FCA2100201417 /* Collections */,
+				A16454951C6D816000201417 /* ViewControllers */,
 				A16454921C6C60F700201417 /* Cells */,
-				A13876D11C59ABD800EA1413 /* CharacterSelectViewController.swift */,
-				A164545B1C66A74F00201417 /* CharacterSelectCell.swift */,
-				A164545D1C66B24B00201417 /* CharacterInfoViewController.swift */,
-				A164547F1C68577000201417 /* DescriptionMoveListCell.swift */,
-				A16454831C68658600201417 /* MoveListCellProtocol.swift */,
-				A16454891C6876C200201417 /* InputCollectionView.swift */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -258,11 +261,41 @@
 		A16454921C6C60F700201417 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				A16454831C68658600201417 /* MoveListCellProtocol.swift */,
+				A164547F1C68577000201417 /* DescriptionMoveListCell.swift */,
+				A164545B1C66A74F00201417 /* CharacterSelectCell.swift */,
 				A16454871C68692700201417 /* InputIconCell.swift */,
 				A16454901C6C60EF00201417 /* InputTextCell.swift */,
 				A16454931C6C611F00201417 /* InputElementCellProtocol.swift */,
 			);
 			name = Cells;
+			sourceTree = "<group>";
+		};
+		A16454951C6D816000201417 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				A164545D1C66B24B00201417 /* MovesListViewController.swift */,
+				A13876D11C59ABD800EA1413 /* CharacterSelectViewController.swift */,
+				A16454961C6D818900201417 /* CharacterInfoPageViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		A16454981C6FC09F00201417 /* Colors */ = {
+			isa = PBXGroup;
+			children = (
+				A16454991C6FC0AF00201417 /* CustomColors.swift */,
+				A164549B1C6FC11400201417 /* ColorUtils.swift */,
+			);
+			name = Colors;
+			sourceTree = "<group>";
+		};
+		A164549D1C6FCA2100201417 /* Collections */ = {
+			isa = PBXGroup;
+			children = (
+				A16454891C6876C200201417 /* InputCollectionView.swift */,
+			);
+			name = Collections;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -407,12 +440,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				A16454801C68577000201417 /* DescriptionMoveListCell.swift in Sources */,
+				A16454971C6D818900201417 /* CharacterInfoPageViewController.swift in Sources */,
 				A13876FA1C5DBB4400EA1413 /* CharactersModel.swift in Sources */,
 				A164545C1C66A74F00201417 /* CharacterSelectCell.swift in Sources */,
 				A16454911C6C60EF00201417 /* InputTextCell.swift in Sources */,
 				A13876F61C5DB7AF00EA1413 /* SFCharacter.swift in Sources */,
 				A13876F11C5DB18E00EA1413 /* MoveListEntryProtocol.swift in Sources */,
-				A164545E1C66B24B00201417 /* CharacterInfoViewController.swift in Sources */,
+				A164545E1C66B24B00201417 /* MovesListViewController.swift in Sources */,
 				A13876F81C5DB8CB00EA1413 /* MoveCategory.swift in Sources */,
 				A13876F31C5DB34D00EA1413 /* MoveListEntry.swift in Sources */,
 				A13876D21C59ABD800EA1413 /* CharacterSelectViewController.swift in Sources */,
@@ -421,8 +455,10 @@
 				A13876D01C59ABD800EA1413 /* AppDelegate.swift in Sources */,
 				A16454881C68692700201417 /* InputIconCell.swift in Sources */,
 				A16454941C6C611F00201417 /* InputElementCellProtocol.swift in Sources */,
+				A164549A1C6FC0AF00201417 /* CustomColors.swift in Sources */,
 				A13876E31C59AC9400EA1413 /* CharacterID.swift in Sources */,
 				A16454571C5F15EA00201417 /* DataSource.swift in Sources */,
+				A164549C1C6FC11400201417 /* ColorUtils.swift in Sources */,
 				A16454841C68658600201417 /* MoveListCellProtocol.swift in Sources */,
 				A13876EF1C5DB0F400EA1413 /* InputElement.swift in Sources */,
 			);
