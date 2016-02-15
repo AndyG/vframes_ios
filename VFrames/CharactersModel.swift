@@ -20,7 +20,11 @@ class CharactersModel {
     
     func getCharacter(characterId:CharacterID) -> SFCharacter {
         return characters[characterId]!
-    }    
+    }
+    
+    func getVersion() -> Int {
+        return version
+    }
     
     func toString() -> String {
         var stringRepresentation = String()
