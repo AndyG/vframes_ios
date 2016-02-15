@@ -28,12 +28,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         } else {
             loadDefaultCharactersModel()
         }
-        NetworkDataSource().loadData()
         return true
     }
 
     func getCharactersModel() -> CharactersModel {
         return charactersModel
+    }
+    
+    func setCharactersModel(charactersModel: CharactersModel) {
+        self.charactersModel = charactersModel
+    }
+    
+    func reloadCharactersModel() {
+        initializeSupportDirectory()
+        if savedCharactersModelExists() {
+            loadSavedCharactersModel()
+        } else {
+            loadDefaultCharactersModel()
+        }
     }
     
     private func initializeSupportDirectory() {
