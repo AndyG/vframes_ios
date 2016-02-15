@@ -54,14 +54,26 @@ class HomePageViewController: UIViewController, UICollectionViewDelegate, UIColl
     
     //This method guarantees we have two columns for the character select screen.
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
+        let cellWidth = getCellWidth()
+        let size = CGSizeMake(cellWidth, cellWidth)
+        return size;
+    }
+    
+    
+    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAtIndex section: Int) -> UIEdgeInsets {
         
         let screenSize: CGRect = UIScreen.mainScreen().bounds
         let screenWidth = screenSize.width;
-        let cellWidth = screenWidth / 2.5; //Replace the divisor with the column count requirement + 1 (in float)
         
-        let size = CGSizeMake(cellWidth, cellWidth);
+        let sideInset = screenWidth * 0.02
         
-        return size;
+        return UIEdgeInsets(top: 0.0, left: sideInset, bottom: 0.0, right: sideInset)
+    }
+    
+    private func getCellWidth() -> CGFloat {
+        let screenSize: CGRect = UIScreen.mainScreen().bounds
+        let screenWidth = screenSize.width
+        return screenWidth * 0.4 //Replace the divisor with the column count requirement + 1 (in float)
     }
     
     func collectionView(collectionView: UICollectionView, didHighlightItemAtIndexPath indexPath: NSIndexPath) {
@@ -73,6 +85,7 @@ class HomePageViewController: UIViewController, UICollectionViewDelegate, UIColl
         let selectedCell = collectionView.cellForItemAtIndexPath(indexPath) as! CharacterSelectCell
         selectedCell.backgroundColor = nil
     }
+
     
     //MARK: methods for getting data from the network
     func onResult(result: GetNetworkDataResult) {
