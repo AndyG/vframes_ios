@@ -22,12 +22,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         Fabric.with([Crashlytics.self])
         StringResolver.initialize()
         
-        initializeSupportDirectory()
-        if savedCharactersModelExists() {
-            loadSavedCharactersModel()
-        } else {
+//        initializeSupportDirectory()
+//        if savedCharactersModelExists() {
+//            loadSavedCharactersModel()
+//        } else {
             loadDefaultCharactersModel()
-        }
+//        }
         NetworkDataSource().loadData()
         return true
     }
@@ -77,16 +77,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     private func loadDefaultCharactersModelData() {
-        let jsonFilePath:NSString = NSBundle.mainBundle().pathForResource("test_data", ofType: "json")!
-        let data:NSData = NSData(contentsOfFile: jsonFilePath as String, )!
-        print(String(data: data, encoding: NSUTF8StringEncoding))
-        var error: NSError?
-        let json = JSON(data: data, options: NSJSONReadingOptions.MutableContainers, error: &error)
+        let path = NSBundle.mainBundle().pathForResource("test_data", ofType: "json")
+        let url = NSURL(fileURLWithPath: path!)
+        let data = NSData(contentsOfURL: url)!
+        let dataString = String(data: data, encoding: NSUTF8StringEncoding)!
+        print(dataString)
+        var error:NSError?
+        let jsonData = JSON(data: data, options: NSJSONReadingOptions.MutableContainers, error: &error)
         if (error != nil) {
             print("error!!")
             print("error: \(error!.localizedDescription)")
         } else {
-            print("no error. jsonData is nil: \(json != nil)")
+            print("no error. jsonData is nil: \(jsonData != nil)")
         }
 //        
 //        //Copy file to app support directory so it's there next time
@@ -102,7 +104,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        }
         
         let dataSource = CharactersModelJsonAdapter()
-        charactersModel = dataSource.loadCharactersModel(json)
+        charactersModel = dataSource.loadCharactersModel(jsonData)
     }
 }
 
