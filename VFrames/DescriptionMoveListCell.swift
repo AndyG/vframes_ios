@@ -25,8 +25,8 @@ class DescriptionMoveListCell: UITableViewCell, MoveListCellProtocol {
 
         moveNameLabel.text = move.getNameId()
         
-        if let descriptionId = move.getDescriptionId() {
-            moveDescriptionLabel.text = getLocalizedString(descriptionId)
+        if let descriptionText = getDescriptionText(move) {
+            moveDescriptionLabel.text = descriptionText
             moveDescriptionLabel.hidden = false
             moveDescriptionLabel.sizeToFit()
         } else {
@@ -35,8 +35,8 @@ class DescriptionMoveListCell: UITableViewCell, MoveListCellProtocol {
             moveDescriptionLabel.hidden = true
         }
         
-        if let pretextId = move.getPretextId() {
-            pretextLabel.text = getLocalizedString(pretextId)
+        if let pretextText = getPretextText(move) {
+            pretextLabel.text = pretextText
             pretextLabel.sizeToFit()
             pretextLabel.hidden = false
         } else {
@@ -45,8 +45,8 @@ class DescriptionMoveListCell: UITableViewCell, MoveListCellProtocol {
             pretextLabel.hidden = true
         }
         
-        if let posttextId = move.getPosttextId() {
-            posttextLabel.text = getLocalizedString(posttextId)
+        if let posttextText = getPosttextText(move) {
+            posttextLabel.text = posttextText
             posttextLabel.sizeToFit()
             posttextLabel.hidden = false
         } else {
@@ -58,9 +58,35 @@ class DescriptionMoveListCell: UITableViewCell, MoveListCellProtocol {
         inputCollectionView.setInput(move.getInput()!)
     }
     
-    private func getLocalizedString(rawStringId: String) -> String {
-        let localizedStringId = StringResolver.resolveString(rawStringId)
-        let localizedString = NSLocalizedString(localizedStringId, comment: "")
-        return localizedString
+    private func getDescriptionText(move: MoveListEntryProtocol) -> String? {
+        if let descriptionId = move.getDescriptionId() {
+            return getLocalizedString(descriptionId)
+        } else {
+            return nil
+        }
+    }
+    
+    private func getPretextText(move: MoveListEntryProtocol) -> String? {
+        if let pretextId = move.getPretextId() {
+            return getLocalizedString(pretextId)
+        } else {
+            return nil
+        }
+    }
+    
+    private func getPosttextText(move: MoveListEntryProtocol) -> String? {
+        if let posttextId = move.getPosttextId() {
+            return getLocalizedString(posttextId)
+        } else {
+            return nil
+        }
+    }
+    
+    private func getLocalizedString(rawStringId: String) -> String? {
+        if let localizedStringId = StringResolver.resolveString(rawStringId) {
+            return NSLocalizedString(localizedStringId, comment: "")
+        } else {
+            return nil
+        }
     }
 }

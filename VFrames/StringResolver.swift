@@ -12,8 +12,8 @@ class StringResolver {
     
     private static var stringDict = [String:String]()
     
-    static func resolveString(stringId: String) -> String {
-        return stringDict[stringId]!
+    static func resolveString(stringId: String) -> String? {
+        return stringDict[stringId]
     }
     
     static func initialize() {

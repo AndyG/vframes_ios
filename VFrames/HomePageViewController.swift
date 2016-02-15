@@ -8,7 +8,12 @@
 
 import UIKit
 
-class CharacterSelectViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+class HomePageViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UITableViewDataSource, UITableViewDelegate {
+    
+    @IBOutlet var characterSelectCollectionView: UICollectionView!
+    @IBOutlet var settingsContainerView: UIView!
+    
+    @IBOutlet var segmentControl: UISegmentedControl!
     
     var charactersModel: CharactersModel!
     
@@ -16,6 +21,8 @@ class CharacterSelectViewController: UIViewController, UICollectionViewDelegate,
         super.viewDidLoad()
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         charactersModel = appDelegate.charactersModel
+        
+        showCorrectView()
     }
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -37,6 +44,8 @@ class CharacterSelectViewController: UIViewController, UICollectionViewDelegate,
         let destination = segue.destinationViewController as! CharacterInfoPageViewController
         destination.targetCharacterId = CharacterID(rawValue: sender as! String)
     }
+    
+    //MARK: methods for character select collection view
     
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         let selectedCell = collectionView.cellForItemAtIndexPath(indexPath) as! CharacterSelectCell
@@ -65,5 +74,28 @@ class CharacterSelectViewController: UIViewController, UICollectionViewDelegate,
         selectedCell.backgroundColor = nil
     }
     
+    //MARK: methods for settings table view
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("settingsCell")!
+        return cell
+    }
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 0
+    }
+    
+    @IBAction func segmentChanged(sender: UISegmentedControl) {
+        showCorrectView()
+    }
+    
+    private func showCorrectView() {
+        if (segmentControl.selectedSegmentIndex == 0) {
+            characterSelectCollectionView.hidden = false
+            settingsContainerView.hidden = true
+        } else {
+            settingsContainerView.hidden = false
+            characterSelectCollectionView.hidden = true
+        }
+    }
 }
 

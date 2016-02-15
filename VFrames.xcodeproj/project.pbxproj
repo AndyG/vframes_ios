@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		2126B52AEEF9D9711CF300E1 /* Pods_VFrames.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77FD0C2D238DB39A348EA825 /* Pods_VFrames.framework */; };
 		A13876D01C59ABD800EA1413 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13876CF1C59ABD800EA1413 /* AppDelegate.swift */; };
-		A13876D21C59ABD800EA1413 /* CharacterSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13876D11C59ABD800EA1413 /* CharacterSelectViewController.swift */; };
+		A13876D21C59ABD800EA1413 /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13876D11C59ABD800EA1413 /* HomePageViewController.swift */; };
 		A13876D51C59ABD800EA1413 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A13876D31C59ABD800EA1413 /* Main.storyboard */; };
 		A13876D71C59ABD800EA1413 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A13876D61C59ABD800EA1413 /* Assets.xcassets */; };
 		A13876DA1C59ABD800EA1413 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A13876D81C59ABD800EA1413 /* LaunchScreen.storyboard */; };
@@ -59,7 +59,7 @@
 		77FD0C2D238DB39A348EA825 /* Pods_VFrames.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VFrames.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A13876CC1C59ABD800EA1413 /* VFrames.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VFrames.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A13876CF1C59ABD800EA1413 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A13876D11C59ABD800EA1413 /* CharacterSelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterSelectViewController.swift; sourceTree = "<group>"; };
+		A13876D11C59ABD800EA1413 /* HomePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageViewController.swift; sourceTree = "<group>"; };
 		A13876D41C59ABD800EA1413 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A13876D61C59ABD800EA1413 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A13876D91C59ABD800EA1413 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -266,7 +266,7 @@
 		A16454951C6D816000201417 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				A13876D11C59ABD800EA1413 /* CharacterSelectViewController.swift */,
+				A13876D11C59ABD800EA1413 /* HomePageViewController.swift */,
 				A16454961C6D818900201417 /* CharacterInfoPageViewController.swift */,
 				A164545D1C66B24B00201417 /* MovesListViewController.swift */,
 				A164549E1C6FFA0400201417 /* FrameDataViewController.swift */,
@@ -483,7 +483,7 @@
 				A16454B01C7026F500201417 /* FrameData.swift in Sources */,
 				A13876F81C5DB8CB00EA1413 /* MoveCategory.swift in Sources */,
 				A13876F31C5DB34D00EA1413 /* MoveListEntry.swift in Sources */,
-				A13876D21C59ABD800EA1413 /* CharacterSelectViewController.swift in Sources */,
+				A13876D21C59ABD800EA1413 /* HomePageViewController.swift in Sources */,
 				A164548A1C6876C200201417 /* InputCollectionView.swift in Sources */,
 				A164548D1C6B080D00201417 /* StringResolver.swift in Sources */,
 				A16454CB1C71C11100201417 /* JSONLoader.swift in Sources */,

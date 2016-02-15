@@ -22,12 +22,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         Fabric.with([Crashlytics.self])
         StringResolver.initialize()
         
-//        initializeSupportDirectory()
-//        if savedCharactersModelExists() {
-//            loadSavedCharactersModel()
-//        } else {
+        initializeSupportDirectory()
+        if savedCharactersModelExists() {
+            loadSavedCharactersModel()
+        } else {
             loadDefaultCharactersModel()
-//        }
+        }
         NetworkDataSource().loadData()
         return true
     }
@@ -41,8 +41,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let urls = fileManager.URLsForDirectory(.ApplicationSupportDirectory, inDomains: .UserDomainMask)
         if let applicationSupportURL = urls.last {
             do {
-                try fileManager.createDirectoryAtURL(applicationSupportURL, withIntermediateDirectories: true, attributes: nil)
-                print("initialized support directory")
+                if (!(fileManager.fileExistsAtPath(applicationSupportURL.relativePath!))) {
+                    try fileManager.createDirectoryAtURL(applicationSupportURL, withIntermediateDirectories: true, attributes: nil)
+                    print("initialized support directory")
+                }
             } catch {
                 print("failed to initialize support directory")
             }
@@ -54,12 +56,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let fileManager = NSFileManager.defaultManager()
         let urls = fileManager.URLsForDirectory(.ApplicationSupportDirectory, inDomains: .UserDomainMask)
         if let applicationSupportURL = urls.last {
-            let versionFileURL = applicationSupportURL.URLByAppendingPathComponent("characters_model_version.json")
-            if fileManager.fileExistsAtPath(versionFileURL.absoluteString) {
-                print("file existed at \(versionFileURL.absoluteString)")
+            let versionFileURL = applicationSupportURL.URLByAppendingPathComponent("characters_model.json")
+            if fileManager.fileExistsAtPath(versionFileURL.relativePath!) {
+                print("found saved characters model")
                 return true
             } else {
-                print("no file existed at \(versionFileURL.absoluteString)")
+                print("could not find saved characters model")
                 return false
             }
         } else {
@@ -69,42 +71,49 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     private func loadSavedCharactersModel() {
-        
+        let fileManager = NSFileManager.defaultManager()
+        let urls = fileManager.URLsForDirectory(.ApplicationSupportDirectory, inDomains: .UserDomainMask)
+        if let applicationSupportURL = urls.last {
+            let savedCharactersModelURL = applicationSupportURL.URLByAppendingPathComponent("characters_model.json")
+            loadCharactersModelFromUrl(savedCharactersModelURL)
+            print("loaded saved characters model")
+        }
     }
     
     private func loadDefaultCharactersModel() {
-        loadDefaultCharactersModelData()
+        let path = NSBundle.mainBundle().pathForResource("default_characters_model", ofType: "json")
+        let defaultModelUrl = NSURL(fileURLWithPath: path!)
+        
+        //Copy file to app support directory so it's there next time
+        let fileManager = NSFileManager.defaultManager()
+        let urls = fileManager.URLsForDirectory(.ApplicationSupportDirectory, inDomains: .UserDomainMask)
+        if let applicationSupportURL = urls.last {
+            let charactersModelURL = applicationSupportURL.URLByAppendingPathComponent("characters_model.json")
+            do {
+                try fileManager.copyItemAtURL(defaultModelUrl, toURL: charactersModelURL)
+            } catch {
+                print("failed to copy characters model file")
+                print("from: \(defaultModelUrl.absoluteString)")
+                print("to: \(charactersModelURL.absoluteString)")
+            }
+        }
+        
+        loadCharactersModelFromUrl(defaultModelUrl)
     }
     
-    private func loadDefaultCharactersModelData() {
-        let path = NSBundle.mainBundle().pathForResource("default_characters_model", ofType: "json")
-        let url = NSURL(fileURLWithPath: path!)
+    private func loadCharactersModelFromUrl(url: NSURL) {
         let data = NSData(contentsOfURL: url)!
         var error: NSError?
         let jsonData = JSON(data: data, options: NSJSONReadingOptions.MutableContainers, error: &error)
         
         if (error != nil) {
-            print("error!!")
             print("error: \(error!.localizedDescription)")
-        } else {
-            print("no error. jsonData is nil: \(jsonData == nil)")
-        }
-
-        //Copy file to app support directory so it's there next time
-        let fileManager = NSFileManager.defaultManager()
-        let urls = fileManager.URLsForDirectory(.ApplicationSupportDirectory, inDomains: .UserDomainMask)
-        if let applicationSupportURL = urls.last {
-            let versionFileURL = applicationSupportURL.URLByAppendingPathComponent("characters_model.json")
-            do {
-                try fileManager.copyItemAtURL(url, toURL: versionFileURL)
-            } catch {
-                print("failed to copy characters model file")
-            }
         }
         
         let dataSource = CharactersModelJsonAdapter()
         charactersModel = dataSource.loadCharactersModel(jsonData)
-        print("Loaded default characters model version: \(charactersModel.getVersion())")
+        print("Loaded characters model version: \(charactersModel.getVersion())")
     }
+    
 }
 

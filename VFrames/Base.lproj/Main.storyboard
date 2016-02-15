@@ -8,10 +8,10 @@
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
-        <!--Select A Character-->
+        <!--Home Page View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="CharacterSelectViewController" customModule="VFrames" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="HomePageViewController" customModule="VFrames" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -20,8 +20,44 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iOK-US-wbZ" userLabel="Settings Container">
+                                <rect key="frame" x="20" y="74" width="560" height="536"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xMy-RH-RGX">
+                                        <rect key="frame" x="171" y="44.5" width="218" height="30"/>
+                                        <state key="normal" title="Update Move List &amp; Frame Data"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VpE-56-vpA">
+                                        <rect key="frame" x="134" y="79.5" width="293" height="30"/>
+                                        <state key="normal" title="Clear Downloaded Move List &amp; Frame Data">
+                                            <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Data From Network" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vR2-8q-1Sb">
+                                        <rect key="frame" x="207" y="10" width="146.5" height="19.5"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="VpE-56-vpA" firstAttribute="centerX" secondItem="iOK-US-wbZ" secondAttribute="centerX" id="8dW-2D-nGs"/>
+                                    <constraint firstItem="xMy-RH-RGX" firstAttribute="centerX" secondItem="iOK-US-wbZ" secondAttribute="centerX" id="AST-jt-Q9O"/>
+                                    <constraint firstItem="xMy-RH-RGX" firstAttribute="top" secondItem="iOK-US-wbZ" secondAttribute="top" constant="108" id="DNU-0A-hKy"/>
+                                    <constraint firstItem="VpE-56-vpA" firstAttribute="top" secondItem="xMy-RH-RGX" secondAttribute="bottom" constant="5" id="aEN-by-R1v"/>
+                                    <constraint firstItem="vR2-8q-1Sb" firstAttribute="top" secondItem="iOK-US-wbZ" secondAttribute="top" constant="10" id="eSH-Vg-ZOq"/>
+                                    <constraint firstItem="vR2-8q-1Sb" firstAttribute="centerX" secondItem="iOK-US-wbZ" secondAttribute="centerX" id="npS-ad-bXZ"/>
+                                    <constraint firstItem="xMy-RH-RGX" firstAttribute="top" secondItem="vR2-8q-1Sb" secondAttribute="bottom" constant="15" id="sy9-Mq-s50"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="DNU-0A-hKy"/>
+                                    </mask>
+                                </variation>
+                            </view>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="qqn-qT-Jau">
-                                <rect key="frame" x="20" y="10" width="560" height="580"/>
+                                <rect key="frame" x="20" y="74" width="560" height="516"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="5" id="fWT-Gq-GCA">
                                     <size key="itemSize" width="130" height="130"/>
@@ -31,7 +67,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="ueF-4H-kc3" customClass="CharacterSelectCell" customModule="VFrames" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="64" width="130" height="130"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="130" height="130"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="130" height="130"/>
@@ -72,14 +108,34 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="leadingMargin" secondItem="iOK-US-wbZ" secondAttribute="leading" id="5Ik-aW-OdY"/>
                             <constraint firstItem="qqn-qT-Jau" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="Anj-tv-CnU"/>
                             <constraint firstItem="qqn-qT-Jau" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="C8o-ly-1uq"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="iOK-US-wbZ" secondAttribute="trailing" id="DUR-VH-dYE"/>
                             <constraint firstItem="qqn-qT-Jau" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" constant="-10" id="Gn4-5u-4Gc"/>
-                            <constraint firstItem="qqn-qT-Jau" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="10" id="ypS-m0-JnR"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="iOK-US-wbZ" secondAttribute="bottom" constant="-10" id="RyJ-xL-7D4"/>
+                            <constraint firstItem="iOK-US-wbZ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="10" id="hs3-tV-W3J"/>
+                            <constraint firstItem="qqn-qT-Jau" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="10" id="rWT-re-Ee7"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Select A Character" id="UkD-Oa-38z"/>
+                    <navigationItem key="navigationItem" id="UkD-Oa-38z">
+                        <nil key="title"/>
+                        <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="ZBb-IP-g3l">
+                            <rect key="frame" x="172.5" y="7" width="255" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <segments>
+                                <segment title="Select a Character"/>
+                                <segment title="Settings"/>
+                            </segments>
+                            <connections>
+                                <action selector="segmentChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="p2A-2r-BAP"/>
+                            </connections>
+                        </segmentedControl>
+                    </navigationItem>
                     <connections>
+                        <outlet property="characterSelectCollectionView" destination="qqn-qT-Jau" id="Ofp-9q-e4Q"/>
+                        <outlet property="segmentControl" destination="ZBb-IP-g3l" id="uk5-qW-WGn"/>
+                        <outlet property="settingsContainerView" destination="iOK-US-wbZ" id="Gb7-01-WU8"/>
                         <segue destination="FLc-cB-P6x" kind="show" identifier="showCharacterInfo" id="iP5-Ue-koQ"/>
                     </connections>
                 </viewController>
