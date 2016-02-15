@@ -74,7 +74,8 @@
 "karin_senha_resshu_description" = "Command grab that misses on crouching opponents.";
 "karin_vskill_description" = "Destroys projectiles with a palm strike.";
 "karin_vtrigger_description" = "Karin gains access to Guren Ken, a new special move with a number of followups.";
-"karin_mujinkyaku_description" = "LK version: safe on block.\nMK version: does an overhead.\nHK version: frame traps.";
+"karin_mujinkyaku_description" = "MK version: does an overhead.\nHK version: frame traps.";
+"karin_after_guren_ken" = "(After Guren Ken)";
 
 // Claw Movelist
 "claw_claw_off_only" = "(Claw Off Only)";

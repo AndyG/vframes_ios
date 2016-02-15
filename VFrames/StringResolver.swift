@@ -57,6 +57,7 @@ class StringResolver {
         stringDict["id_karin_vskill_description"] = "karin_vskill_description"
         stringDict["id_karin_vtrigger_description"] = "karin_vtrigger_description"
         stringDict["id_karin_mujinkyaku_description"] = "karin_mujinkyaku_description"
+        stringDict["id_karin_after_guren_ken"] = "karin_after_guren_ken"
         
         //Claw Movelist
         stringDict["id_claw_claw_on_only"] = "claw_claw_on_only"

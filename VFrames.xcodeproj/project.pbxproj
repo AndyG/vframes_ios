@@ -51,7 +51,6 @@
 		A16454BA1C71206000201417 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A16454B81C71206000201417 /* Fabric.framework */; };
 		A16454BB1C71206000201417 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A16454B91C71206000201417 /* Crashlytics.framework */; };
 		A16454BE1C71967C00201417 /* NetworkDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16454BD1C71967C00201417 /* NetworkDataSource.swift */; };
-		A16454C91C71BAD900201417 /* test_data.json in Resources */ = {isa = PBXBuildFile; fileRef = A16454C81C71BAD900201417 /* test_data.json */; };
 		A16454CB1C71C11100201417 /* JSONLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16454CA1C71C11100201417 /* JSONLoader.swift */; };
 		A16454CF1C71C39300201417 /* default_characters_model.json in Resources */ = {isa = PBXBuildFile; fileRef = A16454CE1C71C39300201417 /* default_characters_model.json */; };
 		A16454D11C72293200201417 /* AppSupportUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16454D01C72293200201417 /* AppSupportUtil.swift */; };
@@ -105,7 +104,6 @@
 		A16454B81C71206000201417 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
 		A16454B91C71206000201417 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		A16454BD1C71967C00201417 /* NetworkDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkDataSource.swift; sourceTree = "<group>"; };
-		A16454C81C71BAD900201417 /* test_data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = test_data.json; sourceTree = "<group>"; };
 		A16454CA1C71C11100201417 /* JSONLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONLoader.swift; sourceTree = "<group>"; };
 		A16454CE1C71C39300201417 /* default_characters_model.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = default_characters_model.json; path = ../../../../Desktop/default_characters_model.json; sourceTree = "<group>"; };
 		A16454D01C72293200201417 /* AppSupportUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppSupportUtil.swift; sourceTree = "<group>"; };
@@ -200,7 +198,6 @@
 			isa = PBXGroup;
 			children = (
 				A16454CE1C71C39300201417 /* default_characters_model.json */,
-				A16454C81C71BAD900201417 /* test_data.json */,
 			);
 			name = TestData;
 			path = /Users/Andy/Development/XCodeProjects/VFrames/VFrames;
@@ -397,7 +394,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				A13877001C5EB3BF00EA1413 /* Podfile in Resources */,
-				A16454C91C71BAD900201417 /* test_data.json in Resources */,
 				A13876DA1C59ABD800EA1413 /* LaunchScreen.storyboard in Resources */,
 				A13876D71C59ABD800EA1413 /* Assets.xcassets in Resources */,
 				A164548F1C6B0EF900201417 /* Localizable.strings in Resources */,
