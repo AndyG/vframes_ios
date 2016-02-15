@@ -11,14 +11,16 @@ import Foundation
 class CharactersModel {
     
     var characters: [CharacterID: SFCharacter]
+    var version: Int
     
-    init(characters: [CharacterID:SFCharacter]) {
+    init(characters: [CharacterID:SFCharacter], version: Int) {
         self.characters = characters
+        self.version = version
     }
     
     func getCharacter(characterId:CharacterID) -> SFCharacter {
         return characters[characterId]!
-    }
+    }    
     
     func toString() -> String {
         var stringRepresentation = String()

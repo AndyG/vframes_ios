@@ -45,7 +45,6 @@ public class FrameDataLoader {
         
         var alternateFrameData: FrameDataEntryProtocol?
         if (frameDataEntryJson["alternateData"] != nil) {
-            print("found alternateFrameData for \(nameId)")
             alternateFrameData = loadHardCodedFrameDataEntry(nameId, descriptionId: descriptionId, frameDataEntryJson: frameDataEntryJson["alternateData"])
         }
         

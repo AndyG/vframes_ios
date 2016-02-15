@@ -16,7 +16,6 @@ class CharacterSelectViewController: UIViewController, UICollectionViewDelegate,
         super.viewDidLoad()
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         charactersModel = appDelegate.charactersModel
-        print(charactersModel.toString())
     }
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

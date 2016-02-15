@@ -20,9 +20,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" delaysContentTouches="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="qqn-qT-Jau">
-                                <rect key="frame" x="20" y="10" width="560" height="590"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="qqn-qT-Jau">
+                                <rect key="frame" x="20" y="10" width="560" height="580"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="5" id="fWT-Gq-GCA">
                                     <size key="itemSize" width="130" height="130"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -70,11 +70,11 @@
                                 </connections>
                             </collectionView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="qqn-qT-Jau" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="Anj-tv-CnU"/>
                             <constraint firstItem="qqn-qT-Jau" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="C8o-ly-1uq"/>
-                            <constraint firstItem="qqn-qT-Jau" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="PKY-ZV-je5"/>
+                            <constraint firstItem="qqn-qT-Jau" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" constant="-10" id="Gn4-5u-4Gc"/>
                             <constraint firstItem="qqn-qT-Jau" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="10" id="ypS-m0-JnR"/>
                         </constraints>
                     </view>
@@ -566,7 +566,7 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notes is on the way to VFrames! Sorry for the wait, and thank you for your patience!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NTq-JH-o2f">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notes (and much more) is on the way to VFrames! Sorry for the wait, and thank you for your patience!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NTq-JH-o2f">
                                 <rect key="frame" x="20" y="271.5" width="560" height="57.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>

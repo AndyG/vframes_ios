@@ -9,46 +9,100 @@
 import UIKit
 import Fabric
 import Crashlytics
+import SwiftyJSON
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     var charactersModel: CharactersModel!
+    var charactersModelVersion: Int!
     
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         Fabric.with([Crashlytics.self])
-        let dataSource = DataSource()
-        charactersModel = dataSource.loadCharactersModel()
         StringResolver.initialize()
+        
+        initializeSupportDirectory()
+        if savedCharactersModelExists() {
+            loadSavedCharactersModel()
+        } else {
+            loadDefaultCharactersModel()
+        }
+        NetworkDataSource().loadData()
         return true
     }
 
-    func applicationWillResignActive(application: UIApplication) {
-        // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
-        // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
-    }
-
-    func applicationDidEnterBackground(application: UIApplication) {
-        // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
-        // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
-    }
-
-    func applicationWillEnterForeground(application: UIApplication) {
-        // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
-    }
-
-    func applicationDidBecomeActive(application: UIApplication) {
-        // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
-    }
-
-    func applicationWillTerminate(application: UIApplication) {
-        // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
-    }
-    
     func getCharactersModel() -> CharactersModel {
         return charactersModel
     }
-
+    
+    private func initializeSupportDirectory() {
+        let fileManager = NSFileManager.defaultManager()
+        let urls = fileManager.URLsForDirectory(.ApplicationSupportDirectory, inDomains: .UserDomainMask)
+        if let applicationSupportURL = urls.last {
+            do {
+                try fileManager.createDirectoryAtURL(applicationSupportURL, withIntermediateDirectories: true, attributes: nil)
+                print("initialized support directory")
+            } catch {
+                print("failed to initialize support directory")
+            }
+            
+        }
+    }
+    
+    private func savedCharactersModelExists() -> Bool {
+        let fileManager = NSFileManager.defaultManager()
+        let urls = fileManager.URLsForDirectory(.ApplicationSupportDirectory, inDomains: .UserDomainMask)
+        if let applicationSupportURL = urls.last {
+            let versionFileURL = applicationSupportURL.URLByAppendingPathComponent("characters_model_version.json")
+            if fileManager.fileExistsAtPath(versionFileURL.absoluteString) {
+                print("file existed at \(versionFileURL.absoluteString)")
+                return true
+            } else {
+                print("no file existed at \(versionFileURL.absoluteString)")
+                return false
+            }
+        } else {
+            print("could not find app support directory")
+            return false
+        }
+    }
+    
+    private func loadSavedCharactersModel() {
+        
+    }
+    
+    private func loadDefaultCharactersModel() {
+        loadDefaultCharactersModelData()
+    }
+    
+    private func loadDefaultCharactersModelData() {
+        let jsonFilePath:NSString = NSBundle.mainBundle().pathForResource("test_data", ofType: "json")!
+        let data:NSData = NSData(contentsOfFile: jsonFilePath as String, )!
+        print(String(data: data, encoding: NSUTF8StringEncoding))
+        var error: NSError?
+        let json = JSON(data: data, options: NSJSONReadingOptions.MutableContainers, error: &error)
+        if (error != nil) {
+            print("error!!")
+            print("error: \(error!.localizedDescription)")
+        } else {
+            print("no error. jsonData is nil: \(json != nil)")
+        }
+//        
+//        //Copy file to app support directory so it's there next time
+//        let fileManager = NSFileManager.defaultManager()
+//        let urls = fileManager.URLsForDirectory(.ApplicationSupportDirectory, inDomains: .UserDomainMask)
+//        if let applicationSupportURL = urls.last {
+//            let versionFileURL = applicationSupportURL.URLByAppendingPathComponent("characters_model.json")
+//            do {
+//                try fileManager.copyItemAtURL(url, toURL: versionFileURL)
+//            } catch {
+//                print("failed to copy characters model file")
+//            }
+//        }
+        
+        let dataSource = CharactersModelJsonAdapter()
+        charactersModel = dataSource.loadCharactersModel(json)
+    }
 }
 
