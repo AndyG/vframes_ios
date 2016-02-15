@@ -9,14 +9,20 @@
 import Foundation
 
 class SFCharacter {
-    var moveList: [MoveCategory:Array<MoveListEntryProtocol>]
+    private var moveList: [MoveCategory:Array<MoveListEntryProtocol>]
+    private var frameData: FrameDataProtocol
     
-    init (moveList: [MoveCategory:Array<MoveListEntryProtocol>]) {
+    init (moveList: [MoveCategory:Array<MoveListEntryProtocol>], frameData: FrameDataProtocol) {
         self.moveList = moveList
+        self.frameData = frameData
     }
         
     func getMoveList() -> [MoveCategory:Array<MoveListEntryProtocol>] {
         return moveList;
+    }
+    
+    func getFrameData() -> FrameDataProtocol {
+        return frameData
     }
     
     func getStringRepresentation() -> String {

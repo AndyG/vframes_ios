@@ -13,7 +13,7 @@ class CharacterInfoPageViewController: UIPageViewController {
     var targetCharacterId: CharacterID!
     
     private(set) lazy var orderedViewControllers: [UIViewController] = {
-        return [self.newViewController("movesListViewController"), self.newViewController("frameDataViewController")]
+        return [self.createMovesListViewController(), self.createFrameDataViewController(), self.createNotesViewController()]
     }()
     
     private func newViewController(restorationId: String) -> UIViewController {
@@ -30,7 +30,6 @@ class CharacterInfoPageViewController: UIPageViewController {
         dataSource = self
         
         if let firstViewController = orderedViewControllers.first as? MovesListViewController {
-            firstViewController.targetCharacterId = targetCharacterId
             setViewControllers([firstViewController],
                 direction: .Forward,
                 animated: true,
@@ -49,6 +48,22 @@ class CharacterInfoPageViewController: UIPageViewController {
         pageControlAppearance.currentPageIndicatorTintColor = characterColor
         pageControlAppearance.pageIndicatorTintColor = characterColorFaded
     }
+    
+    private func createMovesListViewController() -> MovesListViewController {
+        let movesListViewController = self.newViewController("movesListViewController") as! MovesListViewController
+        movesListViewController.targetCharacterId = targetCharacterId
+        return movesListViewController
+    }
+    
+    private func createFrameDataViewController() -> FrameDataViewController {
+        let frameDataViewController = self.newViewController("frameDataViewController") as! FrameDataViewController
+        frameDataViewController.targetCharacterId = targetCharacterId
+        return frameDataViewController
+    }
+    
+    private func createNotesViewController() -> UIViewController {
+        return self.newViewController("notesViewController")
+    }
 }
 
 extension CharacterInfoPageViewController: UIPageViewControllerDataSource {
@@ -57,24 +72,26 @@ extension CharacterInfoPageViewController: UIPageViewControllerDataSource {
         viewControllerBeforeViewController viewController: UIViewController) -> UIViewController? {
             if viewController.isKindOfClass(MovesListViewController) {
                 return nil
+            } else if viewController.isKindOfClass(FrameDataViewController) {
+                return createMovesListViewController()
             } else {
-                let movesListViewController = self.newViewController("movesListViewController") as! MovesListViewController
-                movesListViewController.targetCharacterId = targetCharacterId
-                return movesListViewController
+                return createFrameDataViewController()
             }
     }
     
     func pageViewController(pageViewController: UIPageViewController,
         viewControllerAfterViewController viewController: UIViewController) -> UIViewController? {
             if viewController.isKindOfClass(MovesListViewController) {
-                return self.newViewController("frameDataViewController")
+                return createFrameDataViewController()
+            } else if viewController.isKindOfClass(FrameDataViewController) {
+                return createNotesViewController()
             } else {
                 return nil
             }
     }
     
     func presentationCountForPageViewController(pageViewController: UIPageViewController) -> Int {
-        return 2
+        return 3
     }
     
     func presentationIndexForPageViewController(pageViewController: UIPageViewController) -> Int {

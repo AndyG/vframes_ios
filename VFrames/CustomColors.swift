@@ -74,6 +74,10 @@ extension UIColor {
         return ColorUtils.UIColorFromRGB(0x63291a)
     }
     
+    func highlightedFrameDataEntryColor() -> UIColor {
+        return ColorUtils.UIColorFromRGB(0xffebeb)
+    }
+    
     func getPrimaryColorForCharacter(characterId: CharacterID) -> UIColor {
         switch(characterId) {
             case .BIRDIE:

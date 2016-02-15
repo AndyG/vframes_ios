@@ -16,6 +16,7 @@ class DescriptionMoveListCell: UITableViewCell, MoveListCellProtocol {
 
     @IBOutlet weak var posttextLabel: UILabel!
     
+    @IBOutlet var moveDescriptionBackground: UIView!
     
     @IBOutlet weak var moveDescriptionLabel: UILabel!
     @IBOutlet weak var descriptionHeight: NSLayoutConstraint!
@@ -23,7 +24,6 @@ class DescriptionMoveListCell: UITableViewCell, MoveListCellProtocol {
     func setMove(move: MoveListEntryProtocol, indexPath: NSIndexPath) {
 
         moveNameLabel.text = move.getNameId()
-        
         
         if let descriptionId = move.getDescriptionId() {
             moveDescriptionLabel.text = getLocalizedString(descriptionId)

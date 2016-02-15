@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum MoveCategory: String {
+public enum MoveCategory: String {
     case NORMALS = "normals",
     SPECIALS = "specials",
     VSKILL = "vskill",

@@ -30,13 +30,13 @@ class MovesListViewController: UIViewController, UITableViewDataSource, UITableV
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        movesTable.estimatedRowHeight = 150
-        movesTable.rowHeight = UITableViewAutomaticDimension
+        
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         targetCharacter = appDelegate.charactersModel.getCharacter(targetCharacterId)
-        title = CharacterID.toString(targetCharacterId)
         
         setupMoveListHeaders()
+        movesTable.estimatedRowHeight = 150
+        movesTable.rowHeight = UITableViewAutomaticDimension
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -113,8 +113,7 @@ class MovesListViewController: UIViewController, UITableViewDataSource, UITableV
             return CGSize(width: 70.0, height: 20.0)
         }
         
-        //Add 1 to ensure we'll always fit!
-        let numInputElements = inputArray.count + 1
+        let numInputElements = inputArray.count
         
         let collectionViewWidth = collectionView.frame.size.width
         let cellPadding = CGFloat(5)

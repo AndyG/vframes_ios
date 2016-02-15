@@ -14,7 +14,6 @@ class CharacterSelectViewController: UIViewController, UICollectionViewDelegate,
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         charactersModel = appDelegate.charactersModel
         print(charactersModel.toString())
@@ -29,6 +28,9 @@ class CharacterSelectViewController: UIViewController, UICollectionViewDelegate,
         let characterSelectCell = collectionView.dequeueReusableCellWithReuseIdentifier("cell", forIndexPath: indexPath) as! CharacterSelectCell
         
         characterSelectCell.setTargetCharacter(character)
+        characterSelectCell.layer.cornerRadius = 10.0
+        characterSelectCell.layer.borderWidth = 1
+        characterSelectCell.layer.borderColor = UIColor().getPrimaryColorForCharacter(character).colorWithAlphaComponent(0.5).CGColor
         return characterSelectCell
     }
     
@@ -47,11 +49,21 @@ class CharacterSelectViewController: UIViewController, UICollectionViewDelegate,
         
         let screenSize: CGRect = UIScreen.mainScreen().bounds
         let screenWidth = screenSize.width;
-        let cellWidth = screenWidth / 3.0; //Replace the divisor with the column count requirement + 1 (in float)
+        let cellWidth = screenWidth / 2.5; //Replace the divisor with the column count requirement + 1 (in float)
         
         let size = CGSizeMake(cellWidth, cellWidth);
         
         return size;
+    }
+    
+    func collectionView(collectionView: UICollectionView, didHighlightItemAtIndexPath indexPath: NSIndexPath) {
+        let selectedCell = collectionView.cellForItemAtIndexPath(indexPath) as! CharacterSelectCell
+        selectedCell.backgroundColor = UIColor().getPrimaryColorForCharacter(selectedCell.targetCharacter!).colorWithAlphaComponent(0.05)
+    }
+    
+    func collectionView(collectionView: UICollectionView, didUnhighlightItemAtIndexPath indexPath: NSIndexPath) {
+        let selectedCell = collectionView.cellForItemAtIndexPath(indexPath) as! CharacterSelectCell
+        selectedCell.backgroundColor = nil
     }
     
 }
