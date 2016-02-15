@@ -16,7 +16,7 @@ class NetworkDataSource {
     func loadData(listener: NetworkDataSourceListenerProtocol, currentVersion: Int) {
         let appVersion = NSBundle.mainBundle().infoDictionary!["CFBundleVersion"] as! String
         let urlString = "http://agarron.com/res/vframes/ios/v\(appVersion)/characters_model.json"
-        print("attempting to load from \(urlString)")
+
         let url:NSURL = NSURL(string: urlString)!
         let session = NSURLSession.sharedSession()
         
