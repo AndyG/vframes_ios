@@ -24,7 +24,7 @@ class NetworkDataSource {
             (
             let data, let response, let error) in
             
-            guard let _:NSData = data, let _:NSURLResponse = response  where error == nil else {
+            guard let _:NSData = data, let _: NSURLResponse = response  where error == nil else {
                 print("error")
                 listener.onResult(GetNetworkDataResult.ERROR)
                 return

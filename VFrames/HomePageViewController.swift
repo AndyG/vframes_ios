@@ -63,17 +63,17 @@ class HomePageViewController: UIViewController, UICollectionViewDelegate, UIColl
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAtIndex section: Int) -> UIEdgeInsets {
         
         let screenSize: CGRect = UIScreen.mainScreen().bounds
-        let screenWidth = screenSize.width;
+        let smallerDimen = min(screenSize.width, screenSize.height)
         
-        let sideInset = screenWidth * 0.02
+        let sideInset = smallerDimen * 0.02
         
         return UIEdgeInsets(top: 0.0, left: sideInset, bottom: 0.0, right: sideInset)
     }
     
     private func getCellWidth() -> CGFloat {
         let screenSize: CGRect = UIScreen.mainScreen().bounds
-        let screenWidth = screenSize.width
-        return screenWidth * 0.4 //Replace the divisor with the column count requirement + 1 (in float)
+        let smallerDimen = min(screenSize.width, screenSize.height)
+        return smallerDimen * 0.4 //Replace the divisor with the column count requirement + 1 (in float)
     }
     
     func collectionView(collectionView: UICollectionView, didHighlightItemAtIndexPath indexPath: NSIndexPath) {
