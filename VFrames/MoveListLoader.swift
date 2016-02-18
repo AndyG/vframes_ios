@@ -34,7 +34,7 @@ public class MoveListLoader {
         let name = jsonData["nameID"].string!
         let pretextId = jsonData["pretextID"].string
         let posttextId = jsonData["posttextID"].string
-        let descriptionId = jsonData["descriptionID"].string
+        let descriptionId = jsonData["description"].string
         let input = loadInputArray(jsonData["input"].string)
         
         let moveListEntry = MoveListEntry(nameId: name, pretextId: pretextId, posttextId: posttextId, descriptionId: descriptionId, inputElementList: input)

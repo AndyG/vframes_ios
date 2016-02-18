@@ -16,8 +16,6 @@ class DescriptionMoveListCell: UITableViewCell, MoveListCellProtocol {
 
     @IBOutlet weak var posttextLabel: UILabel!
     
-    @IBOutlet var moveDescriptionBackground: UIView!
-    
     @IBOutlet weak var moveDescriptionLabel: UILabel!
     @IBOutlet weak var descriptionHeight: NSLayoutConstraint!
     

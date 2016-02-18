@@ -21,5 +21,5 @@ public protocol FrameDataEntryProtocol {
     func getDamageValue() -> Int
     func getStunValue() -> Int
     
-    func getDescriptionId() -> String?
+    func getDescription() -> String?
 }

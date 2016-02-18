@@ -16,6 +16,7 @@ class FrameDataEntryCell: UITableViewCell {
     @IBOutlet var recoveryFramesLabel: UILabel!
     @IBOutlet var blockAdvantageLabel: UILabel!
     @IBOutlet var hitAdvantageLabel: UILabel!
+    @IBOutlet var descriptionLabel: UILabel!
     
     private static let DISPLAY_CODE_MISSING_VALUE = 1001;
     private static let DISPLAY_CODE_NOT_APPLICABLE = 1002;
@@ -32,6 +33,17 @@ class FrameDataEntryCell: UITableViewCell {
         
         blockAdvantageLabel.text = getDisplayString(frameDataEntry.getBlockAdvantage())
         hitAdvantageLabel.text = getDisplayString(frameDataEntry.getHitAdvantage())
+        
+        if let descriptionText = frameDataEntry.getDescription() {
+            print("found description: \(descriptionText)")
+            descriptionLabel.text = descriptionText
+            descriptionLabel.hidden = false
+            descriptionLabel.sizeToFit()
+        } else {
+            descriptionLabel.text = nil
+            descriptionLabel.sizeToFit()
+            descriptionLabel.hidden = true
+        }
     }
     
     private func getDisplayString(valueEntry: Int) -> String {

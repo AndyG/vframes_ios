@@ -39,19 +39,19 @@ public class FrameDataLoader {
     
     private static func loadHardCodedFrameDataEntryHolder(frameDataEntryJson: JSON) -> FrameDataEntryHolder {
         let nameId = frameDataEntryJson["nameID"].string!
-        let descriptionId = frameDataEntryJson["descriptionId"].string
+        let description = frameDataEntryJson["description"].string
         
-        let frameData = loadHardCodedFrameDataEntry(nameId, descriptionId: descriptionId, frameDataEntryJson: frameDataEntryJson["data"])
+        let frameData = loadHardCodedFrameDataEntry(nameId, description: description, frameDataEntryJson: frameDataEntryJson["data"])
         
         var alternateFrameData: FrameDataEntryProtocol?
         if (frameDataEntryJson["alternateData"] != nil) {
-            alternateFrameData = loadHardCodedFrameDataEntry(nameId, descriptionId: descriptionId, frameDataEntryJson: frameDataEntryJson["alternateData"])
+            alternateFrameData = loadHardCodedFrameDataEntry(nameId, description: description, frameDataEntryJson: frameDataEntryJson["alternateData"])
         }
         
         return FrameDataEntryHolder(frameDataEntry: frameData, alternateFrameDataEntry: alternateFrameData)
     }
     
-    private static func loadHardCodedFrameDataEntry(nameId: String, descriptionId: String?, frameDataEntryJson: JSON) -> FrameDataEntryProtocol {
+    private static func loadHardCodedFrameDataEntry(nameId: String, description: String?, frameDataEntryJson: JSON) -> FrameDataEntryProtocol {
         
         var startupFrames = DISPLAY_CODE_MISSING_VALUE;
         var activeFrames = DISPLAY_CODE_MISSING_VALUE;
@@ -60,7 +60,6 @@ public class FrameDataLoader {
         var hitAdvantage = DISPLAY_CODE_MISSING_VALUE;
         var damageValue = DISPLAY_CODE_MISSING_VALUE;
         var stunValue = DISPLAY_CODE_MISSING_VALUE;
-        
         
         if let startupFramesFromJson = frameDataEntryJson["startupFrames"].int {
             startupFrames = startupFramesFromJson
@@ -90,7 +89,11 @@ public class FrameDataLoader {
             stunValue = stunValueFromJson
         }
         
-        return HardCodedFrameDataEntry(displayName: nameId, startupFrames: startupFrames, activeFrames: activeFrames, recoveryFrames: recoveryFrames, blockAdvantage: blockAdvantage, hitAdvantage: hitAdvantage, damageValue: damageValue, stunValue: stunValue, descriptionId: descriptionId)
+        var overrideDescription: String? = description
+        if let descriptionFromJson = frameDataEntryJson["description"].string {
+            overrideDescription = descriptionFromJson
+        }
         
+        return HardCodedFrameDataEntry(displayName: nameId, startupFrames: startupFrames, activeFrames: activeFrames, recoveryFrames: recoveryFrames, blockAdvantage: blockAdvantage, hitAdvantage: hitAdvantage, damageValue: damageValue, stunValue: stunValue, description: overrideDescription)
     }
 }

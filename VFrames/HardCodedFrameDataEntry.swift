@@ -21,9 +21,9 @@ public class HardCodedFrameDataEntry: FrameDataEntryProtocol {
     var damageValue: Int!
     var stunValue: Int!
     
-    var descriptionId: String?
+    var description: String?
     
-    public init (displayName: String, startupFrames: Int, activeFrames: Int, recoveryFrames: Int, blockAdvantage: Int, hitAdvantage: Int, damageValue: Int, stunValue: Int, descriptionId: String?) {
+    public init (displayName: String, startupFrames: Int, activeFrames: Int, recoveryFrames: Int, blockAdvantage: Int, hitAdvantage: Int, damageValue: Int, stunValue: Int, description: String?) {
         self.displayName = displayName;
         
         self.startupFrames = startupFrames;
@@ -35,7 +35,7 @@ public class HardCodedFrameDataEntry: FrameDataEntryProtocol {
         self.damageValue = damageValue;
         self.stunValue = stunValue;
         
-        self.descriptionId = descriptionId;
+        self.description = description;
     }
     
     
@@ -71,7 +71,7 @@ public class HardCodedFrameDataEntry: FrameDataEntryProtocol {
         return stunValue
     }
     
-    public func getDescriptionId() -> String? {
-        return descriptionId
+    public func getDescription() -> String? {
+        return description
     }
 }
