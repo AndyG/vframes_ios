@@ -10,6 +10,7 @@ import UIKit
 
 class FrameDataEntryCell: UITableViewCell {
     
+    @IBOutlet var superView: UIView!
     @IBOutlet var moveNameLabel: UILabel!
     @IBOutlet var startupFramesLabel: UILabel!
     @IBOutlet var activeFramesLabel: UILabel!
@@ -17,6 +18,8 @@ class FrameDataEntryCell: UITableViewCell {
     @IBOutlet var blockAdvantageLabel: UILabel!
     @IBOutlet var hitAdvantageLabel: UILabel!
     @IBOutlet var descriptionLabel: UILabel!
+    
+    @IBOutlet var descBackground: UIView!
     
     private static let DISPLAY_CODE_MISSING_VALUE = 1001;
     private static let DISPLAY_CODE_NOT_APPLICABLE = 1002;
@@ -38,10 +41,32 @@ class FrameDataEntryCell: UITableViewCell {
             print("found description: \(descriptionText)")
             descriptionLabel.text = descriptionText
             descriptionLabel.hidden = false
+            print("height: \(descriptionLabel.frame.height)")
+            print("height: \(descBackground.frame.height)")
             descriptionLabel.sizeToFit()
+            
+            let backgroundConstraints = descBackground.constraints
+            
+            for constraint in backgroundConstraints {
+                if let id = constraint.identifier {
+                    if id == "zeroHeightConstraint" {
+                        print("removed constraint")
+                        descBackground.removeConstraint(constraint)
+                    }
+                }
+            }
         } else {
             descriptionLabel.text = nil
             descriptionLabel.sizeToFit()
+            
+            let heightConstraint = NSLayoutConstraint(item: descBackground, attribute: NSLayoutAttribute.Height, relatedBy: NSLayoutRelation.Equal, toItem: nil, attribute: NSLayoutAttribute.NotAnAttribute, multiplier: 1, constant: 0)
+            heightConstraint.priority = 1000
+            heightConstraint.identifier = "zeroHeightConstraint"
+            
+            descBackground.addConstraint(heightConstraint)
+            
+            print("height: \(descriptionLabel.frame.height)")
+            print("height: \(descBackground.frame.height)")
             descriptionLabel.hidden = true
         }
     }

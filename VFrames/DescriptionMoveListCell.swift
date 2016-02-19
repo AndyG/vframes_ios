@@ -17,7 +17,6 @@ class DescriptionMoveListCell: UITableViewCell, MoveListCellProtocol {
     @IBOutlet weak var posttextLabel: UILabel!
     
     @IBOutlet weak var moveDescriptionLabel: UILabel!
-    @IBOutlet weak var descriptionHeight: NSLayoutConstraint!
     
     func setMove(move: MoveListEntryProtocol, indexPath: NSIndexPath) {
 

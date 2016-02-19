@@ -45,7 +45,7 @@ class FrameDataViewController: UIViewController, UITableViewDataSource, UITableV
         }
         
         setupMoveListHeaders()
-        frameDataTable.estimatedRowHeight = 50
+        frameDataTable.estimatedRowHeight = 150
         frameDataTable.rowHeight = UITableViewAutomaticDimension
         
         alternateFrameDataSwitch.addTarget(self, action: Selector("stateChanged:"), forControlEvents: UIControlEvents.ValueChanged)

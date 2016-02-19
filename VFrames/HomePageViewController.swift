@@ -8,14 +8,11 @@
 
 import UIKit
 
-class HomePageViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, NetworkDataSourceListenerProtocol {
+class HomePageViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     @IBOutlet var characterSelectCollectionView: UICollectionView!
-    @IBOutlet var settingsContainerView: UIView!
     
     @IBOutlet var deleteButton: UIButton!
-    
-    @IBOutlet var segmentControl: UISegmentedControl!
     
     var charactersModel: CharactersModel!
     
@@ -87,45 +84,45 @@ class HomePageViewController: UIViewController, UICollectionViewDelegate, UIColl
     }
 
     
-    //MARK: methods for getting data from the network
-    func onResult(result: GetNetworkDataResult) {
-        switch(result) {
-        case .UPDATED:
-            dispatch_async(dispatch_get_main_queue(), {
-                self.showUpdatedAlert()
-            })
-            setupCharactersModel()
-        case .ALREADY_UP_TO_DATE:
-            dispatch_async(dispatch_get_main_queue(), {
-                self.showAlreadyUpToDateAlert()
-            })
-        case .UNSUPPORTED:
-            dispatch_async(dispatch_get_main_queue(), {
-                self.showUnsupportedAlert()
-            })
-        case .ERROR:
-            dispatch_async(dispatch_get_main_queue(), {
-                self.showErrorFetchingDataAlert()
-            })
-        }
-    }
+//    //MARK: methods for getting data from the network
+//    func onResult(result: GetNetworkDataResult) {
+//        switch(result) {
+//        case .UPDATED:
+//            dispatch_async(dispatch_get_main_queue(), {
+//                self.showUpdatedAlert()
+//            })
+//            setupCharactersModel()
+//        case .ALREADY_UP_TO_DATE:
+//            dispatch_async(dispatch_get_main_queue(), {
+//                self.showAlreadyUpToDateAlert()
+//            })
+//        case .UNSUPPORTED:
+//            dispatch_async(dispatch_get_main_queue(), {
+//                self.showUnsupportedAlert()
+//            })
+//        case .ERROR:
+//            dispatch_async(dispatch_get_main_queue(), {
+//                self.showErrorFetchingDataAlert()
+//            })
+//        }
+//    }
     
-    @IBAction func segmentChanged(sender: UISegmentedControl) {
-        showCorrectView()
-    }
-    
-    @IBAction func updateButtonClicked(sender: UIButton) {
-        let dataSource = NetworkDataSource()
-        dataSource.loadData(self, currentVersion: charactersModel.version)
-    }
-    
-    @IBAction func clearButtonClicked(sender: AnyObject) {
-        let appSupportUtil = AppSupportUtil()
-        appSupportUtil.clearData()
-        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-        appDelegate.reloadCharactersModel()
-        setupCharactersModel()
-    }
+//    @IBAction func segmentChanged(sender: UISegmentedControl) {
+//        showCorrectView()
+//    }
+//    
+//    @IBAction func updateButtonClicked(sender: UIButton) {
+//        let dataSource = NetworkDataSource()
+//        dataSource.loadData(self, currentVersion: charactersModel.version)
+//    }
+//    
+//    @IBAction func clearButtonClicked(sender: AnyObject) {
+//        let appSupportUtil = AppSupportUtil()
+//        appSupportUtil.clearData()
+//        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+//        appDelegate.reloadCharactersModel()
+//        setupCharactersModel()
+//    }
     
     private func setupCharactersModel() {
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
@@ -133,46 +130,46 @@ class HomePageViewController: UIViewController, UICollectionViewDelegate, UIColl
     }
     
     private func showCorrectView() {
-        if (segmentControl.selectedSegmentIndex == 0) {
-            characterSelectCollectionView.hidden = false
-            settingsContainerView.hidden = true
-        } else {
-            settingsContainerView.hidden = false
-            characterSelectCollectionView.hidden = true
-        }
+//        if (segmentControl.selectedSegmentIndex == 0) {
+//            characterSelectCollectionView.hidden = false
+//            settingsContainerView.hidden = true
+//        } else {
+//            settingsContainerView.hidden = false
+//            characterSelectCollectionView.hidden = true
+//        }
     }
     
-    private func showUpdatedAlert() {
-        let alert = UIAlertController(title: "Data Updated", message: "You have updated to the latest moves list and frame data. Remember to check for new versions of VFrames in the app store so you can see all the latest additional info, like descriptions and move property specifics. Thank you for using VFrames!", preferredStyle: UIAlertControllerStyle.Alert)
-        let confirmAction = UIAlertAction(title: "Ok, thanks!", style: .Default, handler: nil);
-
-        alert.addAction(confirmAction)
-        presentViewController(alert, animated: true, completion: nil)
-    }
-    
-    private func showAlreadyUpToDateAlert() {
-        let alert = UIAlertController(title: "Already Up to Date", message: "You already have the latest moves list and frame data. Remember to check for new versions of VFrames in the app store so you can see all the latest additional info, like descriptions and move property specifics. Thank you for using VFrames!", preferredStyle: UIAlertControllerStyle.Alert)
-        let confirmAction = UIAlertAction(title: "Ok, thanks!", style: .Default, handler: nil);
-        
-        alert.addAction(confirmAction)
-        presentViewController(alert, animated: true, completion: nil)
-    }
-    
-    private func showUnsupportedAlert() {
-        let alert = UIAlertController(title: "Unsupported VFrames Version", message: "This version of VFrames is no longer supported. Please check for an update in the App Store.", preferredStyle: UIAlertControllerStyle.Alert)
-        let confirmAction = UIAlertAction(title: "Ok", style: .Default, handler: nil);
-        
-        alert.addAction(confirmAction)
-        presentViewController(alert, animated: true, completion: nil)
-    }
-    
-    private func showErrorFetchingDataAlert() {
-        let alert = UIAlertController(title: "Error Fetching Data", message: "There was an error updating your data. Please try again later.", preferredStyle: UIAlertControllerStyle.Alert)
-        let confirmAction = UIAlertAction(title: "Ok", style: .Default, handler: nil);
-        
-        alert.addAction(confirmAction)
-        presentViewController(alert, animated: true, completion: nil)
-    }
+//    private func showUpdatedAlert() {
+//        let alert = UIAlertController(title: "Data Updated", message: "You have updated to the latest moves list and frame data. Remember to check for new versions of VFrames in the app store so you can see all the latest additional info, like descriptions and move property specifics. Thank you for using VFrames!", preferredStyle: UIAlertControllerStyle.Alert)
+//        let confirmAction = UIAlertAction(title: "Ok, thanks!", style: .Default, handler: nil);
+//
+//        alert.addAction(confirmAction)
+//        presentViewController(alert, animated: true, completion: nil)
+//    }
+//    
+//    private func showAlreadyUpToDateAlert() {
+//        let alert = UIAlertController(title: "Already Up to Date", message: "You already have the latest moves list and frame data. Remember to check for new versions of VFrames in the app store so you can see all the latest additional info, like descriptions and move property specifics. Thank you for using VFrames!", preferredStyle: UIAlertControllerStyle.Alert)
+//        let confirmAction = UIAlertAction(title: "Ok, thanks!", style: .Default, handler: nil);
+//        
+//        alert.addAction(confirmAction)
+//        presentViewController(alert, animated: true, completion: nil)
+//    }
+//    
+//    private func showUnsupportedAlert() {
+//        let alert = UIAlertController(title: "Unsupported VFrames Version", message: "This version of VFrames is no longer supported. Please check for an update in the App Store.", preferredStyle: UIAlertControllerStyle.Alert)
+//        let confirmAction = UIAlertAction(title: "Ok", style: .Default, handler: nil);
+//        
+//        alert.addAction(confirmAction)
+//        presentViewController(alert, animated: true, completion: nil)
+//    }
+//    
+//    private func showErrorFetchingDataAlert() {
+//        let alert = UIAlertController(title: "Error Fetching Data", message: "There was an error updating your data. Please try again later.", preferredStyle: UIAlertControllerStyle.Alert)
+//        let confirmAction = UIAlertAction(title: "Ok", style: .Default, handler: nil);
+//        
+//        alert.addAction(confirmAction)
+//        presentViewController(alert, animated: true, completion: nil)
+//    }
     
 }
 

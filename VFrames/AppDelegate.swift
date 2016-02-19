@@ -22,12 +22,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         Fabric.with([Crashlytics.self])
         StringResolver.initialize()
         
-        initializeSupportDirectory()
-        if savedCharactersModelExists() {
-            loadSavedCharactersModel()
-        } else {
-            loadDefaultCharactersModel()
-        }
+        loadDefaultCharactersModel()
+        
+//        initializeSupportDirectory()
+//        if savedCharactersModelExists() {
+//            loadSavedCharactersModel()
+//        } else {
+//            loadDefaultCharactersModel()
+//        }
         return true
     }
 
