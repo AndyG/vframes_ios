@@ -60,10 +60,10 @@ class FrameDataViewController: UIViewController, UITableViewDataSource, UITableV
         let cell = tableView.dequeueReusableCellWithIdentifier("frameDataRow") as! FrameDataEntryCell
         if (alternateFrameDataSwitch.on && frameDataEntryHolder.hasAlternate()) {
             cell.setFrameDataEntry(frameDataEntryHolder.getAlternateFrameDataEntry())
-            cell.backgroundColor = UIColor().highlightedFrameDataEntryColor()
+            cell.moveNameBackground.backgroundColor = UIColor().highlightedFrameDataEntryColor()
         } else {
             cell.setFrameDataEntry(frameDataEntryHolder.getFrameDataEntry())
-            cell.backgroundColor = nil
+            cell.moveNameBackground.backgroundColor = UIColor(colorLiteralRed: 0.0, green: 0.0, blue: 0.0, alpha: 0.03)
         }
         return cell
     }

@@ -14,6 +14,7 @@ class FrameDataEntryCell: UITableViewCell {
     @IBOutlet var moveNameLabel: UILabel!
     @IBOutlet var startupFramesLabel: UILabel!
     @IBOutlet var activeFramesLabel: UILabel!
+    @IBOutlet var moveNameBackground: UIView!
     @IBOutlet var recoveryFramesLabel: UILabel!
     @IBOutlet var blockAdvantageLabel: UILabel!
     @IBOutlet var hitAdvantageLabel: UILabel!
@@ -55,6 +56,7 @@ class FrameDataEntryCell: UITableViewCell {
                     }
                 }
             }
+            
         } else {
             descriptionLabel.text = nil
             descriptionLabel.sizeToFit()
@@ -62,11 +64,8 @@ class FrameDataEntryCell: UITableViewCell {
             let heightConstraint = NSLayoutConstraint(item: descBackground, attribute: NSLayoutAttribute.Height, relatedBy: NSLayoutRelation.Equal, toItem: nil, attribute: NSLayoutAttribute.NotAnAttribute, multiplier: 1, constant: 0)
             heightConstraint.priority = 1000
             heightConstraint.identifier = "zeroHeightConstraint"
-            
             descBackground.addConstraint(heightConstraint)
-            
-            print("height: \(descriptionLabel.frame.height)")
-            print("height: \(descBackground.frame.height)")
+
             descriptionLabel.hidden = true
         }
     }
