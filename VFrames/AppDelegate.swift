@@ -22,6 +22,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         Fabric.with([Crashlytics.self])
         StringResolver.initialize()
         
+        incrementLaunchCount()
+        
         loadDefaultCharactersModel()
         
 //        initializeSupportDirectory()
@@ -127,6 +129,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let dataSource = CharactersModelJsonAdapter()
         charactersModel = dataSource.loadCharactersModel(jsonData)
         print("Loaded characters model version: \(charactersModel.getVersion())")
+    }
+    
+    private func incrementLaunchCount() {
+        let launchCountKey = "PREFS_LAUNCH_COUNT_KEY"
+        let prefs = NSUserDefaults.standardUserDefaults()
+        var launchCount = prefs.integerForKey(launchCountKey)
+        launchCount++
+        prefs.setInteger(launchCount, forKey: launchCountKey)
     }
     
 }

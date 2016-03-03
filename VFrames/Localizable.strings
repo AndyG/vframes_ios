@@ -6,6 +6,12 @@
   Copyright © 2016 VFrames. All rights reserved.
 */
 
+//Rating Request
+"rating_request_title" = "We want your feedback!";
+"rating_request_message" = "Your feedback helps us improve VFrames. Let us know what you think on the App Store! \n\nYou won\'t see this message again.";
+"rating_request_positive_button" = "Give Feedback";
+"rating_request_negative_button" = "No Thanks";
+
 //Character Names
 "ryu_name" = "Ryu";
 "chun_name" = "Chun-Li";

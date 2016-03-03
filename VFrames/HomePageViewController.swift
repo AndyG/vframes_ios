@@ -20,6 +20,9 @@ class HomePageViewController: UIViewController, UICollectionViewDelegate, UIColl
         super.viewDidLoad()
         setupCharactersModel()
         showCorrectView()
+        if (shouldShowFeedbackRequest()) {
+            showFeedbackRequest()
+        }
     }
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -82,7 +85,6 @@ class HomePageViewController: UIViewController, UICollectionViewDelegate, UIColl
         let selectedCell = collectionView.cellForItemAtIndexPath(indexPath) as! CharacterSelectCell
         selectedCell.backgroundColor = nil
     }
-
     
 //    //MARK: methods for getting data from the network
 //    func onResult(result: GetNetworkDataResult) {
@@ -171,5 +173,40 @@ class HomePageViewController: UIViewController, UICollectionViewDelegate, UIColl
 //        presentViewController(alert, animated: true, completion: nil)
 //    }
     
+    private func shouldShowFeedbackRequest() -> Bool {
+        let launchCountKey = "PREFS_LAUNCH_COUNT_KEY"
+        let hasShownFeedbackKey = "PREFS_SHOWN_FEEDBACK_KEY"
+        let prefs = NSUserDefaults.standardUserDefaults()
+        let launchCount = prefs.integerForKey(launchCountKey)
+        let hasShownFeedback = prefs.boolForKey(hasShownFeedbackKey)
+        
+        return (launchCount >= 5 && !hasShownFeedback)
+    }
+    
+    private func showFeedbackRequest() {
+        //Ensure they don't see the message again
+        let hasShownFeedbackKey = "PREFS_SHOWN_FEEDBACK_KEY"
+        let prefs = NSUserDefaults.standardUserDefaults()
+        prefs.setBool(true, forKey: hasShownFeedbackKey)
+        
+        let alertTitle = NSLocalizedString("rating_request_title", comment: "title for dialog")
+        let alertMessage = NSLocalizedString("rating_request_message", comment: "message for dialog")
+        let rateButtonText = NSLocalizedString("rating_request_positive_button", comment: "positive button")
+        let declineButtonText = NSLocalizedString("rating_request_negative_button", comment: "negative button")
+        
+        let alert = UIAlertController(title: alertTitle, message: alertMessage, preferredStyle: UIAlertControllerStyle.Alert)
+
+        let confirmAction = UIAlertAction(title: rateButtonText, style: .Default, handler: { (action: UIAlertAction!) in
+            //TODO: fix this URL as it is not working on simulator
+            let url = NSURL(string: "http://itunes.apple.com/app/id1084560583")!
+            UIApplication.sharedApplication().openURL(url)
+        })
+        
+        let denyAction = UIAlertAction(title: declineButtonText, style: .Cancel, handler: nil);
+
+        alert.addAction(confirmAction)
+        alert.addAction(denyAction)
+        presentViewController(alert, animated: true, completion: nil)
+    }
 }
 
