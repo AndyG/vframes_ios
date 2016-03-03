@@ -76,7 +76,7 @@
 		A13876F51C5DB7AF00EA1413 /* SFCharacter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SFCharacter.swift; sourceTree = "<group>"; };
 		A13876F71C5DB8CB00EA1413 /* MoveCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoveCategory.swift; sourceTree = "<group>"; };
 		A13876F91C5DBB4400EA1413 /* CharactersModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharactersModel.swift; sourceTree = "<group>"; };
-		A13876FF1C5EB3BF00EA1413 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		A13876FF1C5EB3BF00EA1413 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A163B0A21C723C7B0048571D /* NetworkDataSourceListenerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkDataSourceListenerProtocol.swift; sourceTree = "<group>"; };
 		A16454521C5EB55A00201417 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = "Pods/../build/Debug-iphoneos/SwiftyJSON.framework"; sourceTree = "<group>"; };
 		A16454561C5F15EA00201417 /* CharactersModelJsonAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharactersModelJsonAdapter.swift; sourceTree = "<group>"; };

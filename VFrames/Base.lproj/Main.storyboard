@@ -20,8 +20,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="qqn-qT-Jau">
-                                <rect key="frame" x="20" y="118.5" width="560" height="471.5"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" ambiguous="YES" misplaced="YES" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="qqn-qT-Jau">
+                                <rect key="frame" x="20" y="145.5" width="560" height="444.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="5" id="fWT-Gq-GCA">
                                     <size key="itemSize" width="130" height="130"/>
@@ -75,6 +75,16 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Iu-b1-JUj">
+                                <rect key="frame" x="221" y="101.5" width="159" height="30"/>
+                                <state key="normal" title="Update Character Data"/>
+                                <connections>
+                                    <action selector="updateButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="j9c-q4-CJZ"/>
+                                </connections>
+                            </button>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="vAn-gH-Ove" userLabel="Update Data Activity Indicator">
+                                <rect key="frame" x="290" y="101.5" width="20" height="30"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -82,13 +92,20 @@
                             <constraint firstItem="qqn-qT-Jau" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="Anj-tv-CnU"/>
                             <constraint firstItem="qqn-qT-Jau" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="C8o-ly-1uq"/>
                             <constraint firstItem="qqn-qT-Jau" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" constant="-10" id="Gn4-5u-4Gc"/>
+                            <constraint firstItem="5Iu-b1-JUj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="HCb-lc-ino"/>
                             <constraint firstItem="1IX-Sl-tQx" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="HOH-Qb-1WZ"/>
+                            <constraint firstItem="vAn-gH-Ove" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="KxW-OR-hCo"/>
+                            <constraint firstItem="vAn-gH-Ove" firstAttribute="height" secondItem="5Iu-b1-JUj" secondAttribute="height" id="MEv-pc-Cfu"/>
                             <constraint firstAttribute="leadingMargin" secondItem="1IX-Sl-tQx" secondAttribute="leading" id="P1h-js-lVP"/>
+                            <constraint firstItem="qqn-qT-Jau" firstAttribute="top" secondItem="5Iu-b1-JUj" secondAttribute="bottom" constant="14" id="TWu-yK-uHW"/>
+                            <constraint firstItem="5Iu-b1-JUj" firstAttribute="top" secondItem="1IX-Sl-tQx" secondAttribute="bottomMargin" constant="5" id="Ybp-fq-R8h"/>
                             <constraint firstAttribute="trailingMargin" secondItem="1IX-Sl-tQx" secondAttribute="trailing" id="mEy-xh-EHT"/>
                             <constraint firstItem="qqn-qT-Jau" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="10" id="rWT-re-Ee7"/>
+                            <constraint firstItem="vAn-gH-Ove" firstAttribute="centerY" secondItem="5Iu-b1-JUj" secondAttribute="centerY" id="sIO-yk-KYb"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
+                                <exclude reference="3dL-JK-Py5"/>
                                 <exclude reference="rWT-re-Ee7"/>
                             </mask>
                         </variation>
@@ -98,6 +115,8 @@
                     </navigationItem>
                     <connections>
                         <outlet property="characterSelectCollectionView" destination="qqn-qT-Jau" id="Ofp-9q-e4Q"/>
+                        <outlet property="updateDataActivityIndicator" destination="vAn-gH-Ove" id="FRq-vg-1ke"/>
+                        <outlet property="updateDataButton" destination="5Iu-b1-JUj" id="nji-nO-5Xd"/>
                         <segue destination="FLc-cB-P6x" kind="show" identifier="showCharacterInfo" id="iP5-Ue-koQ"/>
                     </connections>
                 </viewController>
