@@ -23,15 +23,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         StringResolver.initialize()
         
         incrementLaunchCount()
+        incrementVersionLaunchCount()
         
         loadDefaultCharactersModel()
         
-//        initializeSupportDirectory()
-//        if savedCharactersModelExists() {
-//            loadSavedCharactersModel()
-//        } else {
-//            loadDefaultCharactersModel()
-//        }
+        initializeSupportDirectory()
+        
+        //We don't want to try to load a saved model if the model doesn't exist or
+        //if this is the user's first time launching this version of the app.
+        if (isFirstVersionLaunch() || !savedCharactersModelExists()) {
+            loadDefaultCharactersModel()
+        } else {
+            loadSavedCharactersModel()
+        }
+        
         return true
     }
 
@@ -137,6 +142,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         var launchCount = prefs.integerForKey(launchCountKey)
         launchCount++
         prefs.setInteger(launchCount, forKey: launchCountKey)
+    }
+    
+    private func incrementVersionLaunchCount() {
+        let appVersion = NSBundle.mainBundle().infoDictionary!["CFBundleVersion"] as! String
+        let versionLaunchCountKey = "PREFS_LAUNCH_COUNT_KEY_VERSION_\(appVersion)"
+        
+        let prefs = NSUserDefaults.standardUserDefaults()
+        var launchCount = prefs.integerForKey(versionLaunchCountKey)
+        launchCount++
+        prefs.setInteger(launchCount, forKey: versionLaunchCountKey)
+    }
+    
+    private func isFirstVersionLaunch() -> Bool {
+        let appVersion = NSBundle.mainBundle().infoDictionary!["CFBundleVersion"] as! String
+        let versionLaunchCountKey = "PREFS_LAUNCH_COUNT_KEY_VERSION_\(appVersion)"
+        
+        let prefs = NSUserDefaults.standardUserDefaults()
+        return (prefs.integerForKey(versionLaunchCountKey) == 1)
     }
     
 }
