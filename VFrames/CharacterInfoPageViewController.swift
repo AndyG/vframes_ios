@@ -13,7 +13,7 @@ class CharacterInfoPageViewController: UIPageViewController {
     var targetCharacterId: CharacterID!
     
     private(set) lazy var orderedViewControllers: [UIViewController] = {
-        return [self.createMovesListViewController(), self.createFrameDataViewController(), self.createNotesViewController()]
+        return [self.createMovesListViewController(), self.createFrameDataViewController(), self.createNotesViewController(), self.createBnbsViewController()]
     }()
     
     private func newViewController(restorationId: String) -> UIViewController {
@@ -61,6 +61,10 @@ class CharacterInfoPageViewController: UIPageViewController {
         return frameDataViewController
     }
     
+    private func createBnbsViewController() -> BnBViewController {
+        return self.newViewController("bnbsViewController") as! BnBViewController
+    }
+    
     private func createNotesViewController() -> UIViewController {
         return self.newViewController("notesViewController")
     }
@@ -74,8 +78,10 @@ extension CharacterInfoPageViewController: UIPageViewControllerDataSource {
                 return nil
             } else if viewController.isKindOfClass(FrameDataViewController) {
                 return createMovesListViewController()
-            } else {
+            } else if viewController.isKindOfClass(BnBViewController) {
                 return createFrameDataViewController()
+            } else {
+                return createBnbsViewController()
             }
     }
     
@@ -84,6 +90,8 @@ extension CharacterInfoPageViewController: UIPageViewControllerDataSource {
             if viewController.isKindOfClass(MovesListViewController) {
                 return createFrameDataViewController()
             } else if viewController.isKindOfClass(FrameDataViewController) {
+                return createBnbsViewController()
+            } else if viewController.isKindOfClass(BnBViewController) {
                 return createNotesViewController()
             } else {
                 return nil
@@ -91,7 +99,7 @@ extension CharacterInfoPageViewController: UIPageViewControllerDataSource {
     }
     
     func presentationCountForPageViewController(pageViewController: UIPageViewController) -> Int {
-        return 3
+        return 4
     }
     
     func presentationIndexForPageViewController(pageViewController: UIPageViewController) -> Int {

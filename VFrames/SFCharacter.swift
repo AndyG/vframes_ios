@@ -11,10 +11,12 @@ import Foundation
 class SFCharacter {
     private var moveList: [MoveCategory:Array<MoveListEntryProtocol>]
     private var frameData: FrameDataProtocol
+    private var bnbCombos: BreadAndButterModel
     
-    init (moveList: [MoveCategory:Array<MoveListEntryProtocol>], frameData: FrameDataProtocol) {
+    init (moveList: [MoveCategory:Array<MoveListEntryProtocol>], frameData: FrameDataProtocol, bnbCombos: BreadAndButterModel) {
         self.moveList = moveList
         self.frameData = frameData
+        self.bnbCombos = bnbCombos
     }
         
     func getMoveList() -> [MoveCategory:Array<MoveListEntryProtocol>] {

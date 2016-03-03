@@ -25,17 +25,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         incrementLaunchCount()
         incrementVersionLaunchCount()
         
-        loadDefaultCharactersModel()
-        
         initializeSupportDirectory()
         
-        //We don't want to try to load a saved model if the model doesn't exist or
-        //if this is the user's first time launching this version of the app.
-        if (isFirstVersionLaunch() || !savedCharactersModelExists()) {
-            loadDefaultCharactersModel()
-        } else {
-            loadSavedCharactersModel()
-        }
+        loadDefaultCharactersModel()
+        
+//        //We don't want to try to load a saved model if the model doesn't exist or
+//        //if this is the user's first time launching this version of the app.
+//        if (isFirstVersionLaunch() || !savedCharactersModelExists()) {
+//            loadDefaultCharactersModel()
+//        } else {
+//            loadSavedCharactersModel()
+//        }
         
         return true
     }
@@ -102,7 +102,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     private func loadDefaultCharactersModel() {
-        let path = NSBundle.mainBundle().pathForResource("default_characters_model", ofType: "json")
+        let path = NSBundle.mainBundle().pathForResource("data_model", ofType: "json")
         let defaultModelUrl = NSURL(fileURLWithPath: path!)
         
         //Copy file to app support directory so it's there next time

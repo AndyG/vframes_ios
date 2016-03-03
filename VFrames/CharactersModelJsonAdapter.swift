@@ -18,6 +18,7 @@ class CharactersModelJsonAdapter {
         let charactersJson = charactersModelJson["characters"]
         var characters = [CharacterID:SFCharacter]()
         for characterId in CharacterID.allValuesAlphabetic {
+            print("Parsing character: \(characterId.rawValue)")
             let characterJsonId = getJsonIdForCharacter(characterId)
             let characterJson = charactersJson[characterJsonId]
             characters[characterId] = loadCharacter(characterJson)
@@ -33,7 +34,10 @@ class CharactersModelJsonAdapter {
         let frameDataJson = characterJson["frame_data"]
         let frameData: FrameDataProtocol = FrameDataLoader.loadFrameData(frameDataJson)
         
-        let sfCharacter: SFCharacter = SFCharacter(moveList: moveList, frameData: frameData)
+        let bnbCombosJson = characterJson["bnb_combos"]
+        let bnbModel: BreadAndButterModel = BnbsLoader.loadCombos(bnbCombosJson.arrayValue)
+        
+        let sfCharacter: SFCharacter = SFCharacter(moveList: moveList, frameData: frameData, bnbCombos: bnbModel)
         return sfCharacter
     }
     

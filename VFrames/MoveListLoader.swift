@@ -35,9 +35,6 @@ public class MoveListLoader {
         let pretextId = jsonData["pretextID"].string
         let posttextId = jsonData["posttextID"].string
         let descriptionId = jsonData["description"].string
-        if (descriptionId != nil) {
-            print("Loaded description: \(descriptionId)")
-        }
         let input = loadInputArray(jsonData["input"].string)
         
         let moveListEntry = MoveListEntry(nameId: name, pretextId: pretextId, posttextId: posttextId, descriptionId: descriptionId, inputElementList: input)
