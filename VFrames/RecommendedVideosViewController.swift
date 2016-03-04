@@ -118,30 +118,47 @@ class RecommendedVideosViewController: UIViewController, UITableViewDataSource, 
         }
     }
     
-    func onResult(result: [String:Array<YoutubeVideo>]) {
-        loadingIndicator.stopAnimating()
-        loadingIndicator.hidden = true
+    private func showVideosTable(youtubeVideos: [String:Array<YoutubeVideo>]) {
+        videosTableView.hidden = false
+        self.youtubeVideos = youtubeVideos
+        setupTableHeaders()
+        videosTableView.reloadData()
         
-        if (!result.isEmpty) {
-            videosTableView.hidden = false
-            self.youtubeVideos = result
-            setupTableHeaders()
-            videosTableView.reloadData()
-
-            errorLoadingContainer.hidden = true
-            videosTableView.hidden = false
-        } else {
-            noVideosLabel.hidden = false
-            errorLoadingContainer.hidden = true
-            videosTableView.hidden = true
-        }
+        errorLoadingContainer.hidden = true
+        videosTableView.hidden = false
     }
     
-    func onError() {
+    private func showNoVideosUI() {
+        noVideosLabel.hidden = false
+        errorLoadingContainer.hidden = true
+        videosTableView.hidden = true
+    }
+    
+    private func showErrorUI() {
         loadingIndicator.stopAnimating()
         loadingIndicator.hidden = true
         noVideosLabel.hidden = true
         videosTableView.hidden = true
         errorLoadingContainer.hidden = false
+    }
+    
+    func onResult(result: [String:Array<YoutubeVideo>]) {
+        dispatch_async(dispatch_get_main_queue(), {
+            self.loadingIndicator.stopAnimating()
+            self.loadingIndicator.hidden = true
+            
+            if (!result.isEmpty) {
+                self.showVideosTable(result)
+            } else {
+                self.showNoVideosUI()
+            }
+        })
+        
+    }
+    
+    func onError() {
+        dispatch_async(dispatch_get_main_queue(), {
+            self.showErrorUI()
+        })
     }
 }
