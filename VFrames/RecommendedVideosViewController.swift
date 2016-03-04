@@ -10,6 +10,7 @@ import UIKit
 
 class RecommendedVideosViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, GetVideosTaskListenerProtocol {
     
+    @IBOutlet var errorLoadingContainer: UIView!
     @IBOutlet var loadingIndicator: UIActivityIndicatorView!
     @IBOutlet var videosTableView: UITableView!
     
@@ -90,9 +91,14 @@ class RecommendedVideosViewController: UIViewController, UITableViewDataSource, 
         self.youtubeVideos = result
         setupTableHeaders()
         videosTableView.reloadData()
+
+        errorLoadingContainer.hidden = true
+        videosTableView.hidden = false
     }
     
     func onError() {
-        print("onError")
+        loadingIndicator.stopAnimating()
+        videosTableView.hidden = true
+        errorLoadingContainer.hidden = false
     }
 }

@@ -813,11 +813,47 @@
                                     <outlet property="delegate" destination="XM6-Mq-KEa" id="UfC-f1-tEg"/>
                                 </connections>
                             </tableView>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v6t-G2-8oc" userLabel="Error Loading View">
+                                <rect key="frame" x="0.0" y="74" width="600" height="525.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="There was an error loading videos. Please check your network connection and try again." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oM8-DZ-V6i">
+                                        <rect key="frame" x="30" y="210" width="540" height="51.5"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="twitch_dead" translatesAutoresizingMaskIntoConstraints="NO" id="xj7-84-bSW" userLabel="Error Loading Image">
+                                        <rect key="frame" x="225" y="50" width="150" height="150"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="150" id="UCC-mO-bfc"/>
+                                            <constraint firstAttribute="height" constant="150" id="jXR-8q-uJr"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="xj7-84-bSW" firstAttribute="centerX" secondItem="v6t-G2-8oc" secondAttribute="centerX" id="2qT-Ju-oBg"/>
+                                    <constraint firstItem="oM8-DZ-V6i" firstAttribute="centerX" secondItem="v6t-G2-8oc" secondAttribute="centerX" id="Req-pK-tyH"/>
+                                    <constraint firstItem="oM8-DZ-V6i" firstAttribute="width" secondItem="v6t-G2-8oc" secondAttribute="width" multiplier="0.9" id="jWV-hW-ts1"/>
+                                    <constraint firstItem="xj7-84-bSW" firstAttribute="top" secondItem="v6t-G2-8oc" secondAttribute="top" constant="50" id="nON-Sx-rTm"/>
+                                    <constraint firstItem="oM8-DZ-V6i" firstAttribute="top" secondItem="xj7-84-bSW" secondAttribute="bottom" constant="10" id="uWX-9B-8YA"/>
+                                    <constraint firstItem="xj7-84-bSW" firstAttribute="centerY" secondItem="v6t-G2-8oc" secondAttribute="centerY" id="vSq-im-cq0"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="vSq-im-cq0"/>
+                                    </mask>
+                                </variation>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="v6t-G2-8oc" firstAttribute="centerX" secondItem="kYh-Sb-IzT" secondAttribute="centerX" id="5p0-X0-9ZV"/>
                             <constraint firstItem="wd0-n8-vWg" firstAttribute="centerY" secondItem="kYh-Sb-IzT" secondAttribute="centerY" id="Efp-uZ-iq2"/>
+                            <constraint firstItem="v6t-G2-8oc" firstAttribute="top" secondItem="wd0-n8-vWg" secondAttribute="bottom" constant="14" id="KXF-yA-asg"/>
                             <constraint firstItem="1Fd-OH-Jqr" firstAttribute="centerY" secondItem="kYh-Sb-IzT" secondAttribute="centerY" id="Otj-M6-buM"/>
+                            <constraint firstItem="v6t-G2-8oc" firstAttribute="width" secondItem="kYh-Sb-IzT" secondAttribute="width" id="ScT-ix-2a2"/>
+                            <constraint firstItem="zJI-QB-eDF" firstAttribute="top" secondItem="v6t-G2-8oc" secondAttribute="bottom" id="Wj4-mO-7y2"/>
                             <constraint firstItem="wd0-n8-vWg" firstAttribute="centerX" secondItem="kYh-Sb-IzT" secondAttribute="centerX" id="X0y-Nm-z67"/>
                             <constraint firstItem="4vi-lt-o69" firstAttribute="leading" secondItem="kYh-Sb-IzT" secondAttribute="leading" id="ZON-uD-mnq"/>
                             <constraint firstItem="4vi-lt-o69" firstAttribute="top" secondItem="wd0-n8-vWg" secondAttribute="bottom" constant="14" id="cf7-qc-HSV"/>
@@ -833,6 +869,7 @@
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="errorLoadingContainer" destination="v6t-G2-8oc" id="HWy-kv-PIV"/>
                         <outlet property="loadingIndicator" destination="1Fd-OH-Jqr" id="s2P-c5-VAD"/>
                         <outlet property="videosTableView" destination="4vi-lt-o69" id="71v-e6-6mp"/>
                     </connections>
@@ -904,5 +941,6 @@
     <resources>
         <image name="birdie_card" width="417" height="549"/>
         <image name="input_direction_back" width="105" height="105"/>
+        <image name="twitch_dead" width="1000" height="1000"/>
     </resources>
 </document>
