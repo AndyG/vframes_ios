@@ -730,8 +730,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="1Fd-OH-Jqr">
-                                <rect key="frame" x="290" y="290" width="20" height="20"/>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" hidesWhenStopped="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="1Fd-OH-Jqr">
+                                <rect key="frame" x="291" y="289" width="20" height="20"/>
                             </activityIndicatorView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recommended Videos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wd0-n8-vWg">
                                 <rect key="frame" x="167" y="28" width="267" height="32.5"/>
@@ -845,20 +845,29 @@
                                     </mask>
                                 </variation>
                             </view>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recommended videos are on the way for this character!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="09s-g6-9hs">
+                                <rect key="frame" x="60.5" y="274" width="480" height="51.5"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="v6t-G2-8oc" firstAttribute="centerX" secondItem="kYh-Sb-IzT" secondAttribute="centerX" id="5p0-X0-9ZV"/>
+                            <constraint firstItem="09s-g6-9hs" firstAttribute="width" secondItem="kYh-Sb-IzT" secondAttribute="width" multiplier="0.8" id="64M-bB-5t4"/>
                             <constraint firstItem="wd0-n8-vWg" firstAttribute="centerY" secondItem="kYh-Sb-IzT" secondAttribute="centerY" id="Efp-uZ-iq2"/>
                             <constraint firstItem="v6t-G2-8oc" firstAttribute="top" secondItem="wd0-n8-vWg" secondAttribute="bottom" constant="14" id="KXF-yA-asg"/>
                             <constraint firstItem="1Fd-OH-Jqr" firstAttribute="centerY" secondItem="kYh-Sb-IzT" secondAttribute="centerY" id="Otj-M6-buM"/>
                             <constraint firstItem="v6t-G2-8oc" firstAttribute="width" secondItem="kYh-Sb-IzT" secondAttribute="width" id="ScT-ix-2a2"/>
+                            <constraint firstItem="09s-g6-9hs" firstAttribute="centerY" secondItem="kYh-Sb-IzT" secondAttribute="centerY" id="Tmy-Th-fdu"/>
                             <constraint firstItem="zJI-QB-eDF" firstAttribute="top" secondItem="v6t-G2-8oc" secondAttribute="bottom" id="Wj4-mO-7y2"/>
                             <constraint firstItem="wd0-n8-vWg" firstAttribute="centerX" secondItem="kYh-Sb-IzT" secondAttribute="centerX" id="X0y-Nm-z67"/>
                             <constraint firstItem="4vi-lt-o69" firstAttribute="leading" secondItem="kYh-Sb-IzT" secondAttribute="leading" id="ZON-uD-mnq"/>
                             <constraint firstItem="4vi-lt-o69" firstAttribute="top" secondItem="wd0-n8-vWg" secondAttribute="bottom" constant="14" id="cf7-qc-HSV"/>
                             <constraint firstItem="zJI-QB-eDF" firstAttribute="top" secondItem="4vi-lt-o69" secondAttribute="bottom" id="eEX-a2-2TA"/>
                             <constraint firstItem="wd0-n8-vWg" firstAttribute="top" secondItem="nmw-ze-rU5" secondAttribute="bottom" constant="8" id="ei6-rt-gWN"/>
+                            <constraint firstItem="09s-g6-9hs" firstAttribute="centerX" secondItem="kYh-Sb-IzT" secondAttribute="centerX" id="fWC-do-e99"/>
                             <constraint firstItem="4vi-lt-o69" firstAttribute="trailing" secondItem="kYh-Sb-IzT" secondAttribute="trailing" id="gxJ-V6-7Eb"/>
                             <constraint firstItem="1Fd-OH-Jqr" firstAttribute="centerX" secondItem="kYh-Sb-IzT" secondAttribute="centerX" id="mmW-Qb-bgX"/>
                         </constraints>
@@ -871,6 +880,7 @@
                     <connections>
                         <outlet property="errorLoadingContainer" destination="v6t-G2-8oc" id="HWy-kv-PIV"/>
                         <outlet property="loadingIndicator" destination="1Fd-OH-Jqr" id="s2P-c5-VAD"/>
+                        <outlet property="noVideosLabel" destination="09s-g6-9hs" id="4sY-kS-0kH"/>
                         <outlet property="videosTableView" destination="4vi-lt-o69" id="71v-e6-6mp"/>
                     </connections>
                 </viewController>

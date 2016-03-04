@@ -13,6 +13,7 @@ class RecommendedVideosViewController: UIViewController, UITableViewDataSource, 
     @IBOutlet var errorLoadingContainer: UIView!
     @IBOutlet var loadingIndicator: UIActivityIndicatorView!
     @IBOutlet var videosTableView: UITableView!
+    @IBOutlet var noVideosLabel: UILabel!
     
     var targetCharacterId: CharacterID!
     
@@ -24,6 +25,8 @@ class RecommendedVideosViewController: UIViewController, UITableViewDataSource, 
         videosTableView.hidden = true
         let getVideosTask = GetRecommendedVideosTask()
         getVideosTask.loadData(self, character: getCharacterStringForUrl(targetCharacterId))
+        loadingIndicator.hidden = false
+        loadingIndicator.startAnimating()
     }
 
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -73,8 +76,38 @@ class RecommendedVideosViewController: UIViewController, UITableViewDataSource, 
     
     private func getCharacterStringForUrl(characterId: CharacterID) -> String {
         switch(characterId) {
-        default:
+        case .BIRDIE:
+            return "birdie"
+        case .CAMMY:
+            return "cammy"
+        case .CHUN:
+            return "chun"
+        case .CLAW:
+            return "claw"
+        case .DHALSIM:
+            return "dhalsim"
+        case .DICTATOR:
+            return "dictator"
+        case .FANG:
+            return "fang"
+        case .KARIN:
+            return "karin"
+        case .KEN:
+            return "ken"
+        case .LAURA:
+            return "laura"
+        case .MIKA:
+            return "mika"
+        case .NASH:
+            return "nash"
+        case .NECALLI:
+            return "necalli"
+        case .RASHID:
+            return "rashid"
+        case .RYU:
             return "ryu"
+        case .ZANGIEF:
+            return "zangief"
         }
     }
     
@@ -87,17 +120,27 @@ class RecommendedVideosViewController: UIViewController, UITableViewDataSource, 
     
     func onResult(result: [String:Array<YoutubeVideo>]) {
         loadingIndicator.stopAnimating()
-        videosTableView.hidden = false
-        self.youtubeVideos = result
-        setupTableHeaders()
-        videosTableView.reloadData()
+        loadingIndicator.hidden = true
+        
+        if (!result.isEmpty) {
+            videosTableView.hidden = false
+            self.youtubeVideos = result
+            setupTableHeaders()
+            videosTableView.reloadData()
 
-        errorLoadingContainer.hidden = true
-        videosTableView.hidden = false
+            errorLoadingContainer.hidden = true
+            videosTableView.hidden = false
+        } else {
+            noVideosLabel.hidden = false
+            errorLoadingContainer.hidden = true
+            videosTableView.hidden = true
+        }
     }
     
     func onError() {
         loadingIndicator.stopAnimating()
+        loadingIndicator.hidden = true
+        noVideosLabel.hidden = true
         videosTableView.hidden = true
         errorLoadingContainer.hidden = false
     }
