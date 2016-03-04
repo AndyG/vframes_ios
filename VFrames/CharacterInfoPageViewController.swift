@@ -13,7 +13,11 @@ class CharacterInfoPageViewController: UIPageViewController {
     var targetCharacterId: CharacterID!
     
     private(set) lazy var orderedViewControllers: [UIViewController] = {
-        return [self.createMovesListViewController(), self.createFrameDataViewController(), self.createBnbsViewController(), self.createRecommendedVideosViewController(), self.createNotesViewController()]
+        return [self.createFrameDataViewController(),
+            self.createMovesListViewController(),
+            self.createBnbsViewController(),
+            self.createRecommendedVideosViewController(),
+            self.createNotesViewController()]
     }()
     
     private func newViewController(restorationId: String) -> UIViewController {
@@ -29,7 +33,7 @@ class CharacterInfoPageViewController: UIPageViewController {
         title = CharacterID.toString(targetCharacterId)
         dataSource = self
         
-        if let firstViewController = orderedViewControllers.first as? MovesListViewController {
+        if let firstViewController = orderedViewControllers.first as? FrameDataViewController {
             setViewControllers([firstViewController],
                 direction: .Forward,
                 animated: true,
@@ -82,12 +86,12 @@ extension CharacterInfoPageViewController: UIPageViewControllerDataSource {
     
     func pageViewController(pageViewController: UIPageViewController,
         viewControllerBeforeViewController viewController: UIViewController) -> UIViewController? {
-            if viewController.isKindOfClass(MovesListViewController) {
+            if viewController.isKindOfClass(FrameDataViewController) {
                 return nil
-            } else if viewController.isKindOfClass(FrameDataViewController) {
-                return createMovesListViewController()
-            } else if viewController.isKindOfClass(BnBViewController) {
+            } else if viewController.isKindOfClass(MovesListViewController) {
                 return createFrameDataViewController()
+            } else if viewController.isKindOfClass(BnBViewController) {
+                return createMovesListViewController()
             } else if viewController.isKindOfClass(RecommendedVideosViewController) {
                 return createBnbsViewController()
             } else if viewController.isKindOfClass(NotesViewController) {
@@ -99,9 +103,9 @@ extension CharacterInfoPageViewController: UIPageViewControllerDataSource {
     
     func pageViewController(pageViewController: UIPageViewController,
         viewControllerAfterViewController viewController: UIViewController) -> UIViewController? {
-            if viewController.isKindOfClass(MovesListViewController) {
-                return createFrameDataViewController()
-            } else if viewController.isKindOfClass(FrameDataViewController) {
+            if viewController.isKindOfClass(FrameDataViewController) {
+                return createMovesListViewController()
+            } else if viewController.isKindOfClass(MovesListViewController) {
                 return createBnbsViewController()
             } else if viewController.isKindOfClass(BnBViewController) {
                 return createRecommendedVideosViewController()

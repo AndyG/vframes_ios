@@ -174,7 +174,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ye8-eo-zmR" userLabel="Error Container View">
-                                <rect key="frame" x="0.0" y="102.5" width="600" height="384.5"/>
+                                <rect key="frame" x="0.0" y="118" width="600" height="369"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="twitch_dead" translatesAutoresizingMaskIntoConstraints="NO" id="cuH-fW-mE1">
                                         <rect key="frame" x="225" y="20" width="150" height="150"/>
@@ -215,7 +215,7 @@
                                 <rect key="frame" x="290" y="234" width="20" height="20"/>
                             </activityIndicatorView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="8r2-O6-6WL">
-                                <rect key="frame" x="0.0" y="94.5" width="600" height="392.5"/>
+                                <rect key="frame" x="0.0" y="118" width="600" height="369"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="stream" id="Bmh-i4-kxN" customClass="TwitchStreamCell" customModule="VFrames" customModuleProvider="target">
@@ -288,6 +288,13 @@
                                     <outlet property="delegate" destination="cHU-jS-s0X" id="wbI-gG-1yj"/>
                                 </connections>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PV0-Ln-MEi">
+                                <rect key="frame" x="243" y="78" width="114" height="30"/>
+                                <state key="normal" title="Refresh Streams"/>
+                                <connections>
+                                    <action selector="refreshClicked:" destination="cHU-jS-s0X" eventType="touchUpInside" id="L6G-Yw-JmO"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -302,6 +309,10 @@
                             <constraint firstAttribute="trailingMargin" secondItem="fBq-kZ-Fp2" secondAttribute="trailing" constant="10" id="Q5t-PL-qIM"/>
                             <constraint firstItem="fBq-kZ-Fp2" firstAttribute="leading" secondItem="sdy-SZ-h8T" secondAttribute="leadingMargin" constant="10" id="RDE-Of-acd"/>
                             <constraint firstItem="fBq-kZ-Fp2" firstAttribute="centerX" secondItem="sdy-SZ-h8T" secondAttribute="centerX" id="UgX-iw-UJU"/>
+                            <constraint firstItem="PV0-Ln-MEi" firstAttribute="centerX" secondItem="sdy-SZ-h8T" secondAttribute="centerX" id="VFz-U2-cOb"/>
+                            <constraint firstItem="8r2-O6-6WL" firstAttribute="top" secondItem="PV0-Ln-MEi" secondAttribute="bottom" constant="10" id="WcG-AX-azt"/>
+                            <constraint firstItem="Ye8-eo-zmR" firstAttribute="top" secondItem="PV0-Ln-MEi" secondAttribute="bottom" constant="10" id="ZoJ-TU-ntL"/>
+                            <constraint firstItem="PV0-Ln-MEi" firstAttribute="top" secondItem="mg8-JH-1cH" secondAttribute="bottom" constant="-6.5" id="b9x-CQ-XZy"/>
                             <constraint firstItem="Ye8-eo-zmR" firstAttribute="height" secondItem="sdy-SZ-h8T" secondAttribute="height" id="bKW-6r-7ah"/>
                             <constraint firstItem="Ye8-eo-zmR" firstAttribute="centerY" secondItem="sdy-SZ-h8T" secondAttribute="centerY" id="g1f-Eg-V5H"/>
                             <constraint firstItem="Ye8-eo-zmR" firstAttribute="width" secondItem="sdy-SZ-h8T" secondAttribute="width" id="gz0-96-BEx"/>
@@ -313,8 +324,10 @@
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
+                                <exclude reference="6xe-76-OQf"/>
                                 <exclude reference="bKW-6r-7ah"/>
                                 <exclude reference="g1f-Eg-V5H"/>
+                                <exclude reference="v4E-jj-KxE"/>
                                 <exclude reference="hps-Fi-104"/>
                             </mask>
                         </variation>

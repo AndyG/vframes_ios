@@ -22,13 +22,19 @@ class CurrentStreamsViewController: UIViewController, UITableViewDataSource, UIT
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        loadNewStreams()
+    }
+
+    @IBAction func refreshClicked(sender: UIButton) {
+        loadNewStreams()
+    }
+    
+    private func loadNewStreams() {
         //Load the twitch streams.
         showLoadingIndicator()
         let getTwitchStreamsTask = GetTwitchStreamsTask()
         getTwitchStreamsTask.getStreams(self)
     }
-
     private func showLoadingIndicator() {
         dispatch_async(dispatch_get_main_queue(), {
             self.activityIndicator.startAnimating()
