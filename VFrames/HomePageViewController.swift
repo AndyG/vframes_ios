@@ -8,21 +8,38 @@
 
 import UIKit
 
-class HomePageViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, NetworkDataSourceListenerProtocol {
+class HomePageViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout,
+    UITabBarDelegate,
+    NetworkDataSourceListenerProtocol {
+    
+    @IBOutlet var currentStreamsLayout: UIView!
+
+    @IBOutlet var characterSelectLayout: UIView!
     
     @IBOutlet var updateDataButton: UIButton!
     @IBOutlet var updateDataActivityIndicator: UIActivityIndicatorView!
     
+    @IBOutlet var tabBar: UITabBar!
     @IBOutlet var characterSelectCollectionView: UICollectionView!
         
     var charactersModel: CharactersModel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        tabBar.selectedItem = tabBar.items![0]
+//        addStreamsController()
         setupCharactersModel()
+        showCharacterSelectLayout()
         if (shouldShowFeedbackRequest()) {
             showFeedbackRequest()
         }
+        
+    }
+    
+    private func addStreamsController() {
+        let streams = storyboard?.instantiateViewControllerWithIdentifier("streamsViewController")
+        streams!.view.frame = currentStreamsLayout.bounds
+        currentStreamsLayout.addSubview((streams?.view)!)
     }
     
     @IBAction func updateButtonClicked(sender: UIButton) {
@@ -31,6 +48,15 @@ class HomePageViewController: UIViewController, UICollectionViewDelegate, UIColl
         updateDataActivityIndicator.hidden = false
         let dataSource = NetworkDataSource()
         dataSource.loadData(self, currentVersion: charactersModel.version)
+    }
+    
+    func tabBar(tabBar: UITabBar, didSelectItem item: UITabBarItem) {
+        let tag = item.tag
+        if (tag == 0) {
+            showCharacterSelectLayout()
+        } else if (tag == 1) {
+            showStreamsLayout()
+        }
     }
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -49,8 +75,12 @@ class HomePageViewController: UIViewController, UICollectionViewDelegate, UIColl
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        let destination = segue.destinationViewController as! CharacterInfoPageViewController
-        destination.targetCharacterId = CharacterID(rawValue: sender as! String)
+        if (segue.identifier == "showCharacterInfo") {
+            let destination = segue.destinationViewController as! CharacterInfoPageViewController
+            destination.targetCharacterId = CharacterID(rawValue: sender as! String)
+        } else {
+            print("preparing for embed segue")
+        }
     }
     
     //MARK: methods for character select collection view
@@ -92,6 +122,16 @@ class HomePageViewController: UIViewController, UICollectionViewDelegate, UIColl
     func collectionView(collectionView: UICollectionView, didUnhighlightItemAtIndexPath indexPath: NSIndexPath) {
         let selectedCell = collectionView.cellForItemAtIndexPath(indexPath) as! CharacterSelectCell
         selectedCell.backgroundColor = nil
+    }
+    
+    private func showCharacterSelectLayout() {
+        characterSelectLayout.hidden = false
+        currentStreamsLayout.hidden = true
+    }
+    
+    private func showStreamsLayout() {
+        characterSelectLayout.hidden = true
+        currentStreamsLayout.hidden = false
     }
     
     //MARK: methods for getting data from the network
