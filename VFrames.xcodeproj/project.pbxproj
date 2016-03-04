@@ -20,6 +20,9 @@
 		A126F2191C891C4A004D4BE8 /* RecommendedVideosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A126F2181C891C4A004D4BE8 /* RecommendedVideosViewController.swift */; };
 		A126F21B1C891FD3004D4BE8 /* YoutubeVideoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A126F21A1C891FD3004D4BE8 /* YoutubeVideoCell.swift */; };
 		A126F21D1C89F6AC004D4BE8 /* CurrentStreamsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A126F21C1C89F6AC004D4BE8 /* CurrentStreamsViewController.swift */; };
+		A126F2201C8A0962004D4BE8 /* GetTwitchStreamsTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = A126F21F1C8A0962004D4BE8 /* GetTwitchStreamsTask.swift */; };
+		A126F2221C8A099A004D4BE8 /* GetTwitchStreamsListenerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A126F2211C8A099A004D4BE8 /* GetTwitchStreamsListenerProtocol.swift */; };
+		A126F2251C8A0A1E004D4BE8 /* TwitchStream.swift in Sources */ = {isa = PBXBuildFile; fileRef = A126F2241C8A0A1E004D4BE8 /* TwitchStream.swift */; };
 		A13876D01C59ABD800EA1413 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13876CF1C59ABD800EA1413 /* AppDelegate.swift */; };
 		A13876D21C59ABD800EA1413 /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13876D11C59ABD800EA1413 /* HomePageViewController.swift */; };
 		A13876D51C59ABD800EA1413 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A13876D31C59ABD800EA1413 /* Main.storyboard */; };
@@ -88,6 +91,9 @@
 		A126F2181C891C4A004D4BE8 /* RecommendedVideosViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecommendedVideosViewController.swift; sourceTree = "<group>"; };
 		A126F21A1C891FD3004D4BE8 /* YoutubeVideoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YoutubeVideoCell.swift; sourceTree = "<group>"; };
 		A126F21C1C89F6AC004D4BE8 /* CurrentStreamsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentStreamsViewController.swift; sourceTree = "<group>"; };
+		A126F21F1C8A0962004D4BE8 /* GetTwitchStreamsTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetTwitchStreamsTask.swift; sourceTree = "<group>"; };
+		A126F2211C8A099A004D4BE8 /* GetTwitchStreamsListenerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetTwitchStreamsListenerProtocol.swift; sourceTree = "<group>"; };
+		A126F2241C8A0A1E004D4BE8 /* TwitchStream.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitchStream.swift; sourceTree = "<group>"; };
 		A13876CC1C59ABD800EA1413 /* VFrames.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VFrames.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A13876CF1C59ABD800EA1413 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A13876D11C59ABD800EA1413 /* HomePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageViewController.swift; sourceTree = "<group>"; };
@@ -209,6 +215,23 @@
 			name = YoutubeVideos;
 			sourceTree = "<group>";
 		};
+		A126F21E1C8A0950004D4BE8 /* Twitch */ = {
+			isa = PBXGroup;
+			children = (
+				A126F21F1C8A0962004D4BE8 /* GetTwitchStreamsTask.swift */,
+				A126F2211C8A099A004D4BE8 /* GetTwitchStreamsListenerProtocol.swift */,
+			);
+			name = Twitch;
+			sourceTree = "<group>";
+		};
+		A126F2231C8A0A16004D4BE8 /* Twitch */ = {
+			isa = PBXGroup;
+			children = (
+				A126F2241C8A0A1E004D4BE8 /* TwitchStream.swift */,
+			);
+			name = Twitch;
+			sourceTree = "<group>";
+		};
 		A13876C31C59ABD800EA1413 = {
 			isa = PBXGroup;
 			children = (
@@ -291,6 +314,7 @@
 		A13876FB1C5DC14700EA1413 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				A126F2231C8A0A16004D4BE8 /* Twitch */,
 				A126F20E1C890952004D4BE8 /* Videos */,
 				A1F214DD1C87F2BC009AD929 /* Bnb Combos */,
 				A16454A31C701CE400201417 /* Frame Data */,
@@ -397,6 +421,7 @@
 		A16454BC1C71966D00201417 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				A126F21E1C8A0950004D4BE8 /* Twitch */,
 				A126F2171C8914D1004D4BE8 /* YoutubeVideos */,
 				A126F2071C890844004D4BE8 /* RecommendedVideos */,
 				A16454BD1C71967C00201417 /* NetworkDataSource.swift */,
@@ -578,6 +603,7 @@
 				A126F2041C889371004D4BE8 /* BreadAndButterCell.swift in Sources */,
 				A16454A51C701D0400201417 /* FrameDataEntryProtocol.swift in Sources */,
 				A126F2161C891451004D4BE8 /* GetYoutubeVideosTask.swift in Sources */,
+				A126F2221C8A099A004D4BE8 /* GetTwitchStreamsListenerProtocol.swift in Sources */,
 				A13876F61C5DB7AF00EA1413 /* SFCharacter.swift in Sources */,
 				A13876F11C5DB18E00EA1413 /* MoveListEntryProtocol.swift in Sources */,
 				A16454D11C72293200201417 /* AppSupportUtil.swift in Sources */,
@@ -589,6 +615,7 @@
 				A16454B01C7026F500201417 /* FrameData.swift in Sources */,
 				A13876F81C5DB8CB00EA1413 /* MoveCategory.swift in Sources */,
 				A13876F31C5DB34D00EA1413 /* MoveListEntry.swift in Sources */,
+				A126F2251C8A0A1E004D4BE8 /* TwitchStream.swift in Sources */,
 				A13876D21C59ABD800EA1413 /* HomePageViewController.swift in Sources */,
 				A164548A1C6876C200201417 /* InputCollectionView.swift in Sources */,
 				A126F21D1C89F6AC004D4BE8 /* CurrentStreamsViewController.swift in Sources */,
@@ -597,6 +624,7 @@
 				A164548D1C6B080D00201417 /* StringResolver.swift in Sources */,
 				A16454CB1C71C11100201417 /* JSONLoader.swift in Sources */,
 				A13876D01C59ABD800EA1413 /* AppDelegate.swift in Sources */,
+				A126F2201C8A0962004D4BE8 /* GetTwitchStreamsTask.swift in Sources */,
 				A164549F1C6FFA0400201417 /* FrameDataViewController.swift in Sources */,
 				A1F214E11C87F344009AD929 /* BreadAndButterModel.swift in Sources */,
 				A163B0A31C723C7B0048571D /* NetworkDataSourceListenerProtocol.swift in Sources */,

@@ -8,21 +8,74 @@
 
 import UIKit
 
-class CurrentStreamsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class CurrentStreamsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, GetTwitchStreamsListenerProtocol {
 
+    @IBOutlet var errorContainerView: UIView!
+    
+    @IBOutlet var noStreamsLabel: UILabel!
+    
+    @IBOutlet var streamsTableView: UITableView!
+    
+    @IBOutlet var activityIndicator: UIActivityIndicatorView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("loaded current streams view controller")
-        // Do any additional setup after loading the view.
+        
+        //Load the twitch streams.
+        showLoadingIndicator()
+        let getTwitchStreamsTask = GetTwitchStreamsTask()
+        getTwitchStreamsTask.getStreams(self)
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    private func showLoadingIndicator() {
+        dispatch_async(dispatch_get_main_queue(), {
+            self.activityIndicator.startAnimating()
+            self.activityIndicator.hidden = false
+            
+            self.errorContainerView.hidden = true
+            self.streamsTableView.hidden = true
+            self.noStreamsLabel.hidden = true
+        })
+    }
+    
+    private func showStreamsTable() {
+        dispatch_async(dispatch_get_main_queue(), {
+            self.activityIndicator.stopAnimating()
+            self.activityIndicator.hidden = true
+            
+            self.errorContainerView.hidden = true
+            self.noStreamsLabel.hidden = true
+            
+            self.streamsTableView.hidden = false
+        })
+    }
+    
+    private func showNoStreamsUI() {
+        dispatch_async(dispatch_get_main_queue(), {
+            self.activityIndicator.stopAnimating()
+            self.activityIndicator.hidden = true
+            
+            self.errorContainerView.hidden = true
+            self.streamsTableView.hidden = true
+            
+            self.noStreamsLabel.hidden = false
+        })
+    }
+    
+    private func showErrorUI() {
+        dispatch_async(dispatch_get_main_queue(), {
+            self.activityIndicator.stopAnimating()
+            self.activityIndicator.hidden = true
+            
+
+            self.streamsTableView.hidden = true
+            self.noStreamsLabel.hidden = true
+            
+            self.errorContainerView.hidden = false
+        })
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        print("creating stream cell")
         let cell = tableView.dequeueReusableCellWithIdentifier("streamCell")!
         return cell
     }
@@ -35,15 +88,18 @@ class CurrentStreamsViewController: UIViewController, UITableViewDataSource, UIT
         return 1
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func onResult(result: Array<TwitchStream>) {
+        print("onResult")
+        if (!result.isEmpty) {
+            showStreamsTable()
+        } else {
+            showNoStreamsUI()
+        }
     }
-    */
+    
+    func onError() {
+        print("error")
+        showErrorUI()
+    }
 
 }

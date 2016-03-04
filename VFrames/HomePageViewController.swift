@@ -27,7 +27,6 @@ class HomePageViewController: UIViewController, UICollectionViewDelegate, UIColl
     override func viewDidLoad() {
         super.viewDidLoad()
         tabBar.selectedItem = tabBar.items![0]
-//        addStreamsController()
         setupCharactersModel()
         showCharacterSelectLayout()
         if (shouldShowFeedbackRequest()) {
