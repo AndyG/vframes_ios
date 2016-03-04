@@ -13,7 +13,7 @@ class CharacterInfoPageViewController: UIPageViewController {
     var targetCharacterId: CharacterID!
     
     private(set) lazy var orderedViewControllers: [UIViewController] = {
-        return [self.createMovesListViewController(), self.createFrameDataViewController(), self.createNotesViewController(), self.createBnbsViewController()]
+        return [self.createMovesListViewController(), self.createFrameDataViewController(), self.createBnbsViewController(), self.createRecommendedVideosViewController(), self.createNotesViewController()]
     }()
     
     private func newViewController(restorationId: String) -> UIViewController {
@@ -62,7 +62,15 @@ class CharacterInfoPageViewController: UIPageViewController {
     }
     
     private func createBnbsViewController() -> BnBViewController {
-        return self.newViewController("bnbsViewController") as! BnBViewController
+        let bnbViewController = self.newViewController("bnbsViewController") as! BnBViewController
+        bnbViewController.targetCharacterId = targetCharacterId
+        return bnbViewController
+    }
+    
+    private func createRecommendedVideosViewController() -> RecommendedVideosViewController {
+        let recommendedVideosVC = self.newViewController("recommendedVideosViewController") as! RecommendedVideosViewController
+        recommendedVideosVC.targetCharacterId = targetCharacterId
+        return recommendedVideosVC
     }
     
     private func createNotesViewController() -> UIViewController {
@@ -80,8 +88,12 @@ extension CharacterInfoPageViewController: UIPageViewControllerDataSource {
                 return createMovesListViewController()
             } else if viewController.isKindOfClass(BnBViewController) {
                 return createFrameDataViewController()
-            } else {
+            } else if viewController.isKindOfClass(RecommendedVideosViewController) {
                 return createBnbsViewController()
+            } else if viewController.isKindOfClass(NotesViewController) {
+                return createRecommendedVideosViewController()
+            } else {
+                return nil
             }
     }
     
@@ -92,14 +104,18 @@ extension CharacterInfoPageViewController: UIPageViewControllerDataSource {
             } else if viewController.isKindOfClass(FrameDataViewController) {
                 return createBnbsViewController()
             } else if viewController.isKindOfClass(BnBViewController) {
+                return createRecommendedVideosViewController()
+            } else if viewController.isKindOfClass(RecommendedVideosViewController) {
                 return createNotesViewController()
+            } else if viewController.isKindOfClass(NotesViewController) {
+                return nil
             } else {
                 return nil
             }
     }
     
     func presentationCountForPageViewController(pageViewController: UIPageViewController) -> Int {
-        return 4
+        return 5
     }
     
     func presentationIndexForPageViewController(pageViewController: UIPageViewController) -> Int {

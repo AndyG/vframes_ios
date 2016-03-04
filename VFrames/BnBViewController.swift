@@ -10,10 +10,23 @@ import UIKit
 
 class BnBViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
+    var targetCharacterId: CharacterID!
+    var breadAndButters: BreadAndButterModel!
+    
+    @IBOutlet var bnbsTableView: UITableView!
+    
+    private var tableHeaders: Array<String>!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        let character = appDelegate.charactersModel.getCharacter(targetCharacterId)
+        breadAndButters = character.getBreadAndButterCombos()
+        
+        setupBnbsHeaders()
+        bnbsTableView.estimatedRowHeight = 150
+//        bnbsTableView.rowHeight = UITableViewAutomaticDimension
     }
 
     override func didReceiveMemoryWarning() {
@@ -22,23 +35,34 @@ class BnBViewController: UIViewController, UITableViewDataSource, UITableViewDel
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        let category = tableHeaders[indexPath.section]
+        let combo = breadAndButters.getCombosForCategory(category)[indexPath.item]
+        
+        let cell = tableView.dequeueReusableCellWithIdentifier("breadAndButterCell")
+        
+        let breadAndButterCell = cell as! BreadAndButterCell
+        breadAndButterCell.setCombo(combo)
+        return breadAndButterCell
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
-    }
-    
-    func tableView(tableView: UITableView, sectionForSectionIndexTitle title: String, atIndex index: Int) -> Int {
-        return 0
+        let category = tableHeaders[section]
+        return breadAndButters.getCombosForCategory(category).count
     }
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 0
+        return tableHeaders.count
     }
     
     func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return nil
+        return tableHeaders[section]
+    }
+    
+    private func setupBnbsHeaders() {
+        tableHeaders = Array<String>()
+        for category in breadAndButters.getCategories() {
+            tableHeaders.append(category)
+        }
     }
 
 }

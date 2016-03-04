@@ -5610,9 +5610,7 @@
                             "description": "Footsies range poke combo.", 
                             "label": "1-meter combo"
                         }
-                    ]
-                }, 
-                {
+                    ],
                     "Crush Counter Combos": [
                         {
                             "inputs": "s.HK, (walk forward) s.MP, s.HP xx HK Cannon Spike", 
@@ -5624,18 +5622,16 @@
                             "description": "Guaranteed command grab off of a crush counter. Can end with Critical Art.", 
                             "label": "The knees"
                         }
-                    ]
-                }, 
-                {
-                    "V-Trigger Combos": [
+                    ],
+                   "V-Trigger Combos": [
                         {
-                            "inputs": "s.MP, s.HP xx V-Trigger, s.HP xx Spiral Arrow, Cannon Spike", 
-                            "description": "Uses 1 meter.", 
+                            "inputs": "s.MP, s.HP xx V-Trigger, s.HP xx Spiral Arrow, Cannon Spike",
+                            "description": "Uses 1 meter.",
                             "label": "Basic poke"
                         }
                     ]
                 }
-            ], 
+            ],
             "move_list": {
                 "vreversal": [
                     {
