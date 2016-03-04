@@ -23,6 +23,8 @@
 		A126F2201C8A0962004D4BE8 /* GetTwitchStreamsTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = A126F21F1C8A0962004D4BE8 /* GetTwitchStreamsTask.swift */; };
 		A126F2221C8A099A004D4BE8 /* GetTwitchStreamsListenerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A126F2211C8A099A004D4BE8 /* GetTwitchStreamsListenerProtocol.swift */; };
 		A126F2251C8A0A1E004D4BE8 /* TwitchStream.swift in Sources */ = {isa = PBXBuildFile; fileRef = A126F2241C8A0A1E004D4BE8 /* TwitchStream.swift */; };
+		A126F2271C8A1E6A004D4BE8 /* TwitchStreamsJsonAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A126F2261C8A1E6A004D4BE8 /* TwitchStreamsJsonAdapter.swift */; };
+		A126F22B1C8A2452004D4BE8 /* TwitchStreamCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A126F22A1C8A2452004D4BE8 /* TwitchStreamCell.swift */; };
 		A13876D01C59ABD800EA1413 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13876CF1C59ABD800EA1413 /* AppDelegate.swift */; };
 		A13876D21C59ABD800EA1413 /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13876D11C59ABD800EA1413 /* HomePageViewController.swift */; };
 		A13876D51C59ABD800EA1413 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A13876D31C59ABD800EA1413 /* Main.storyboard */; };
@@ -94,6 +96,8 @@
 		A126F21F1C8A0962004D4BE8 /* GetTwitchStreamsTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetTwitchStreamsTask.swift; sourceTree = "<group>"; };
 		A126F2211C8A099A004D4BE8 /* GetTwitchStreamsListenerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetTwitchStreamsListenerProtocol.swift; sourceTree = "<group>"; };
 		A126F2241C8A0A1E004D4BE8 /* TwitchStream.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitchStream.swift; sourceTree = "<group>"; };
+		A126F2261C8A1E6A004D4BE8 /* TwitchStreamsJsonAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitchStreamsJsonAdapter.swift; sourceTree = "<group>"; };
+		A126F22A1C8A2452004D4BE8 /* TwitchStreamCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitchStreamCell.swift; sourceTree = "<group>"; };
 		A13876CC1C59ABD800EA1413 /* VFrames.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VFrames.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A13876CF1C59ABD800EA1413 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A13876D11C59ABD800EA1413 /* HomePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageViewController.swift; sourceTree = "<group>"; };
@@ -356,6 +360,7 @@
 				A16454B31C7034A600201417 /* FrameDataEntryCell.swift */,
 				A126F2031C889371004D4BE8 /* BreadAndButterCell.swift */,
 				A126F21A1C891FD3004D4BE8 /* YoutubeVideoCell.swift */,
+				A126F22A1C8A2452004D4BE8 /* TwitchStreamCell.swift */,
 			);
 			name = Cells;
 			sourceTree = "<group>";
@@ -401,6 +406,7 @@
 				A16454CA1C71C11100201417 /* JSONLoader.swift */,
 				A1F214E21C87F655009AD929 /* BnbsLoader.swift */,
 				A126F2111C890BEB004D4BE8 /* RecommendedVideosJsonAdapter.swift */,
+				A126F2261C8A1E6A004D4BE8 /* TwitchStreamsJsonAdapter.swift */,
 			);
 			name = Loader;
 			sourceTree = "<group>";
@@ -594,6 +600,7 @@
 				A16454971C6D818900201417 /* CharacterInfoPageViewController.swift in Sources */,
 				A16454B61C71160D00201417 /* NotesViewController.swift in Sources */,
 				A1F214E31C87F655009AD929 /* BnbsLoader.swift in Sources */,
+				A126F22B1C8A2452004D4BE8 /* TwitchStreamCell.swift in Sources */,
 				A1F214DF1C87F2CF009AD929 /* BreadAndButterCombo.swift in Sources */,
 				A16454AE1C7021BE00201417 /* HardCodedFrameDataEntry.swift in Sources */,
 				A13876FA1C5DBB4400EA1413 /* CharactersModel.swift in Sources */,
@@ -612,6 +619,7 @@
 				A126F2191C891C4A004D4BE8 /* RecommendedVideosViewController.swift in Sources */,
 				A126F2101C890960004D4BE8 /* YoutubeVideo.swift in Sources */,
 				A164545E1C66B24B00201417 /* MovesListViewController.swift in Sources */,
+				A126F2271C8A1E6A004D4BE8 /* TwitchStreamsJsonAdapter.swift in Sources */,
 				A16454B01C7026F500201417 /* FrameData.swift in Sources */,
 				A13876F81C5DB8CB00EA1413 /* MoveCategory.swift in Sources */,
 				A13876F31C5DB34D00EA1413 /* MoveListEntry.swift in Sources */,

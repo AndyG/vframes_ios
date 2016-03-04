@@ -18,6 +18,8 @@ class CurrentStreamsViewController: UIViewController, UITableViewDataSource, UIT
     
     @IBOutlet var activityIndicator: UIActivityIndicatorView!
     
+    private var twitchStreams: Array<TwitchStream>!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -38,14 +40,18 @@ class CurrentStreamsViewController: UIViewController, UITableViewDataSource, UIT
         })
     }
     
-    private func showStreamsTable() {
+    private func showStreamsTable(streams: Array<TwitchStream>) {
+        
+        twitchStreams = streams
+        
         dispatch_async(dispatch_get_main_queue(), {
             self.activityIndicator.stopAnimating()
             self.activityIndicator.hidden = true
             
             self.errorContainerView.hidden = true
             self.noStreamsLabel.hidden = true
-            
+
+            self.streamsTableView.reloadData()
             self.streamsTableView.hidden = false
         })
     }
@@ -76,22 +82,44 @@ class CurrentStreamsViewController: UIViewController, UITableViewDataSource, UIT
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("streamCell")!
+        print("loading cell for row: \(indexPath.row)")
+        let cell = tableView.dequeueReusableCellWithIdentifier("stream") as! TwitchStreamCell
+        cell.setStream(twitchStreams[indexPath.row])
         return cell
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        if (twitchStreams != nil) {
+            return twitchStreams.count
+        } else {
+            return 0
+        }
     }
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 1
+        return (twitchStreams != nil) ? 1 : 0
     }
     
+    func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return "Live Streams"
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let url = NSURL(string: twitchStreams[indexPath.row].channelUrl)!
+        UIApplication.sharedApplication().openURL(url)
+        tableView.deselectRowAtIndexPath(indexPath, animated: false)
+    }
+    
+    func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 0.0
+    }
+    
+    //MARK: listener from network call
     func onResult(result: Array<TwitchStream>) {
         print("onResult")
         if (!result.isEmpty) {
-            showStreamsTable()
+            print("got \(result.count) streams")
+            showStreamsTable(result)
         } else {
             showNoStreamsUI()
         }

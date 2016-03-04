@@ -46,7 +46,8 @@ public class GetTwitchStreamsTask {
         if (error != nil) {
             listener.onError()
         } else {
-            listener.onResult(Array<TwitchStream>())
+            let twitchStreams = TwitchStreamsJsonAdapter.loadStreams(jsonData)
+            listener.onResult(twitchStreams)
         }
     }
 }
