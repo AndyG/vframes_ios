@@ -52,7 +52,7 @@
 		A164548F1C6B0EF900201417 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A164548E1C6B0EF900201417 /* Localizable.strings */; };
 		A16454911C6C60EF00201417 /* InputTextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16454901C6C60EF00201417 /* InputTextCell.swift */; };
 		A16454941C6C611F00201417 /* InputElementCellProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16454931C6C611F00201417 /* InputElementCellProtocol.swift */; };
-		A16454971C6D818900201417 /* CharacterInfoPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16454961C6D818900201417 /* CharacterInfoPageViewController.swift */; };
+		A16454971C6D818900201417 /* CharacterInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16454961C6D818900201417 /* CharacterInfoViewController.swift */; };
 		A164549A1C6FC0AF00201417 /* CustomColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16454991C6FC0AF00201417 /* CustomColors.swift */; };
 		A164549C1C6FC11400201417 /* ColorUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = A164549B1C6FC11400201417 /* ColorUtils.swift */; };
 		A164549F1C6FFA0400201417 /* FrameDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A164549E1C6FFA0400201417 /* FrameDataViewController.swift */; };
@@ -127,7 +127,7 @@
 		A164548E1C6B0EF900201417 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		A16454901C6C60EF00201417 /* InputTextCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputTextCell.swift; sourceTree = "<group>"; };
 		A16454931C6C611F00201417 /* InputElementCellProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputElementCellProtocol.swift; sourceTree = "<group>"; };
-		A16454961C6D818900201417 /* CharacterInfoPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterInfoPageViewController.swift; sourceTree = "<group>"; };
+		A16454961C6D818900201417 /* CharacterInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterInfoViewController.swift; sourceTree = "<group>"; };
 		A16454991C6FC0AF00201417 /* CustomColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomColors.swift; sourceTree = "<group>"; };
 		A164549B1C6FC11400201417 /* ColorUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorUtils.swift; sourceTree = "<group>"; };
 		A164549E1C6FFA0400201417 /* FrameDataViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FrameDataViewController.swift; sourceTree = "<group>"; };
@@ -369,7 +369,7 @@
 			isa = PBXGroup;
 			children = (
 				A13876D11C59ABD800EA1413 /* HomePageViewController.swift */,
-				A16454961C6D818900201417 /* CharacterInfoPageViewController.swift */,
+				A16454961C6D818900201417 /* CharacterInfoViewController.swift */,
 				A164545D1C66B24B00201417 /* MovesListViewController.swift */,
 				A164549E1C6FFA0400201417 /* FrameDataViewController.swift */,
 				A16454B51C71160D00201417 /* NotesViewController.swift */,
@@ -597,7 +597,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A16454801C68577000201417 /* DescriptionMoveListCell.swift in Sources */,
-				A16454971C6D818900201417 /* CharacterInfoPageViewController.swift in Sources */,
+				A16454971C6D818900201417 /* CharacterInfoViewController.swift in Sources */,
 				A16454B61C71160D00201417 /* NotesViewController.swift in Sources */,
 				A1F214E31C87F655009AD929 /* BnbsLoader.swift in Sources */,
 				A126F22B1C8A2452004D4BE8 /* TwitchStreamCell.swift in Sources */,

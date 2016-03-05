@@ -75,7 +75,7 @@ class HomePageViewController: UIViewController, UICollectionViewDelegate, UIColl
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if (segue.identifier == "showCharacterInfo") {
-            let destination = segue.destinationViewController as! CharacterInfoPageViewController
+            let destination = segue.destinationViewController as! CharacterInfoViewController
             destination.targetCharacterId = CharacterID(rawValue: sender as! String)
         } else {
             print("preparing for embed segue")
