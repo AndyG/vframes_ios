@@ -126,7 +126,7 @@
 "dictator_before_head_press" = "(Before Head Press Hits)";
 "dictator_psycho_blast_description" = "EX version launches a projectile.";
 "dictator_devil_reverse_description" = "Crosses up while in V-Trigger";
-"dictator_vskill_description" = "Press buttons to absorb a projectile. Hold buttons to throw a projectile back.";
+"dictator_vskill_description" = "Press buttons to absorb a projectile or strike. Hold buttons to throw a projectile back.";
 "dictator_vtrigger_description" = "Special moves become cancellable into EX moves. Various special move properties change. Dashes gain ability to cross up.";
 
 // Birdie Movelist
@@ -166,8 +166,8 @@
 "nash_sonic_scythe_description" = "EX version has upper-body invulnerability.";
 "nash_tragedy_assault_description" = "HP version hits overhead. \nEX version drains health and meter.";
 "nash_sonic_move_hide_description" = "Teleports behind opponent.";
-"nash_sonic_move_blitz_air_description" = "Teleports above and behind opponent.";
-"nash_sonic_move_steel_air_description" = "Teleports in front of opponent.";
+"nash_sonic_move_blitz_air_description" = "Teleports above and in front of opponent.";
+"nash_sonic_move_steel_air_description" = "Teleports above and behind opponent.";
 "nash_critical_art_description" = "Projectile invulnerable.";
 "nash_vskill_description" = "A chop attack which can absorb a projectile, ;building V-Meter.";
 

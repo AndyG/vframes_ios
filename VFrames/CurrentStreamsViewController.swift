@@ -88,8 +88,9 @@ class CurrentStreamsViewController: UIViewController, UITableViewDataSource, UIT
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        print("loading cell for row: \(indexPath.row)")
-        let cell = tableView.dequeueReusableCellWithIdentifier("stream") as! TwitchStreamCell
+        print("loading cell for row: \(indexPath.row) with \(twitchStreams.count) available streams")
+        
+        let cell = tableView.dequeueReusableCellWithIdentifier("stream") as! TwitchStreamCell        
         cell.setStream(twitchStreams[indexPath.row])
         return cell
     }

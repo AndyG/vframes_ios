@@ -30,7 +30,7 @@
                                 <rect key="frame" x="0.0" y="64" width="600" height="487"/>
                                 <subviews>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="qqn-qT-Jau">
-                                        <rect key="frame" x="20" y="70.5" width="552" height="416.5"/>
+                                        <rect key="frame" x="10" y="70.5" width="572" height="416.5"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="5" id="fWT-Gq-GCA">
                                             <size key="itemSize" width="130" height="130"/>
@@ -97,10 +97,10 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="trailingMargin" secondItem="qqn-qT-Jau" secondAttribute="trailing" constant="20" id="1cS-en-3fD"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="qqn-qT-Jau" secondAttribute="trailing" constant="10" id="1cS-en-3fD"/>
                                     <constraint firstItem="5Iu-b1-JUj" firstAttribute="centerX" secondItem="hkX-RI-G3I" secondAttribute="centerX" id="1yR-KE-OUh"/>
                                     <constraint firstItem="1IX-Sl-tQx" firstAttribute="leading" secondItem="hkX-RI-G3I" secondAttribute="leading" id="20E-vD-Fgy"/>
-                                    <constraint firstItem="qqn-qT-Jau" firstAttribute="leading" secondItem="hkX-RI-G3I" secondAttribute="leading" constant="20" id="4sx-JA-zra"/>
+                                    <constraint firstItem="qqn-qT-Jau" firstAttribute="leading" secondItem="hkX-RI-G3I" secondAttribute="leading" constant="10" id="4sx-JA-zra"/>
                                     <constraint firstAttribute="trailing" secondItem="1IX-Sl-tQx" secondAttribute="trailing" id="AVt-mI-YWq"/>
                                     <constraint firstItem="1IX-Sl-tQx" firstAttribute="top" secondItem="hkX-RI-G3I" secondAttribute="top" constant="8" id="FRb-fd-cEI"/>
                                     <constraint firstItem="vAn-gH-Ove" firstAttribute="centerX" secondItem="5Iu-b1-JUj" secondAttribute="centerX" id="G0t-rv-E0V"/>
@@ -115,8 +115,8 @@
                                 <rect key="frame" x="0.0" y="551" width="600" height="49"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <items>
-                                    <tabBarItem systemItem="contacts" id="MoH-Gk-erm" userLabel="Characters Item"/>
-                                    <tabBarItem tag="1" systemItem="featured" id="T1E-OX-16y" userLabel="Streams Item"/>
+                                    <tabBarItem title="Character Info" image="characters_icon@1x" id="MoH-Gk-erm" userLabel="Characters Item"/>
+                                    <tabBarItem tag="1" title="Live Streams" image="streams_icon@1x" id="T1E-OX-16y" userLabel="Streams Item"/>
                                 </items>
                                 <color key="barTintColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
@@ -220,11 +220,11 @@
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="99.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="birdie_card" translatesAutoresizingMaskIntoConstraints="NO" id="FKy-kQ-m4F" userLabel="Thumbnail Image">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="FKy-kQ-m4F" userLabel="Thumbnail Image">
                                                     <rect key="frame" x="8" y="8" width="120" height="83.5"/>
                                                 </imageView>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TDT-pF-v1V" userLabel="Details Container">
-                                                    <rect key="frame" x="128" y="8" width="464" height="83.5"/>
+                                                    <rect key="frame" x="138" y="8" width="454" height="83.5"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Video Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Owf-rC-X8l">
                                                             <rect key="frame" x="0.0" y="0.0" width="464" height="20.5"/>
@@ -238,7 +238,7 @@
                                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="8MA-8I-ibf" userLabel="Video Description">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="8MA-8I-ibf" userLabel="Video Description">
                                                             <rect key="frame" x="0.0" y="65.5" width="464" height="18"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -259,21 +259,28 @@
                                                         <constraint firstAttribute="trailing" secondItem="Owf-rC-X8l" secondAttribute="trailing" id="o8E-QM-My3"/>
                                                     </constraints>
                                                 </view>
+                                                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="qD6-Ra-ezO">
+                                                    <rect key="frame" x="58" y="40" width="20" height="20"/>
+                                                </activityIndicatorView>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="bottomMargin" secondItem="TDT-pF-v1V" secondAttribute="bottom" id="30v-Ik-2gv"/>
                                                 <constraint firstItem="FKy-kQ-m4F" firstAttribute="leading" secondItem="PfD-F5-gY6" secondAttribute="leadingMargin" id="3Np-rc-3HD"/>
                                                 <constraint firstItem="FKy-kQ-m4F" firstAttribute="top" secondItem="PfD-F5-gY6" secondAttribute="topMargin" id="67c-Vv-Phv"/>
-                                                <constraint firstItem="FKy-kQ-m4F" firstAttribute="trailing" secondItem="TDT-pF-v1V" secondAttribute="leading" id="FyI-Ih-mQA"/>
+                                                <constraint firstItem="qD6-Ra-ezO" firstAttribute="centerY" secondItem="FKy-kQ-m4F" secondAttribute="centerY" id="AFY-Gh-hfh"/>
+                                                <constraint firstItem="TDT-pF-v1V" firstAttribute="leading" secondItem="FKy-kQ-m4F" secondAttribute="trailing" constant="10" id="FyI-Ih-mQA"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="TDT-pF-v1V" secondAttribute="trailing" id="KmV-2k-a9l"/>
                                                 <constraint firstItem="TDT-pF-v1V" firstAttribute="top" secondItem="PfD-F5-gY6" secondAttribute="topMargin" id="TrU-3I-LkA"/>
+                                                <constraint firstItem="qD6-Ra-ezO" firstAttribute="centerX" secondItem="FKy-kQ-m4F" secondAttribute="centerX" id="opd-fC-Wgj"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="FKy-kQ-m4F" secondAttribute="bottom" id="pBB-Ba-6Rj"/>
                                                 <constraint firstItem="FKy-kQ-m4F" firstAttribute="width" secondItem="PfD-F5-gY6" secondAttribute="width" multiplier="0.2" id="vyj-SX-VPP"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="channelName" destination="Owf-rC-X8l" id="NH3-q9-WAh"/>
+                                            <outlet property="loadingIndicator" destination="qD6-Ra-ezO" id="QHw-Jj-8VX"/>
                                             <outlet property="status" destination="8MA-8I-ibf" id="3z4-Lj-82Q"/>
+                                            <outlet property="thumbnailImage" destination="FKy-kQ-m4F" id="QIi-ie-Gw8"/>
                                             <outlet property="viewCount" destination="AwA-yr-Qv7" id="ZUc-s8-HQQ"/>
                                         </connections>
                                     </tableViewCell>
@@ -562,11 +569,11 @@
                                 <rect key="frame" x="0.0" y="551" width="600" height="49"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <items>
-                                    <tabBarItem systemItem="bookmarks" id="1xv-1R-GTF"/>
-                                    <tabBarItem tag="1" systemItem="topRated" id="Pm7-Xe-2W9"/>
-                                    <tabBarItem tag="2" systemItem="recents" id="iEA-Lj-J1S"/>
-                                    <tabBarItem tag="3" systemItem="downloads" id="FLn-cN-LNG"/>
-                                    <tabBarItem tag="4" systemItem="mostViewed" id="rY5-sI-Oyg"/>
+                                    <tabBarItem title="Frame Data" image="frame_data_icon_30" id="1xv-1R-GTF"/>
+                                    <tabBarItem tag="1" title="Moves List" image="moves_icon_30" id="Pm7-Xe-2W9"/>
+                                    <tabBarItem tag="2" title="Combos" image="combos_icon_50" id="iEA-Lj-J1S"/>
+                                    <tabBarItem tag="3" title="Videos" image="videos_icon_30" id="FLn-cN-LNG"/>
+                                    <tabBarItem tag="4" title="Notes" image="notes_icon_50" id="rY5-sI-Oyg"/>
                                 </items>
                                 <color key="barTintColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
@@ -1082,7 +1089,10 @@
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="99.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="birdie_card" translatesAutoresizingMaskIntoConstraints="NO" id="1bj-zF-VCV" userLabel="Thumbnail Image">
+                                                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="1fb-9n-Rgy">
+                                                    <rect key="frame" x="58" y="40" width="20" height="20"/>
+                                                </activityIndicatorView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1bj-zF-VCV" userLabel="Thumbnail Image">
                                                     <rect key="frame" x="8" y="8" width="120" height="83.5"/>
                                                 </imageView>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UjW-sT-tD5" userLabel="Details Container">
@@ -1095,13 +1105,13 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Author" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="KZf-Eo-dI3" userLabel="Video Author">
-                                                            <rect key="frame" x="0.0" y="25.5" width="420" height="16"/>
+                                                            <rect key="frame" x="0.0" y="25.5" width="420" height="35"/>
                                                             <fontDescription key="fontDescription" type="system" weight="light" pointSize="13"/>
                                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="xK0-ps-erU" userLabel="Video Description">
-                                                            <rect key="frame" x="0.0" y="46.5" width="420" height="37"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="xK0-ps-erU" userLabel="Video Description">
+                                                            <rect key="frame" x="0.0" y="65.5" width="420" height="18"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                             <nil key="highlightedColor"/>
@@ -1128,14 +1138,18 @@
                                                 <constraint firstAttribute="trailingMargin" secondItem="UjW-sT-tD5" secondAttribute="trailing" id="QDs-y4-eZy"/>
                                                 <constraint firstItem="1bj-zF-VCV" firstAttribute="top" secondItem="WuF-gz-Ljd" secondAttribute="topMargin" id="ROH-Cg-lPG"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="1bj-zF-VCV" secondAttribute="bottom" id="djk-JP-o4K"/>
+                                                <constraint firstItem="1fb-9n-Rgy" firstAttribute="centerX" secondItem="1bj-zF-VCV" secondAttribute="centerX" id="fd9-Rg-PJT"/>
                                                 <constraint firstItem="UjW-sT-tD5" firstAttribute="top" secondItem="WuF-gz-Ljd" secondAttribute="topMargin" id="flP-nN-SOo"/>
                                                 <constraint firstItem="UjW-sT-tD5" firstAttribute="width" secondItem="WuF-gz-Ljd" secondAttribute="width" multiplier="0.7" id="hew-9m-pLI"/>
                                                 <constraint firstItem="1bj-zF-VCV" firstAttribute="width" secondItem="WuF-gz-Ljd" secondAttribute="width" multiplier="0.2" id="sg7-wR-tUS"/>
+                                                <constraint firstItem="1fb-9n-Rgy" firstAttribute="centerY" secondItem="1bj-zF-VCV" secondAttribute="centerY" id="yfr-lZ-nN1"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="author" destination="KZf-Eo-dI3" id="DVp-g5-6yA"/>
                                             <outlet property="descriptionText" destination="xK0-ps-erU" id="j5j-zi-tds"/>
+                                            <outlet property="loadingIndicator" destination="1fb-9n-Rgy" id="uId-3J-IJn"/>
+                                            <outlet property="thumbnailImage" destination="1bj-zF-VCV" id="grD-c7-e8v"/>
                                             <outlet property="videoTitle" destination="mvM-v9-Rnw" id="I6Q-5h-2PE"/>
                                         </connections>
                                     </tableViewCell>
@@ -1177,7 +1191,7 @@
                                     </mask>
                                 </variation>
                             </view>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recommended videos are on the way for this character!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="09s-g6-9hs">
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recommended videos are on the way for this character!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="09s-g6-9hs">
                                 <rect key="frame" x="60" y="217" width="480" height="51.5"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -1281,8 +1295,14 @@
         </scene>
     </scenes>
     <resources>
-        <image name="birdie_card" width="417" height="549"/>
+        <image name="characters_icon@1x" width="30" height="30"/>
+        <image name="combos_icon_50" width="30" height="30"/>
+        <image name="frame_data_icon_30" width="30" height="30"/>
         <image name="input_direction_back" width="105" height="105"/>
+        <image name="moves_icon_30" width="30" height="30"/>
+        <image name="notes_icon_50" width="30" height="30"/>
+        <image name="streams_icon@1x" width="30" height="30"/>
         <image name="twitch_dead" width="1000" height="1000"/>
+        <image name="videos_icon_30" width="30" height="30"/>
     </resources>
 </document>
