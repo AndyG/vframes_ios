@@ -50,7 +50,7 @@ class NetworkDataSource {
         }
         
         //check if the data from network is newer than current version
-        if let version = jsonData["version"].int {
+        if let version = Int(jsonData["version"].string!) {
             if (version <= currentVersion) {
                 listener.onResult(GetNetworkDataResult.ALREADY_UP_TO_DATE)
                 return
