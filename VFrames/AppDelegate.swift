@@ -30,8 +30,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //We don't want to try to load a saved model if the model doesn't exist or
         //if this is the user's first time launching this version of the app.
         if (isFirstVersionLaunch() || !savedCharactersModelExists()) {
+            print("loading default")
             loadDefaultCharactersModel()
         } else {
+            print("loading saved")
             loadSavedCharactersModel()
         }
         

@@ -12,6 +12,7 @@ import SwiftyJSON
 class CharactersModelJsonAdapter {
         
     func loadCharactersModel(charactersModelJson: JSON) -> CharactersModel {
+        print("loading characters model")
                 
         let version = Int(charactersModelJson["version"].string!)!
         
