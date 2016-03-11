@@ -13,7 +13,7 @@ class CharactersModelJsonAdapter {
         
     func loadCharactersModel(charactersModelJson: JSON) -> CharactersModel {
                 
-        let version = charactersModelJson["version"].int!
+        let version = Int(charactersModelJson["version"].string!)!
         
         let charactersJson = charactersModelJson["characters"]
         var characters = [CharacterID:SFCharacter]()
