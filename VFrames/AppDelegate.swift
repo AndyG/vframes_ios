@@ -112,7 +112,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             let charactersModelURL = applicationSupportURL.URLByAppendingPathComponent("characters_model.json")
             do {
                 try fileManager.copyItemAtURL(defaultModelUrl, toURL: charactersModelURL)
-            } catch {
+            } catch let error as NSError {
+                print("error: \(error)")
                 print("failed to copy characters model file")
                 print("from: \(defaultModelUrl.absoluteString)")
                 print("to: \(charactersModelURL.absoluteString)")
