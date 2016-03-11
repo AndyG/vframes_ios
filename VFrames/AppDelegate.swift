@@ -113,10 +113,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             do {
                 try fileManager.copyItemAtURL(defaultModelUrl, toURL: charactersModelURL)
             } catch let error as NSError {
-                print("error: \(error)")
-                print("failed to copy characters model file")
-                print("from: \(defaultModelUrl.absoluteString)")
-                print("to: \(charactersModelURL.absoluteString)")
+                if error.code == NSFileWriteFileExistsError {
+                    print("removing old file")
+                    removeFileAtUrl(charactersModelURL)
+                    try! fileManager.copyItemAtURL(defaultModelUrl, toURL: charactersModelURL)
+                }
             }
         }
         
@@ -161,6 +162,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let prefs = NSUserDefaults.standardUserDefaults()
         return (prefs.integerForKey(versionLaunchCountKey) == 1)
+    }
+    
+    private func removeFileAtUrl(url: NSURL) {
+        do {
+            let fileManager = NSFileManager.defaultManager()
+            try! fileManager.removeItemAtURL(url)
+        }
     }
     
 }
