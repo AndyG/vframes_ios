@@ -44,16 +44,18 @@ class NetworkDataSource {
         let jsonData = JSON(data: data!, options: NSJSONReadingOptions.MutableContainers, error: &error)
         
         //check if the client version is supported
-        if  jsonData["error"].string != nil {
+        if jsonData["error"].string != nil {
             listener.onResult(GetNetworkDataResult.UNSUPPORTED)
             return
         }
         
         //check if the data from network is newer than current version
-        if let version = Int(jsonData["version"].string!) {
-            if (version <= currentVersion) {
-                listener.onResult(GetNetworkDataResult.ALREADY_UP_TO_DATE)
-                return
+        if let versionString = jsonData["version"].string {
+            if let version = Int(versionString) {
+                if (version <= currentVersion) {
+                    listener.onResult(GetNetworkDataResult.ALREADY_UP_TO_DATE)
+                    return
+                }
             }
         } else {
             listener.onResult(GetNetworkDataResult.ERROR)
