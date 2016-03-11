@@ -13,6 +13,7 @@ class AppSupportUtil {
     func writeNewCharactersModel(data: NSData) {
         let fileManager = NSFileManager.defaultManager()
         do {
+            clearData()
             let charactersModelUrl = try getCharactersModelUrl()
             fileManager.createFileAtPath(charactersModelUrl.relativePath!, contents: data, attributes: nil)
             print("successfully wrote characters model file")
