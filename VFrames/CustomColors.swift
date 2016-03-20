@@ -14,6 +14,10 @@ extension UIColor {
         return ColorUtils.UIColorFromRGB(0x5b58c7)
     }
     
+    func alexPrimary() -> UIColor {
+        return ColorUtils.UIColorFromRGB(0xb41515)
+    }
+    
     func birdiePrimary() -> UIColor {
         return ColorUtils.UIColorFromRGB(0x33261f)
     }
@@ -80,6 +84,8 @@ extension UIColor {
     
     func getPrimaryColorForCharacter(characterId: CharacterID) -> UIColor {
         switch(characterId) {
+        case .ALEX:
+            return alexPrimary()
             case .BIRDIE:
                 return birdiePrimary()
             case .CAMMY:

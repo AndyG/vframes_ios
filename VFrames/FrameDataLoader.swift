@@ -38,20 +38,20 @@ public class FrameDataLoader {
     }
     
     private static func loadHardCodedFrameDataEntryHolder(frameDataEntryJson: JSON) -> FrameDataEntryHolder {
-        let nameId = frameDataEntryJson["nameID"].string!
+        let name = frameDataEntryJson["name"].string!
         let description = frameDataEntryJson["description"].string
         
-        let frameData = loadHardCodedFrameDataEntry(nameId, description: description, frameDataEntryJson: frameDataEntryJson["data"])
+        let frameData = loadHardCodedFrameDataEntry(name, description: description, frameDataEntryJson: frameDataEntryJson["data"])
         
         var alternateFrameData: FrameDataEntryProtocol?
         if (frameDataEntryJson["alternateData"] != nil) {
-            alternateFrameData = loadHardCodedFrameDataEntry(nameId, description: description, frameDataEntryJson: frameDataEntryJson["alternateData"])
+            alternateFrameData = loadHardCodedFrameDataEntry(name, description: description, frameDataEntryJson: frameDataEntryJson["alternateData"])
         }
         
         return FrameDataEntryHolder(frameDataEntry: frameData, alternateFrameDataEntry: alternateFrameData)
     }
     
-    private static func loadHardCodedFrameDataEntry(nameId: String, description: String?, frameDataEntryJson: JSON) -> FrameDataEntryProtocol {
+    private static func loadHardCodedFrameDataEntry(name: String, description: String?, frameDataEntryJson: JSON) -> FrameDataEntryProtocol {
         
         var startupFrames = DISPLAY_CODE_MISSING_VALUE;
         var activeFrames = DISPLAY_CODE_MISSING_VALUE;
@@ -94,6 +94,6 @@ public class FrameDataLoader {
             overrideDescription = descriptionFromJson
         }
         
-        return HardCodedFrameDataEntry(displayName: nameId, startupFrames: startupFrames, activeFrames: activeFrames, recoveryFrames: recoveryFrames, blockAdvantage: blockAdvantage, hitAdvantage: hitAdvantage, damageValue: damageValue, stunValue: stunValue, description: overrideDescription)
+        return HardCodedFrameDataEntry(displayName: name, startupFrames: startupFrames, activeFrames: activeFrames, recoveryFrames: recoveryFrames, blockAdvantage: blockAdvantage, hitAdvantage: hitAdvantage, damageValue: damageValue, stunValue: stunValue, description: overrideDescription)
     }
 }

@@ -25,6 +25,8 @@ class CharacterSelectCell: UICollectionViewCell {
         var imageName: String!
 
         switch(characterId) {
+            case .ALEX:
+                imageName = "alex_card"
             case .BIRDIE:
                 imageName = "birdie_card"
             case .CAMMY:

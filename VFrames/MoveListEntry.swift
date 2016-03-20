@@ -10,55 +10,55 @@ import Foundation
 
 class MoveListEntry: MoveListEntryProtocol {
     
-    var nameId: String
-    var pretextId: String?
-    var posttextId: String?
-    var descriptionId: String?
+    var name: String
+    var pretext: String?
+    var posttext: String?
+    var description: String?
     var inputElementList: Array<InputElement>?
     
-    init(nameId: String, pretextId: String?, posttextId: String?, descriptionId: String?, inputElementList: Array<InputElement>?) {
-        self.nameId = nameId
-        self.pretextId = pretextId
-        self.posttextId = posttextId
-        self.descriptionId = descriptionId
+    init(name: String, pretext: String?, posttext: String?, description: String?, inputElementList: Array<InputElement>?) {
+        self.name = name
+        self.pretext = pretext
+        self.posttext = posttext
+        self.description = description
         self.inputElementList = inputElementList
     }
-    
-    func getNameId() -> String {
-        return nameId
+
+    func getName() -> String {
+        return name
     }
     
     func getInput() -> Array<InputElement>? {
         return inputElementList
     }
     
-    func getPretextId() -> String? {
-        return pretextId
+    func getPretext() -> String? {
+        return pretext
+    }
+
+    func getPosttext() -> String? {
+        return posttext
     }
     
-    func getPosttextId() -> String? {
-        return posttextId
-    }
-    
-    func getDescriptionId() -> String? {
-        return descriptionId
+    func getDescription() -> String? {
+        return description
     }
     
     func getStringRepresentation() -> String {
         var stringRepresentation = String()
         
-        stringRepresentation += "name: \(nameId)\n"
+        stringRepresentation += "name: \(name)\n"
         
-        if let unwrappedPretextId = pretextId {
-            stringRepresentation += "pretextId: \(unwrappedPretextId)\n"
+        if let unwrappedPretext = pretext {
+            stringRepresentation += "pretext: \(unwrappedPretext)\n"
         }
         
-        if let unwrappedPosttextId = posttextId {
-            stringRepresentation += "posttextId: \(unwrappedPosttextId)\n"
+        if let unwrappedPosttext = posttext {
+            stringRepresentation += "posttext: \(unwrappedPosttext)\n"
         }
         
-        if let unwrappedDescriptionId = descriptionId {
-            stringRepresentation += "descriptionId: \(unwrappedDescriptionId)\n"
+        if let unwrappedDescription = description {
+            stringRepresentation += "description: \(unwrappedDescription)\n"
         }
         
         if let unwrappedInputElementList = inputElementList {

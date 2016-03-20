@@ -10,6 +10,7 @@ import UIKit
 
 class FrameDataViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
+    @IBOutlet var noFrameDataLabel: UILabel!
     @IBOutlet var frameDataTable: UITableView!
     @IBOutlet var controlsContainerHeight: NSLayoutConstraint!
     @IBOutlet var controlsContainer: UIView!
@@ -36,7 +37,55 @@ class FrameDataViewController: UIViewController, UITableViewDataSource, UITableV
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         targetCharacter = appDelegate.charactersModel.getCharacter(targetCharacterId)
         
-        if (targetCharacter.getFrameData().hasAlternateFrameData()) {
+        if let frameData = targetCharacter.getFrameData() {
+            noFrameDataLabel.hidden = true
+            frameDataTable.hidden = false
+            showFrameData(frameData)
+        } else {
+            noFrameDataLabel.hidden = false
+            frameDataTable.hidden = true
+            controlsContainer.hidden = true
+            frameDataHeaders = Array<MoveCategory>()
+        }
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        
+        let category = frameDataHeaders[indexPath.section]
+        
+        let frameDataEntryHolder = targetCharacter.getFrameData()!.getFromCategory(category)[indexPath.item]
+        let cell = tableView.dequeueReusableCellWithIdentifier("frameDataRow") as! FrameDataEntryCell
+        if (alternateFrameDataSwitch.on && frameDataEntryHolder.hasAlternate()) {
+            cell.setFrameDataEntry(frameDataEntryHolder.getAlternateFrameDataEntry())
+            cell.moveNameBackground.backgroundColor = UIColor().highlightedFrameDataEntryColor()
+        } else {
+            cell.setFrameDataEntry(frameDataEntryHolder.getFrameDataEntry())
+            cell.moveNameBackground.backgroundColor = UIColor(colorLiteralRed: 0.0, green: 0.0, blue: 0.0, alpha: 0.03)
+        }
+        return cell
+    }
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        let category = frameDataHeaders[section]
+        let frameDataForSection = targetCharacter.getFrameData()!.getFromCategory(category)
+        return frameDataForSection.count
+    }
+    
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return frameDataHeaders.count
+    }
+    
+    func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return MoveCategory.toString(frameDataHeaders[section])
+    }
+    
+    func stateChanged(switchState: UISwitch) {
+        updateFrameDataStateLabel()
+        frameDataTable.reloadData()
+    }
+    
+    private func showFrameData(frameData: FrameDataProtocol) {
+        if (frameData.hasAlternateFrameData()) {
             controlsContainerHeight.constant = 40
             controlsContainer.hidden = false
         } else {
@@ -52,49 +101,10 @@ class FrameDataViewController: UIViewController, UITableViewDataSource, UITableV
         updateFrameDataStateLabel()
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        
-        let category = frameDataHeaders[indexPath.section]
-        
-        let frameDataEntryHolder = targetCharacter.getFrameData().getFromCategory(category)[indexPath.item]
-        let cell = tableView.dequeueReusableCellWithIdentifier("frameDataRow") as! FrameDataEntryCell
-        if (alternateFrameDataSwitch.on && frameDataEntryHolder.hasAlternate()) {
-            cell.setFrameDataEntry(frameDataEntryHolder.getAlternateFrameDataEntry())
-            cell.moveNameBackground.backgroundColor = UIColor().highlightedFrameDataEntryColor()
-        } else {
-            cell.setFrameDataEntry(frameDataEntryHolder.getFrameDataEntry())
-            cell.moveNameBackground.backgroundColor = UIColor(colorLiteralRed: 0.0, green: 0.0, blue: 0.0, alpha: 0.03)
-        }
-        return cell
-    }
-    
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        let category = frameDataHeaders[section]
-        let frameDataForSection = targetCharacter.getFrameData().getFromCategory(category)
-        return frameDataForSection.count
-    }
-    
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return frameDataHeaders.count
-    }
-    
-    func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return MoveCategory.toString(frameDataHeaders[section])
-    }
-    
-    func stateChanged(switchState: UISwitch) {
-        updateFrameDataStateLabel()
-        frameDataTable.reloadData()
-        //TODO: find a way to do this reloading without weird scrolling
-//        let indexPaths = getIndexPathsForAlternateRows()
-//        let animation = switchState.on ? UITableViewRowAnimation.Right : UITableViewRowAnimation.Left
-//        frameDataTable.reloadRowsAtIndexPaths(indexPaths, withRowAnimation: animation)
-    }
-    
     private func setupMoveListHeaders() {
         frameDataHeaders = Array<MoveCategory>()
         for moveCategory in frameDataHeadersOrder {
-            let frameData = targetCharacter.getFrameData()
+            let frameData = targetCharacter.getFrameData()!
             let categoryExists = frameData.hasCategory(moveCategory)
             if categoryExists {
                 frameDataHeaders?.append(moveCategory)
@@ -122,7 +132,7 @@ class FrameDataViewController: UIViewController, UITableViewDataSource, UITableV
         var indexPaths = [NSIndexPath]()
         for sectionIndex in 0..<frameDataHeaders.count {
             let category = frameDataHeaders[sectionIndex]
-            let frameDataForCategory = targetCharacter.getFrameData().getFromCategory(category)
+            let frameDataForCategory = targetCharacter.getFrameData()!.getFromCategory(category)
             
             for rowIndex in 0..<frameDataForCategory.count {
                 let frameDataEntryHolder = frameDataForCategory[rowIndex]

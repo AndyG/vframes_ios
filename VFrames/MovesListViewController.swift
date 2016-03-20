@@ -10,6 +10,7 @@ import UIKit
 
 class MovesListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
+    @IBOutlet var noMovesLabel: UILabel!
     @IBOutlet var movesTable: UITableView!
     
     let moveListHeadersOrder: Array<MoveCategory> = [
@@ -32,21 +33,30 @@ class MovesListViewController: UIViewController, UITableViewDataSource, UITableV
         // Do any additional setup after loading the view.
         
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        
         targetCharacter = appDelegate.charactersModel.getCharacter(targetCharacterId)
         
-        setupMoveListHeaders()
-        movesTable.estimatedRowHeight = 150
-        movesTable.rowHeight = UITableViewAutomaticDimension
+        if (targetCharacter.getMoveList() != nil) {
+            movesTable.hidden = false
+            noMovesLabel.hidden = true
+            setupMoveListHeaders()
+            movesTable.estimatedRowHeight = 150
+            movesTable.rowHeight = UITableViewAutomaticDimension
+        } else {
+            moveListHeaders = Array<MoveCategory>()
+            movesTable.hidden = true
+            noMovesLabel.hidden = false
+        }
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        let moveListForSection = targetCharacter.getMoveList()[moveListHeaders![section]]
+        let moveListForSection = targetCharacter.getMoveList()![moveListHeaders![section]]
         return moveListForSection!.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let category = moveListHeaders[indexPath.section]
-        let move = targetCharacter.getMoveList()[category]![indexPath.item]
+        let move = targetCharacter.getMoveList()![category]![indexPath.item]
         
         let cell = tableView.dequeueReusableCellWithIdentifier("descriptionCell")
         let moveListEntryCell = cell as! MoveListCellProtocol
@@ -66,15 +76,15 @@ class MovesListViewController: UIViewController, UITableViewDataSource, UITableV
         let move = getMoveForIndexPath(indexPath)
         var height = tableView.estimatedRowHeight
         
-        if (move.getDescriptionId() != nil) {
+        if (move.getDescription() != nil) {
             height += 40
         }
         
-        if move.getPretextId() != nil {
+        if move.getPretext() != nil {
             height += 20
         }
         
-        if move.getPosttextId() != nil {
+        if move.getPosttext() != nil {
             height += 20
         }
         
@@ -138,13 +148,13 @@ class MovesListViewController: UIViewController, UITableViewDataSource, UITableV
     
     private func getMoveForIndexPath(indexPath: NSIndexPath) -> MoveListEntryProtocol {
         let category = moveListHeaders[indexPath.section]
-        return targetCharacter.getMoveList()[category]![indexPath.item]
+        return targetCharacter.getMoveList()![category]![indexPath.item]
     }
     
     private func setupMoveListHeaders() {
         moveListHeaders = Array<MoveCategory>()
         for moveCategory in moveListHeadersOrder {
-            let categoryExists = targetCharacter.getMoveList()[moveCategory] != nil
+            let categoryExists = targetCharacter.getMoveList()![moveCategory] != nil
             if categoryExists {
                 moveListHeaders?.append(moveCategory)
             }

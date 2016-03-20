@@ -76,6 +76,8 @@ class RecommendedVideosViewController: UIViewController, UITableViewDataSource, 
     
     private func getCharacterStringForUrl(characterId: CharacterID) -> String {
         switch(characterId) {
+        case .ALEX:
+            return "alex"
         case .BIRDIE:
             return "birdie"
         case .CAMMY:

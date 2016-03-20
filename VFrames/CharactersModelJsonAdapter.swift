@@ -22,21 +22,36 @@ class CharactersModelJsonAdapter {
             print("Parsing character: \(characterId.rawValue)")
             let characterJsonId = getJsonIdForCharacter(characterId)
             let characterJson = charactersJson[characterJsonId]
-            characters[characterId] = loadCharacter(characterJson)
+            
+            if (characterJson != nil) {
+                characters[characterId] = loadCharacter(characterJson)
+            } else {
+                characters[characterId] = SFCharacter(moveList: nil, frameData: nil, bnbCombos: nil)
+            }
         }
         return CharactersModel(characters: characters, version: version)
     }
     
     private func loadCharacter(characterJson: JSON) -> SFCharacter {
         
+        var moveList: [MoveCategory:Array<MoveListEntryProtocol>]? = nil
+        var frameData: FrameDataProtocol? = nil
+        var bnbModel: BreadAndButterModel? = nil
+        
         let moveListJson = characterJson["move_list"]
-        let moveList: [MoveCategory:Array<MoveListEntryProtocol>] = MoveListLoader.loadMoveList(moveListJson)
+        if moveListJson != nil {
+            moveList = MoveListLoader.loadMoveList(moveListJson)
+        }
         
         let frameDataJson = characterJson["frame_data"]
-        let frameData: FrameDataProtocol = FrameDataLoader.loadFrameData(frameDataJson)
+        if frameDataJson != nil {
+            frameData = FrameDataLoader.loadFrameData(frameDataJson)
+        }
         
         let bnbCombosJson = characterJson["bnb_combos"]
-        let bnbModel: BreadAndButterModel = BnbsLoader.loadCombos(bnbCombosJson.arrayValue)
+        if (bnbCombosJson != nil) {
+            bnbModel = BnbsLoader.loadCombos(bnbCombosJson.arrayValue)
+        }
         
         let sfCharacter: SFCharacter = SFCharacter(moveList: moveList, frameData: frameData, bnbCombos: bnbModel)
         return sfCharacter
@@ -47,6 +62,8 @@ class CharactersModelJsonAdapter {
         var fileName: String!
         
         switch(characterId) {
+        case .ALEX:
+            fileName = "alex"
         case .BIRDIE:
             fileName = "birdie"
         case .CAMMY:

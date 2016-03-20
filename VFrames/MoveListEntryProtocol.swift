@@ -9,9 +9,9 @@
 import Foundation
 
 protocol MoveListEntryProtocol {
-    func getNameId() -> String
+    func getName() -> String
     func getInput() -> Array<InputElement>?
-    func getPretextId() -> String?
-    func getPosttextId() -> String?
-    func getDescriptionId() -> String?
+    func getPretext() -> String?
+    func getPosttext() -> String?
+    func getDescription() -> String?
 }

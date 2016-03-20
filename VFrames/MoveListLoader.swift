@@ -31,13 +31,13 @@ public class MoveListLoader {
     }
     
     private static func loadSingleMove(jsonData: JSON) -> MoveListEntryProtocol {
-        let name = jsonData["nameID"].string!
-        let pretextId = jsonData["pretextID"].string
-        let posttextId = jsonData["posttextID"].string
-        let descriptionId = jsonData["description"].string
+        let name = jsonData["name"].string!
+        let pretext = jsonData["pretext"].string
+        let posttext = jsonData["posttext"].string
+        let description = jsonData["description"].string
         let input = loadInputArray(jsonData["input"].string)
         
-        let moveListEntry = MoveListEntry(nameId: name, pretextId: pretextId, posttextId: posttextId, descriptionId: descriptionId, inputElementList: input)
+        let moveListEntry = MoveListEntry(name: name, pretext: pretext, posttext: posttext, description: description, inputElementList: input)
         
         return moveListEntry
     }

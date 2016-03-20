@@ -20,7 +20,7 @@ class DescriptionMoveListCell: UITableViewCell, MoveListCellProtocol {
     
     func setMove(move: MoveListEntryProtocol, indexPath: NSIndexPath) {
 
-        moveNameLabel.text = move.getNameId()
+        moveNameLabel.text = move.getName()
         
         if let descriptionText = getDescriptionText(move) {
             moveDescriptionLabel.text = descriptionText
@@ -56,32 +56,24 @@ class DescriptionMoveListCell: UITableViewCell, MoveListCellProtocol {
     }
     
     private func getDescriptionText(move: MoveListEntryProtocol) -> String? {
-        if let descriptionId = move.getDescriptionId() {
-            return getLocalizedString(descriptionId)
+        if let description = move.getDescription() {
+            return description
         } else {
             return nil
         }
     }
     
     private func getPretextText(move: MoveListEntryProtocol) -> String? {
-        if let pretextId = move.getPretextId() {
-            return getLocalizedString(pretextId)
+        if let pretext = move.getPretext() {
+            return pretext
         } else {
             return nil
         }
     }
     
     private func getPosttextText(move: MoveListEntryProtocol) -> String? {
-        if let posttextId = move.getPosttextId() {
-            return getLocalizedString(posttextId)
-        } else {
-            return nil
-        }
-    }
-    
-    private func getLocalizedString(rawStringId: String) -> String? {
-        if let localizedStringId = StringResolver.resolveString(rawStringId) {
-            return NSLocalizedString(localizedStringId, comment: "")
+        if let postText = move.getPosttext() {
+            return postText
         } else {
             return nil
         }

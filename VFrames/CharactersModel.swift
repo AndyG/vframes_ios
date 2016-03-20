@@ -25,12 +25,4 @@ class CharactersModel {
     func getVersion() -> Int {
         return version
     }
-    
-    func toString() -> String {
-        var stringRepresentation = String()
-        for (characterId, sfCharacter) in characters {
-            stringRepresentation += String(characterId) + "\n\(sfCharacter.getStringRepresentation())"
-        }
-        return stringRepresentation
-    }
 }
