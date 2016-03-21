@@ -694,7 +694,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Nhx-k8-U1s">
-                                <rect key="frame" x="20" y="409.5" width="560" height="77.5"/>
+                                <rect key="frame" x="20" y="147" width="560" height="77.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="77.5" id="I5v-Tl-SYc"/>
+                                </constraints>
                                 <string key="text">Detailed frame data for this character will become available soon. Try fetching new data on the character select screen to see if we've added this data!</string>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -950,6 +953,7 @@
                             <constraint firstItem="LmC-vt-Rtr" firstAttribute="centerX" secondItem="lrN-Zh-iBj" secondAttribute="centerX" id="GEC-w7-PaO"/>
                             <constraint firstItem="Hp9-sK-te9" firstAttribute="centerX" secondItem="lrN-Zh-iBj" secondAttribute="centerX" id="Hnf-h2-ZKD"/>
                             <constraint firstItem="fyr-d9-Ide" firstAttribute="leading" secondItem="lrN-Zh-iBj" secondAttribute="leading" id="Jqz-7C-sAm"/>
+                            <constraint firstItem="Nhx-k8-U1s" firstAttribute="top" secondItem="Hp9-sK-te9" secondAttribute="bottom" constant="10" id="KIF-wn-dlL"/>
                             <constraint firstItem="oMn-Xz-O1g" firstAttribute="top" secondItem="Nhx-k8-U1s" secondAttribute="bottom" id="PS7-8E-D9v"/>
                             <constraint firstItem="Nhx-k8-U1s" firstAttribute="centerX" secondItem="lrN-Zh-iBj" secondAttribute="centerX" id="Rzz-cy-gPY"/>
                             <constraint firstItem="XcW-Cp-Whg" firstAttribute="top" secondItem="kIM-Qp-W0k" secondAttribute="bottom" constant="8" id="Y6w-65-hfP"/>
@@ -969,6 +973,7 @@
                             <mask key="constraints">
                                 <exclude reference="d2X-BX-Hbv"/>
                                 <exclude reference="x1Z-lv-dLB"/>
+                                <exclude reference="PS7-8E-D9v"/>
                                 <exclude reference="yYc-Wo-08b"/>
                             </mask>
                         </variation>
