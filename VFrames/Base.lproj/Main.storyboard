@@ -693,9 +693,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="487"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Nhx-k8-U1s">
-                                <rect key="frame" x="20" y="205" width="560" height="77.5"/>
-                                <string key="text">Detailed frame data for this character will become available soon. Try fetching new data on the character select screen to see if we've added this data! Here is even Here is even Here is even Here is even Here is even Here is even</string>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Nhx-k8-U1s">
+                                <rect key="frame" x="20" y="409.5" width="560" height="77.5"/>
+                                <string key="text">Detailed frame data for this character will become available soon. Try fetching new data on the character select screen to see if we've added this data!</string>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -950,6 +950,7 @@
                             <constraint firstItem="LmC-vt-Rtr" firstAttribute="centerX" secondItem="lrN-Zh-iBj" secondAttribute="centerX" id="GEC-w7-PaO"/>
                             <constraint firstItem="Hp9-sK-te9" firstAttribute="centerX" secondItem="lrN-Zh-iBj" secondAttribute="centerX" id="Hnf-h2-ZKD"/>
                             <constraint firstItem="fyr-d9-Ide" firstAttribute="leading" secondItem="lrN-Zh-iBj" secondAttribute="leading" id="Jqz-7C-sAm"/>
+                            <constraint firstItem="oMn-Xz-O1g" firstAttribute="top" secondItem="Nhx-k8-U1s" secondAttribute="bottom" id="PS7-8E-D9v"/>
                             <constraint firstItem="Nhx-k8-U1s" firstAttribute="centerX" secondItem="lrN-Zh-iBj" secondAttribute="centerX" id="Rzz-cy-gPY"/>
                             <constraint firstItem="XcW-Cp-Whg" firstAttribute="top" secondItem="kIM-Qp-W0k" secondAttribute="bottom" constant="8" id="Y6w-65-hfP"/>
                             <constraint firstItem="fyr-d9-Ide" firstAttribute="trailing" secondItem="lrN-Zh-iBj" secondAttribute="trailing" id="Z1A-dJ-Rrd"/>
@@ -962,10 +963,13 @@
                             <constraint firstItem="XcW-Cp-Whg" firstAttribute="trailing" secondItem="lrN-Zh-iBj" secondAttribute="trailingMargin" id="uK3-d5-B8w"/>
                             <constraint firstItem="Nhx-k8-U1s" firstAttribute="leading" secondItem="lrN-Zh-iBj" secondAttribute="leadingMargin" id="urk-kz-WtQ"/>
                             <constraint firstItem="Nhx-k8-U1s" firstAttribute="top" secondItem="Hp9-sK-te9" secondAttribute="bottom" constant="68" id="x1Z-lv-dLB"/>
+                            <constraint firstItem="oMn-Xz-O1g" firstAttribute="top" secondItem="Nhx-k8-U1s" secondAttribute="bottom" id="yYc-Wo-08b"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
                                 <exclude reference="d2X-BX-Hbv"/>
+                                <exclude reference="x1Z-lv-dLB"/>
+                                <exclude reference="yYc-Wo-08b"/>
                             </mask>
                         </variation>
                     </view>
@@ -1000,7 +1004,7 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bread and Butter Combos" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Wc-sj-RwC">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bread and Butter Combos" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="8Wc-sj-RwC">
                                 <rect key="frame" x="20" y="8" width="560" height="32.5"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
