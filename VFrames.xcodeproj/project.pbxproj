@@ -71,7 +71,7 @@
 		A16454D31C7238E800201417 /* GetNetworkDataResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16454D21C7238E800201417 /* GetNetworkDataResult.swift */; };
 		A184F8FB1C7292C7009B7F3B /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A184F8FA1C7292C7009B7F3B /* StoreKit.framework */; };
 		A184F8FD1C7292D1009B7F3B /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A184F8FC1C7292D1009B7F3B /* GameKit.framework */; };
-		A1E45E241C9E478D00BC2D6C /* default_data_model.json in Resources */ = {isa = PBXBuildFile; fileRef = A1E45E231C9E478D00BC2D6C /* default_data_model.json */; };
+		A1E45E261C9FB0C700BC2D6C /* default_data_model.json in Resources */ = {isa = PBXBuildFile; fileRef = A1E45E251C9FB0C700BC2D6C /* default_data_model.json */; };
 		A1F214DF1C87F2CF009AD929 /* BreadAndButterCombo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F214DE1C87F2CF009AD929 /* BreadAndButterCombo.swift */; };
 		A1F214E11C87F344009AD929 /* BreadAndButterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F214E01C87F344009AD929 /* BreadAndButterModel.swift */; };
 		A1F214E31C87F655009AD929 /* BnbsLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F214E21C87F655009AD929 /* BnbsLoader.swift */; };
@@ -144,7 +144,7 @@
 		A16454D21C7238E800201417 /* GetNetworkDataResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetNetworkDataResult.swift; sourceTree = "<group>"; };
 		A184F8FA1C7292C7009B7F3B /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		A184F8FC1C7292D1009B7F3B /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
-		A1E45E231C9E478D00BC2D6C /* default_data_model.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = default_data_model.json; sourceTree = "<group>"; };
+		A1E45E251C9FB0C700BC2D6C /* default_data_model.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = default_data_model.json; sourceTree = "<group>"; };
 		A1F214DE1C87F2CF009AD929 /* BreadAndButterCombo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BreadAndButterCombo.swift; sourceTree = "<group>"; };
 		A1F214E01C87F344009AD929 /* BreadAndButterModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BreadAndButterModel.swift; sourceTree = "<group>"; };
 		A1F214E21C87F655009AD929 /* BnbsLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BnbsLoader.swift; sourceTree = "<group>"; };
@@ -284,7 +284,7 @@
 		A13876E81C59B7B900EA1413 /* TestData */ = {
 			isa = PBXGroup;
 			children = (
-				A1E45E231C9E478D00BC2D6C /* default_data_model.json */,
+				A1E45E251C9FB0C700BC2D6C /* default_data_model.json */,
 			);
 			name = TestData;
 			path = /Users/Andy/Development/XCodeProjects/VFrames/VFrames;
@@ -514,7 +514,7 @@
 				A13877001C5EB3BF00EA1413 /* Podfile in Resources */,
 				A13876DA1C59ABD800EA1413 /* LaunchScreen.storyboard in Resources */,
 				A13876D71C59ABD800EA1413 /* Assets.xcassets in Resources */,
-				A1E45E241C9E478D00BC2D6C /* default_data_model.json in Resources */,
+				A1E45E261C9FB0C700BC2D6C /* default_data_model.json in Resources */,
 				A164548F1C6B0EF900201417 /* Localizable.strings in Resources */,
 				A13876D51C59ABD800EA1413 /* Main.storyboard in Resources */,
 			);

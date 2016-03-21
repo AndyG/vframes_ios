@@ -113,12 +113,25 @@ class CurrentStreamsViewController: UIViewController, UITableViewDataSource, UIT
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let url = NSURL(string: twitchStreams[indexPath.row].channelUrl)!
-        UIApplication.sharedApplication().openURL(url)
+        let streamName = twitchStreams[indexPath.row].channelName
+        openTwitchStream(url, streamName: streamName)
         tableView.deselectRowAtIndexPath(indexPath, animated: false)
     }
     
     func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 0.0
+    }
+    
+    private func openTwitchStream(url: NSURL, streamName: String) {
+        let twitchUrlStr: String = "twitch://stream/\(streamName)"
+        let twitchUrl = NSURL(string: twitchUrlStr)!
+        let application = UIApplication.sharedApplication()
+        
+        if (application.canOpenURL(twitchUrl)) {
+            application.openURL(twitchUrl)
+        } else {
+            application.openURL(url)
+        }
     }
     
     //MARK: listener from network call

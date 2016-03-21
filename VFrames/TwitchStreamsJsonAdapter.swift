@@ -28,13 +28,15 @@ public class TwitchStreamsJsonAdapter {
     private static func parseStream(streamJson: JSON) -> TwitchStream? {
         var channelJson = streamJson["channel"]
         
+        
         //Verify everything we need from the channel is there
-        if (channelJson["display_name"] == nil || channelJson["url"] == nil) {
+        if (channelJson["display_name"] == nil || channelJson["url"] == nil || channelJson["name"]) {
             return nil
         }
         
         //Get the channel data from the json.
         let channelDisplayName = channelJson["display_name"].string!
+        let channelName = channelJson["name"].string!
         let channelUrl = channelJson["url"].string!
         let status = channelJson["status"].string
         
@@ -53,6 +55,6 @@ public class TwitchStreamsJsonAdapter {
         
         let previewUrl = streamJson["preview"]["medium"].string!
         
-        return TwitchStream(channelDisplayName: channelDisplayName, status: status, channelUrl: channelUrl, viewerCount: viewerCount, previewUrl: previewUrl)
+        return TwitchStream(channelDisplayName: channelDisplayName, channelName: channelName, status: status, channelUrl: channelUrl, viewerCount: viewerCount, previewUrl: previewUrl)
     }
 }

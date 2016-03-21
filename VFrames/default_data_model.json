@@ -1,96 +1,6 @@
 {
     "version": "1", 
     "characters": {
-        "alex": {
-            "move_list": {
-                "vreversal": [
-                              {
-                              "input": "FORWARD|PLUS|ALL_KICKS",
-                              "name": "Senpu Nataotoshi",
-                              "pretext": "(During Guard)"
-                              }
-                              ],
-                "vskill": [
-                           {
-                           "input": "MP|PLUS|MK",
-                           "name": "Quick Step",
-                           "description": "Moves Ken forward. Holding the buttons performs a step kick."
-                           }
-                           ],
-                "specials": [
-                             {
-                             "input": "QCF|PLUS|PUNCH",
-                             "name": "Hadoken",
-                             "description": "Punch strength determines projectile speed."
-                             },
-                             {
-                             "input": "SRK|PLUS|PUNCH",
-                             "name": "Shoryuken",
-                             "description": "Startup invincibility."
-                             },
-                             {
-                             "input": "QCB|PLUS|KICK",
-                             "name": "Tatsumaki Senpukyaku",
-                             "description": "LK version launches opponent. HK and EX versions rise off the ground."
-                             },
-                             {
-                             "input": "QCB|PLUS|KICK",
-                             "pretext": "(During Forward Jump)",
-                             "name": "Airborne Tatsumaki Senpukyaku",
-                             "description": "EX version attacks diagonally downward."
-                             }
-                             ],
-                "critical_arts": [
-                                  {
-                                  "input": "QCF|QCF|PLUS|KICK",
-                                  "name": "Guren Enjinkyaku"
-                                  }
-                                  ],
-                "unique_attacks": [
-                                   {
-                                   "input": "FORWARD|PLUS|HK",
-                                   "posttext": "Tap to feint, hold to attack.",
-                                   "name": "Thunder Kick",
-                                   "description": "Hits overhead."
-                                   },
-                                   {
-                                   "input": "BACK|PLUS|MK",
-                                   "name": "Inazuma Kick"
-                                   },
-                                   {
-                                   "input": "BACK|PLUS|MP",
-                                   "name": "Chin Buster"
-                                   },
-                                   {
-                                   "input": "BACK|PLUS|MP|ARROW|HP",
-                                   "name": "Chin Buster 2nd"
-                                   },
-                                   {
-                                   "input": "MK|ARROW|HK",
-                                   "name": "Lion Breaker"
-                                   }
-                                   ],
-                "throws": [
-                           {
-                           "input": "LP|PLUS|LK",
-                           "name": "Knee Bash",
-                           "pretext": "(Close To Opponent)"
-                           }, 
-                           {
-                           "input": "BACK|PLUS|LP|PLUS|LK", 
-                           "name": "Hell Wheel", 
-                           "pretext": "(Close To Opponent)"
-                           }
-                           ], 
-                "vtrigger": [
-                             {
-                             "input": "HP|PLUS|HK", 
-                             "name": "Heat Rush", 
-                             "description": "Moves Ken forward, maintaining pressure or extending a combo. Afterward, Kens special moves are faster and gain better hitboxes."
-                             }
-                             ]
-            }
-        },
         "ken": {
             "frame_data": {
                 "vreversal": [
@@ -842,7 +752,95 @@
                         }
                     ]
                 }
-            ]
+            ], 
+            "move_list": {
+                "vreversal": [
+                    {
+                        "input": "FORWARD|PLUS|ALL_KICKS", 
+                        "name": "Senpu Nataotoshi", 
+                        "pretext": "(During Guard)"
+                    }
+                ], 
+                "vskill": [
+                    {
+                        "input": "MP|PLUS|MK", 
+                        "name": "Quick Step", 
+                        "description": "Moves Ken forward. Holding the buttons performs a step kick."
+                    }
+                ], 
+                "specials": [
+                    {
+                        "input": "QCF|PLUS|PUNCH", 
+                        "name": "Hadoken", 
+                        "description": "Punch strength determines projectile speed."
+                    }, 
+                    {
+                        "input": "SRK|PLUS|PUNCH", 
+                        "name": "Shoryuken", 
+                        "description": "Startup invincibility."
+                    }, 
+                    {
+                        "input": "QCB|PLUS|KICK", 
+                        "name": "Tatsumaki Senpukyaku", 
+                        "description": "LK version launches opponent. HK and EX versions rise off the ground."
+                    }, 
+                    {
+                        "input": "QCB|PLUS|KICK", 
+                        "pretext": "(During Forward Jump)", 
+                        "name": "Airborne Tatsumaki Senpukyaku", 
+                        "description": "EX version attacks diagonally downward."
+                    }
+                ], 
+                "critical_arts": [
+                    {
+                        "input": "QCF|QCF|PLUS|KICK", 
+                        "name": "Guren Enjinkyaku"
+                    }
+                ], 
+                "unique_attacks": [
+                    {
+                        "input": "FORWARD|PLUS|HK", 
+                        "posttext": "Tap to feint, hold to attack.", 
+                        "name": "Thunder Kick", 
+                        "description": "Hits overhead."
+                    }, 
+                    {
+                        "input": "BACK|PLUS|MK", 
+                        "name": "Inazuma Kick"
+                    }, 
+                    {
+                        "input": "BACK|PLUS|MP", 
+                        "name": "Chin Buster"
+                    }, 
+                    {
+                        "input": "BACK|PLUS|MP|ARROW|HP", 
+                        "name": "Chin Buster 2nd"
+                    }, 
+                    {
+                        "input": "MK|ARROW|HK", 
+                        "name": "Lion Breaker"
+                    }
+                ], 
+                "throws": [
+                    {
+                        "input": "LP|PLUS|LK", 
+                        "name": "Knee Bash", 
+                        "pretext": "(Close To Opponent)"
+                    }, 
+                    {
+                        "input": "BACK|PLUS|LP|PLUS|LK", 
+                        "name": "Hell Wheel", 
+                        "pretext": "(Close To Opponent)"
+                    }
+                ], 
+                "vtrigger": [
+                    {
+                        "input": "HP|PLUS|HK", 
+                        "name": "Heat Rush", 
+                        "description": "Moves Ken forward, maintaining pressure or extending a combo. Afterward, Kens special moves are faster and gain better hitboxes."
+                    }
+                ]
+            }
         }, 
         "mika": {
             "frame_data": {
