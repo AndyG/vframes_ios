@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RecommendedVideosViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, GetVideosTaskListenerProtocol {
+class GuideVideosController: UIViewController, UITableViewDataSource, UITableViewDelegate, GetVideosTaskListenerProtocol {
     
     @IBOutlet var errorLoadingContainer: UIView!
     @IBOutlet var loadingIndicator: UIActivityIndicatorView!
@@ -23,7 +23,7 @@ class RecommendedVideosViewController: UIViewController, UITableViewDataSource, 
     override func viewDidLoad() {
         super.viewDidLoad()
         videosTableView.hidden = true
-        let getVideosTask = GetRecommendedVideosTask()
+        let getVideosTask = GetGuideVideosTask()
         getVideosTask.loadData(self, character: getCharacterStringForUrl(targetCharacterId))
         loadingIndicator.hidden = false
         loadingIndicator.startAnimating()

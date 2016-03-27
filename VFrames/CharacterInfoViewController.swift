@@ -15,20 +15,19 @@ class CharacterInfoViewController: UIViewController, UITabBarDelegate {
     @IBOutlet var movesListContainer: UIView!
     @IBOutlet var frameDataContainer: UIView!
     @IBOutlet var combosContainer: UIView!
-    @IBOutlet var videosContainer: UIView!
     @IBOutlet var notesContainer: UIView!
     
-    
     var targetCharacterId: CharacterID!
-
     
     override func viewDidLoad() {
+        print("loading")
         showFrameData()                
         
         let backgroundColor = UIColor.groupTableViewBackgroundColor()
         view.backgroundColor = backgroundColor
         
         title = CharacterID.toString(targetCharacterId)
+        print("loaded")
     }
     
     func tabBar(tabBar: UITabBar, didSelectItem item: UITabBarItem) {
@@ -40,8 +39,6 @@ class CharacterInfoViewController: UIViewController, UITabBarDelegate {
         case 2:
             showCombos()
         case 3:
-            showVideos()
-        case 4:
             showNotes()
         default:
             //should never happen
@@ -54,7 +51,6 @@ class CharacterInfoViewController: UIViewController, UITabBarDelegate {
         
         movesListContainer.hidden = true
         combosContainer.hidden = true
-        videosContainer.hidden = true
         notesContainer.hidden = true
         
         frameDataContainer.hidden = false
@@ -65,7 +61,6 @@ class CharacterInfoViewController: UIViewController, UITabBarDelegate {
         
         frameDataContainer.hidden = true
         combosContainer.hidden = true
-        videosContainer.hidden = true
         notesContainer.hidden = true
         
         movesListContainer.hidden = false
@@ -76,30 +71,17 @@ class CharacterInfoViewController: UIViewController, UITabBarDelegate {
         
         frameDataContainer.hidden = true
         movesListContainer.hidden = true
-        videosContainer.hidden = true
         notesContainer.hidden = true
         
         combosContainer.hidden = false
     }
     
-    private func showVideos() {
+    private func showNotes() {
         tabBar.selectedItem = tabBar.items![3]
         
         movesListContainer.hidden = true
         frameDataContainer.hidden = true
         combosContainer.hidden = true
-        notesContainer.hidden = true
-        
-        videosContainer.hidden = false
-    }
-    
-    private func showNotes() {
-        tabBar.selectedItem = tabBar.items![4]
-        
-        movesListContainer.hidden = true
-        frameDataContainer.hidden = true
-        combosContainer.hidden = true
-        videosContainer.hidden = true
         
         notesContainer.hidden = false
     }
@@ -127,12 +109,6 @@ class CharacterInfoViewController: UIViewController, UITabBarDelegate {
         return bnbViewController
     }
     
-    private func createRecommendedVideosViewController() -> RecommendedVideosViewController {
-        let recommendedVideosVC = self.newViewController("recommendedVideosViewController") as! RecommendedVideosViewController
-        recommendedVideosVC.targetCharacterId = targetCharacterId
-        return recommendedVideosVC
-    }
-    
     private func createNotesViewController() -> UIViewController {
         return self.newViewController("notesViewController")
     }    
@@ -146,9 +122,6 @@ class CharacterInfoViewController: UIViewController, UITabBarDelegate {
             destination.targetCharacterId = targetCharacterId
         } else if (segue.identifier == "embedCombos") {
             let destination = segue.destinationViewController as! BnBViewController
-            destination.targetCharacterId = targetCharacterId
-        } else if (segue.identifier == "embedVideos") {
-            let destination = segue.destinationViewController as! RecommendedVideosViewController
             destination.targetCharacterId = targetCharacterId
         } else if (segue.identifier == "embedNotes") {
             //nothing to do for notes yet

@@ -1,15 +1,7 @@
-//
-//  GetVideosTask.swift
-//  VFrames
-//
-//  Created by Andy Garron on 3/3/16.
-//  Copyright © 2016 VFrames. All rights reserved.
-//
-
 import Foundation
 import SwiftyJSON
 
-public class GetRecommendedVideosTask {
+public class GetGuideVideosTask {
     
     var data: NSData?
     

@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum CharacterID: String {
+public enum CharacterID: String {
     case RYU = "Ryu",
     CHUN = "Chun",
     DICTATOR = "Dictator",

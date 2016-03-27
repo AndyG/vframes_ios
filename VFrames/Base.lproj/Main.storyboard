@@ -344,7 +344,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hOi-sY-Bkc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1970" y="1181"/>
+            <point key="canvasLocation" x="790" y="1576.5"/>
         </scene>
         <!--Moves List View Controller-->
         <scene sceneID="2D0-F4-qt6">
@@ -584,8 +584,7 @@
                                     <tabBarItem title="Frame Data" image="frame_data_icon_30" id="1xv-1R-GTF"/>
                                     <tabBarItem tag="1" title="Moves List" image="moves_icon_30" id="Pm7-Xe-2W9"/>
                                     <tabBarItem tag="2" title="Combos" image="combos_icon_50" id="iEA-Lj-J1S"/>
-                                    <tabBarItem tag="3" title="Videos" image="videos_icon_30" id="FLn-cN-LNG"/>
-                                    <tabBarItem tag="4" title="Notes" image="notes_icon_50" id="rY5-sI-Oyg"/>
+                                    <tabBarItem tag="3" title="Notes" image="notes_icon_50" id="rY5-sI-Oyg"/>
                                 </items>
                                 <color key="barTintColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
@@ -612,9 +611,6 @@
                             </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8KU-5K-0du" userLabel="Videos Container">
                                 <rect key="frame" x="0.0" y="64" width="600" height="487"/>
-                                <connections>
-                                    <segue destination="XM6-Mq-KEa" kind="embed" identifier="embedVideos" id="EUz-hB-Jnv"/>
-                                </connections>
                             </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GAV-fC-EaG" userLabel="Notes Container">
                                 <rect key="frame" x="0.0" y="64" width="600" height="487"/>
@@ -674,7 +670,6 @@
                         <outlet property="movesListContainer" destination="933-hF-KGD" id="PMT-Ka-Imx"/>
                         <outlet property="notesContainer" destination="GAV-fC-EaG" id="xMp-Mf-LWT"/>
                         <outlet property="tabBar" destination="2TE-AD-Rcq" id="v9f-p0-VeA"/>
-                        <outlet property="videosContainer" destination="8KU-5K-0du" id="tBI-GK-6ke"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CND-9i-TCz" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1116,19 +1111,19 @@
                         <viewControllerLayoutGuide type="bottom" id="zJI-QB-eDF"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kYh-Sb-IzT">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="487"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="1Fd-OH-Jqr">
-                                <rect key="frame" x="290" y="233.5" width="20" height="20"/>
+                                <rect key="frame" x="290" y="290" width="20" height="20"/>
                             </activityIndicatorView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recommended Videos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wd0-n8-vWg">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Recommended Videos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wd0-n8-vWg">
                                 <rect key="frame" x="167" y="8" width="267" height="32.5"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="100" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="4vi-lt-o69">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="100" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="4vi-lt-o69">
                                 <rect key="frame" x="0.0" y="54.5" width="600" height="432.5"/>
                                 <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
@@ -1209,7 +1204,7 @@
                                     <outlet property="delegate" destination="XM6-Mq-KEa" id="UfC-f1-tEg"/>
                                 </connections>
                             </tableView>
-                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v6t-G2-8oc" userLabel="Error Loading View">
+                            <view hidden="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="v6t-G2-8oc" userLabel="Error Loading View">
                                 <rect key="frame" x="0.0" y="54" width="600" height="433"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="There was an error loading videos. Please check your network connection and try again." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oM8-DZ-V6i">
@@ -1241,8 +1236,8 @@
                                     </mask>
                                 </variation>
                             </view>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recommended videos are on the way for this character!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="09s-g6-9hs">
-                                <rect key="frame" x="60" y="217" width="480" height="51.5"/>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Recommended videos are on the way for this character!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="09s-g6-9hs">
+                                <rect key="frame" x="60" y="273" width="480" height="51.5"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -1282,7 +1277,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WBB-ft-wQ4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4811" y="-130"/>
+            <point key="canvasLocation" x="4915" y="872"/>
         </scene>
         <!--Notes View Controller-->
         <scene sceneID="qwq-Sv-87B">
@@ -1323,7 +1318,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bex-eM-asd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5483" y="-130"/>
+            <point key="canvasLocation" x="4863" y="-130.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="66C-9A-Ian">
@@ -1353,6 +1348,5 @@
         <image name="notes_icon_50" width="30" height="30"/>
         <image name="streams_icon@1x" width="30" height="30"/>
         <image name="twitch_dead" width="1000" height="1000"/>
-        <image name="videos_icon_30" width="30" height="30"/>
     </resources>
 </document>
