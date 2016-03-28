@@ -8,16 +8,18 @@
 
 import UIKit
 
-class GuideVideosController: UIViewController, UITableViewDataSource, UITableViewDelegate, UIPickerViewDataSource, UIPickerViewDelegate, GetVideosTaskListenerProtocol {
+class TournamentVideosController: UIViewController, UITableViewDataSource, UITableViewDelegate, UIPickerViewDataSource, UIPickerViewDelegate, GetVideosTaskListenerProtocol {
     
-    @IBOutlet var filterPicker: UIPickerView!
-    @IBOutlet var errorLoadingContainer: UIView!
+    @IBOutlet var firstCharacterPicker: UIPickerView!
+    @IBOutlet var secondCharacterPicker: UIPickerView!
+    
+    @IBOutlet var errorLoadingLayout: UIView!
     @IBOutlet var loadingIndicator: UIActivityIndicatorView!
     @IBOutlet var videosTableView: UITableView!
     @IBOutlet var noVideosLabel: UILabel!
     
     var youtubeVideos: [YoutubeVideo]!
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         loadVideos()
@@ -26,16 +28,12 @@ class GuideVideosController: UIViewController, UITableViewDataSource, UITableVie
     private func loadVideos() {
         showLoadingIndicator()
         
-        let row = filterPicker.selectedRowInComponent(0)
-        var selection = "general"
-        if row != 0 {
-            let character = CharacterID.allValuesAlphabetic[row - 1]
-            selection = getCharacterStringForUrl(character)
-        }
-        let getGuideVideosTask = GetGuideVideosTask()
-        getGuideVideosTask.loadData(self, character: selection)
+        let firstQueryParameter = getQueryParameter(firstCharacterPicker)
+        let secondQueryParameter = getQueryParameter(secondCharacterPicker)
+        let getTournamentVideosTask = GetTournamentVideosTask()
+        getTournamentVideosTask.loadData(self, firstCharacter: firstQueryParameter, secondCharacter: secondQueryParameter)
     }
-
+    
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let video = youtubeVideos[indexPath.item]
         
@@ -60,7 +58,7 @@ class GuideVideosController: UIViewController, UITableViewDataSource, UITableVie
     }
     
     func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return "Guides"
+        return "Tournament Matches"
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
@@ -82,7 +80,7 @@ class GuideVideosController: UIViewController, UITableViewDataSource, UITableVie
     
     func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         if (row == 0) {
-            return "General"
+            return "Any"
         } else {
             return CharacterID.toString(CharacterID.allValuesAlphabetic[row - 1])
         }
@@ -131,6 +129,16 @@ class GuideVideosController: UIViewController, UITableViewDataSource, UITableVie
         }
     }
     
+    private func getQueryParameter(picker: UIPickerView) -> String {
+        let row = picker.selectedRowInComponent(0)
+        var selection = "any"
+        if row != 0 {
+            let character = CharacterID.allValuesAlphabetic[row - 1]
+            selection = getCharacterStringForUrl(character)
+        }
+        return selection
+    }
+    
     private func showVideosTable(youtubeVideos: [YoutubeVideo]) {
         self.youtubeVideos = youtubeVideos
         videosTableView.reloadData()
@@ -138,7 +146,7 @@ class GuideVideosController: UIViewController, UITableViewDataSource, UITableVie
         loadingIndicator.stopAnimating()
         loadingIndicator.hidden = true
         noVideosLabel.hidden = true
-        errorLoadingContainer.hidden = true
+        errorLoadingLayout.hidden = true
         
         videosTableView.hidden = false
     }
@@ -146,7 +154,7 @@ class GuideVideosController: UIViewController, UITableViewDataSource, UITableVie
     private func showNoVideosUI() {
         loadingIndicator.stopAnimating()
         loadingIndicator.hidden = true
-        errorLoadingContainer.hidden = true
+        errorLoadingLayout.hidden = true
         videosTableView.hidden = true
         
         noVideosLabel.hidden = false
@@ -158,13 +166,13 @@ class GuideVideosController: UIViewController, UITableViewDataSource, UITableVie
         noVideosLabel.hidden = true
         videosTableView.hidden = true
         
-        errorLoadingContainer.hidden = false
+        errorLoadingLayout.hidden = false
     }
     
     private func showLoadingIndicator() {
         noVideosLabel.hidden = true
         videosTableView.hidden = true
-        errorLoadingContainer.hidden = true
+        errorLoadingLayout.hidden = true
         
         self.loadingIndicator.startAnimating()
         self.loadingIndicator.hidden = false

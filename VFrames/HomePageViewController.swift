@@ -10,13 +10,14 @@ import UIKit
 
 class HomePageViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout,
     UITabBarDelegate,
-    NetworkDataSourceListenerProtocol {
+    NetworkDataSourceListenerProtocol, GetDataVersionTaskListener {
     
     @IBOutlet var currentStreamsLayout: UIView!
 
+    @IBOutlet var tournamentVideosLayout: UIView!
+    @IBOutlet var guideVideosLayout: UIView!
     @IBOutlet var characterSelectLayout: UIView!
     
-    @IBOutlet var updateDataButton: UIButton!
     @IBOutlet var updateDataActivityIndicator: UIActivityIndicatorView!
     
     @IBOutlet var tabBar: UITabBar!
@@ -31,22 +32,11 @@ class HomePageViewController: UIViewController, UICollectionViewDelegate, UIColl
         showCharacterSelectLayout()
         if (shouldShowFeedbackRequest()) {
             showFeedbackRequest()
+        } else {
+            let getDataVersionTask = GetDataVersionTask()
+            getDataVersionTask.loadData(charactersModel.getVersion(), listener: self)
         }
         
-    }
-    
-    private func addStreamsController() {
-        let streams = storyboard?.instantiateViewControllerWithIdentifier("streamsViewController")
-        streams!.view.frame = currentStreamsLayout.bounds
-        currentStreamsLayout.addSubview((streams?.view)!)
-    }
-    
-    @IBAction func updateButtonClicked(sender: UIButton) {
-        updateDataButton.hidden = true
-        updateDataActivityIndicator.startAnimating()
-        updateDataActivityIndicator.hidden = false
-        let dataSource = NetworkDataSource()
-        dataSource.loadData(self, currentVersion: charactersModel.version)
     }
     
     func tabBar(tabBar: UITabBar, didSelectItem item: UITabBarItem) {
@@ -55,6 +45,10 @@ class HomePageViewController: UIViewController, UICollectionViewDelegate, UIColl
             showCharacterSelectLayout()
         } else if (tag == 1) {
             showStreamsLayout()
+        } else if (tag == 2) {
+            showGuidesLayout()
+        } else if (tag == 3) {
+            showTournamentVideosLayout()
         }
     }
     
@@ -96,7 +90,6 @@ class HomePageViewController: UIViewController, UICollectionViewDelegate, UIColl
         return size;
     }
     
-    
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAtIndex section: Int) -> UIEdgeInsets {
         
         let screenSize: CGRect = UIScreen.mainScreen().bounds
@@ -124,22 +117,42 @@ class HomePageViewController: UIViewController, UICollectionViewDelegate, UIColl
     }
     
     private func showCharacterSelectLayout() {
-        characterSelectLayout.hidden = false
         currentStreamsLayout.hidden = true
+        guideVideosLayout.hidden = true
+        tournamentVideosLayout.hidden = true
+        
+        characterSelectLayout.hidden = false
     }
     
     private func showStreamsLayout() {
+        guideVideosLayout.hidden = true
         characterSelectLayout.hidden = true
+        tournamentVideosLayout.hidden = true
+        
         currentStreamsLayout.hidden = false
+    }
+    
+    private func showGuidesLayout() {
+        currentStreamsLayout.hidden = true
+        characterSelectLayout.hidden = true
+        tournamentVideosLayout.hidden = true
+        
+        guideVideosLayout.hidden = false
+    }
+    
+    private func showTournamentVideosLayout() {
+        currentStreamsLayout.hidden = true
+        characterSelectLayout.hidden = true
+        guideVideosLayout.hidden = true
+        
+        tournamentVideosLayout.hidden = false
     }
     
     //MARK: methods for getting data from the network
     func onResult(result: GetNetworkDataResult) {
         
-        print("on result")
         //Update the UI appropriately
         dispatch_async(dispatch_get_main_queue(), {
-            self.updateDataButton.hidden = false
             self.updateDataActivityIndicator.stopAnimating()
         })
         
@@ -149,14 +162,6 @@ class HomePageViewController: UIViewController, UICollectionViewDelegate, UIColl
                 self.showUpdatedAlert()
             })
             setupCharactersModel()
-        case .ALREADY_UP_TO_DATE:
-            dispatch_async(dispatch_get_main_queue(), {
-                self.showAlreadyUpToDateAlert()
-            })
-        case .UNSUPPORTED:
-            dispatch_async(dispatch_get_main_queue(), {
-                self.showUnsupportedAlert()
-            })
         case .ERROR:
             dispatch_async(dispatch_get_main_queue(), {
                 self.showErrorFetchingDataAlert()
@@ -170,17 +175,9 @@ class HomePageViewController: UIViewController, UICollectionViewDelegate, UIColl
     }
     
     private func showUpdatedAlert() {
-        let alert = UIAlertController(title: "Data Updated", message: "You have updated to the latest moves list and frame data. Remember to check for new versions of VFrames in the app store so you can see all the latest additional info, like descriptions and move property specifics. Thank you for using VFrames!", preferredStyle: UIAlertControllerStyle.Alert)
+        let alert = UIAlertController(title: "Data Updated", message: "VFrames has updated to the latest moves list and frame data. Thank you for using VFrames!", preferredStyle: UIAlertControllerStyle.Alert)
         let confirmAction = UIAlertAction(title: "Ok, thanks!", style: .Default, handler: nil);
 
-        alert.addAction(confirmAction)
-        presentViewController(alert, animated: true, completion: nil)
-    }
-    
-    private func showAlreadyUpToDateAlert() {
-        let alert = UIAlertController(title: "Already Up to Date", message: "You already have the latest moves list and frame data. Remember to check for new versions of VFrames in the app store so you can see all the latest additional info, like descriptions and move property specifics. Thank you for using VFrames!", preferredStyle: UIAlertControllerStyle.Alert)
-        let confirmAction = UIAlertAction(title: "Ok, thanks!", style: .Default, handler: nil);
-        
         alert.addAction(confirmAction)
         presentViewController(alert, animated: true, completion: nil)
     }
@@ -236,5 +233,32 @@ class HomePageViewController: UIViewController, UICollectionViewDelegate, UIColl
         alert.addAction(denyAction)
         presentViewController(alert, animated: true, completion: nil)
     }
+    
+    private func loadNewDataFromNetwork() {
+        dispatch_async(dispatch_get_main_queue(), {
+            self.updateDataActivityIndicator.startAnimating()
+            self.updateDataActivityIndicator.hidden = false
+        })
+        
+        let dataSource = NetworkDataSource()
+        dataSource.loadData(self, currentVersion: charactersModel.version)
+    }
+    
+    func onNewDataAvailable() {
+        loadNewDataFromNetwork()
+    }
+    
+    func onVersionOutOfDate() {
+        showUnsupportedAlert()
+    }
+    
+    func onUpToDate() {
+        //Don't need to do anything here.
+    }
+    
+    func onError() {
+        //TODO: do we need to do anything here? Probably not.
+    }
+    
 }
 

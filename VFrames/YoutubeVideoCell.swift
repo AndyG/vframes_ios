@@ -18,13 +18,8 @@ public class YoutubeVideoCell: UITableViewCell {
     
     public func setVideo(video: YoutubeVideo) {
         videoTitle.text = video.title
-        videoTitle.sizeToFit()
-        
         author.text = video.author
-        author.sizeToFit()
-        
-        descriptionText.text = video.description
-        descriptionText.sizeToFit()
+        descriptionText.text = video.subtext
         
         loadImageForStream(video.thumbnailUrl)
     }
@@ -35,7 +30,6 @@ public class YoutubeVideoCell: UITableViewCell {
         loadingIndicator.hidden = false
         loadingIndicator.startAnimating()
         
-        print("loading from url: \(url)")
         let httpsUrl = NSURL(string: forceHttps(url))!
         
         let task = NSURLSession.sharedSession().dataTaskWithURL(httpsUrl) {

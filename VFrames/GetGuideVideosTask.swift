@@ -6,7 +6,7 @@ public class GetGuideVideosTask {
     var data: NSData?
     
     func loadData(listener: GetVideosTaskListenerProtocol, character: String) {
-        let urlString = "http://agarron.com/res/vframes/recommendedVideos/\(character)/videos.json"
+        let urlString = "http://still-hollows-20653.herokuapp.com/guideVideos?character=\(character)"
         
         let url:NSURL = NSURL(string: urlString)!
         let session = NSURLSession.sharedSession()
@@ -37,10 +37,9 @@ public class GetGuideVideosTask {
             listener.onError()
         }
         
-        print("loaded recommended videos json: \(jsonData)")
-        let recommendedVideos = RecommendedVideosJsonAdapter.loadVideos(jsonData["videos"].arrayValue)
-        let getYoutubeVideosTask = GetYoutubeVideosTask(recommendedVideos: recommendedVideos)
-        getYoutubeVideosTask.getYoutubeVideos(listener)
+        let guideVideos = GuideVideosJsonAdapter.loadVideos(jsonData.arrayValue)
+        let getYoutubeVideosTask = GetYoutubeVideosTask()
+        getYoutubeVideosTask.getYoutubeVideos(guideVideos, listener: listener)
     }
     
 }

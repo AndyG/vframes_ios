@@ -141,7 +141,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let launchCountKey = "PREFS_LAUNCH_COUNT_KEY"
         let prefs = NSUserDefaults.standardUserDefaults()
         var launchCount = prefs.integerForKey(launchCountKey)
-        launchCount++
+        launchCount += 1
         prefs.setInteger(launchCount, forKey: launchCountKey)
     }
     
@@ -151,7 +151,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let prefs = NSUserDefaults.standardUserDefaults()
         var launchCount = prefs.integerForKey(versionLaunchCountKey)
-        launchCount++
+        launchCount += 1
         prefs.setInteger(launchCount, forKey: versionLaunchCountKey)
     }
     

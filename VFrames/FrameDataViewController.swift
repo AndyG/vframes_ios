@@ -97,7 +97,7 @@ class FrameDataViewController: UIViewController, UITableViewDataSource, UITableV
         frameDataTable.estimatedRowHeight = 150
         frameDataTable.rowHeight = UITableViewAutomaticDimension
         
-        alternateFrameDataSwitch.addTarget(self, action: Selector("stateChanged:"), forControlEvents: UIControlEvents.ValueChanged)
+        alternateFrameDataSwitch.addTarget(self, action: #selector(FrameDataViewController.stateChanged(_:)), forControlEvents: UIControlEvents.ValueChanged)
         updateFrameDataStateLabel()
     }
     

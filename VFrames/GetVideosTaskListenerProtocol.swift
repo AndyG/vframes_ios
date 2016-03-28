@@ -9,6 +9,6 @@
 import Foundation
 
 public protocol GetVideosTaskListenerProtocol {
-    func onResult(result: [String:Array<YoutubeVideo>])
+    func onResult(result: [YoutubeVideo])
     func onError()
 }

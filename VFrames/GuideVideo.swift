@@ -3,9 +3,11 @@ import Foundation
 public class GuideVideo: GuideVideoPrtcl {
     var videoId: String!
     var description: String!
-    var character: CharacterID!
     
-    init(videoId: String, description: String, character: CharacterID) {
+    //If there is no character, it is a general guide
+    var character: CharacterID?
+    
+    init(videoId: String, description: String, character: CharacterID?) {
         self.videoId = videoId
         self.description = description
         self.character = character
@@ -19,7 +21,7 @@ public class GuideVideo: GuideVideoPrtcl {
         return description
     }
     
-    public func getCharacter() -> CharacterID {
+    public func getCharacter() -> CharacterID? {
         return character
     }
 }

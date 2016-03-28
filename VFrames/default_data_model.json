@@ -1,5 +1,8 @@
 {
-    "version": "1", 
+	"versioning": {
+    	"dataVersion": 1,
+    	"minSupportediOSVersion": 6
+	},
     "characters": {
         "ken": {
             "frame_data": {

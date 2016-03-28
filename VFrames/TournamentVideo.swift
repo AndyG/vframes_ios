@@ -1,16 +1,12 @@
 import Foundation
 
-public class TournamentVideo: TournamentVideoPrtcl {
+public class TournamentVideo: VideoPrtcl {
     var videoId: String!
     var tournamentName: String!
-    var firstCharacter: CharacterID!
-    var secondCharacter: CharacterID!
     
-    init(videoId: String, tournamentName: String, firstCharacter: CharacterID, secondCharacter: CharacterID) {
+    init(videoId: String, tournamentName: String) {
         self.videoId = videoId
         self.tournamentName = tournamentName
-        self.firstCharacter = firstCharacter
-        self.secondCharacter = secondCharacter
     }
     
     public func getVideoId() -> String {
@@ -19,13 +15,5 @@ public class TournamentVideo: TournamentVideoPrtcl {
     
     public func getSubtext() -> String {
         return tournamentName
-    }
-    
-    public func getFirstCharacter() -> CharacterID {
-        return firstCharacter
-    }
-    
-    public func getSecondCharacter() -> CharacterID {
-        return secondCharacter
     }
 }

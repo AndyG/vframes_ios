@@ -13,5 +13,7 @@ public class YoutubeVideo {
         self.thumbnailUrl = thumbnailUrl
         self.subtext = subtext
         self.id = id
+        
+        print("created youtube video with title: \(title), author: \(author), subtext: \(subtext) and id: \(id)")
     }
 }

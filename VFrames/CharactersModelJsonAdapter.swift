@@ -14,7 +14,7 @@ class CharactersModelJsonAdapter {
     func loadCharactersModel(charactersModelJson: JSON) -> CharactersModel {
         print("loading characters model")
                 
-        let version = Int(charactersModelJson["version"].string!)!
+        let version: Int = parseVersion(charactersModelJson)
         
         let charactersJson = charactersModelJson["characters"]
         var characters = [CharacterID:SFCharacter]()
@@ -99,5 +99,17 @@ class CharactersModelJsonAdapter {
         }
         
         return fileName
+    }
+    
+    private func parseVersion(dataModelJson: JSON) -> Int {
+        let versioning = dataModelJson["versioning"]
+        
+        if versioning != nil {
+            if let version = versioning["dataVersion"].int {
+                return version
+            }
+        }
+        
+        return 0
     }
 }

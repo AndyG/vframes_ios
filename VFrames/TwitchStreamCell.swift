@@ -20,7 +20,7 @@ public class TwitchStreamCell: UITableViewCell {
         channelName.text = stream.channelDisplayName
         viewCount.text = "\(stream.viewerCount) viewers"
         status.text = stream.status
-        
+
         loadImageForStream(stream.previewUrl)
     }
     
@@ -29,7 +29,6 @@ public class TwitchStreamCell: UITableViewCell {
         loadingIndicator.hidden = false
         loadingIndicator.startAnimating()
         
-        print("loading from url: \(url)")
         let httpsUrl = NSURL(string: forceHttps(url))!
         
         let task = NSURLSession.sharedSession().dataTaskWithURL(httpsUrl) {

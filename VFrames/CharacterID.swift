@@ -67,4 +67,45 @@ public enum CharacterID: String {
                 return "Zangief"
         }
     }
+    
+    static func fromBackendString(string: String) -> CharacterID? {
+        switch(string) {
+        case "alex":
+            return .ALEX
+        case "birdie":
+            return .BIRDIE
+        case "cammy":
+            return .CAMMY
+        case "chun":
+            return .CHUN
+        case "claw":
+            return .CLAW
+        case "dhalsim":
+            return .DHALSIM
+        case "dictator":
+            return .DICTATOR
+        case "fang":
+            return .FANG
+        case "karin":
+            return .KARIN
+        case "ken":
+            return .KEN
+        case "laura":
+            return .LAURA
+        case "mika":
+            return .MIKA
+        case "nash":
+            return .NASH
+        case "necalli":
+            return .NECALLI
+        case "rashid":
+            return .RASHID
+        case "ryu":
+            return .RYU
+        case "zangief":
+            return .ZANGIEF
+        default:
+            return nil
+        }
+    }
 }

@@ -14,8 +14,7 @@ class NetworkDataSource {
     var data: NSData?
     
     func loadData(listener: NetworkDataSourceListenerProtocol, currentVersion: Int) {
-        let appVersion = NSBundle.mainBundle().infoDictionary!["CFBundleVersion"] as! String
-        let urlString = "http://agarron.com/res/vframes/ios/v\(appVersion)/characters_model.json"
+        let urlString = "http://still-hollows-20653.herokuapp.com/dataModel?endpoint=iOS"
 
         let url:NSURL = NSURL(string: urlString)!
         let session = NSURLSession.sharedSession()
@@ -43,26 +42,12 @@ class NetworkDataSource {
         print("\(data == nil)")
         let jsonData = JSON(data: data!, options: NSJSONReadingOptions.MutableContainers, error: &error)
         
-        //check if the client version is supported
-        if jsonData["error"].string != nil {
-            listener.onResult(GetNetworkDataResult.UNSUPPORTED)
+        if (error != nil) {
+            listener.onResult(.ERROR)
             return
         }
         
-        //check if the data from network is newer than current version
-        if let versionString = jsonData["version"].string {
-            if let version = Int(versionString) {
-                if (version <= currentVersion) {
-                    listener.onResult(GetNetworkDataResult.ALREADY_UP_TO_DATE)
-                    return
-                }
-            }
-        } else {
-            listener.onResult(GetNetworkDataResult.ERROR)
-            return
-        }
-        
-        //Now we know the version is new and supported!
+        //We know the version is new and supported.
         //Need to save it as the new character model in app support and
         //refresh the existing instance of the app
         let newCharactersModel = CharactersModelJsonAdapter().loadCharactersModel(jsonData)

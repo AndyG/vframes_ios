@@ -10,7 +10,5 @@ import Foundation
 
 enum GetNetworkDataResult {
     case UPDATED,
-    ALREADY_UP_TO_DATE,
-    UNSUPPORTED,
     ERROR
 }
