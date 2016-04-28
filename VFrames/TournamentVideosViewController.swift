@@ -108,6 +108,8 @@ class TournamentVideosController: UIViewController, UITableViewDataSource, UITab
             return "dictator"
         case .FANG:
             return "fang"
+        case .GUILE:
+            return "guile"
         case .KARIN:
             return "karin"
         case .KEN:

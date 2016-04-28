@@ -10,6 +10,10 @@ import UIKit
 
 extension UIColor {
     
+    func guilePrimary() -> UIColor {
+        return ColorUtils.UIColorFromRGB(0x112804)
+    }
+    
     func chunPrimary() -> UIColor {
         return ColorUtils.UIColorFromRGB(0x5b58c7)
     }
@@ -100,6 +104,8 @@ extension UIColor {
                 return dictatorPrimary()
             case .FANG:
                 return fangPrimary()
+            case .GUILE:
+                return guilePrimary()
             case .KARIN:
                 return karinPrimary()
             case .KEN:

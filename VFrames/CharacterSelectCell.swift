@@ -41,6 +41,8 @@ class CharacterSelectCell: UICollectionViewCell {
                 imageName = "dictator_card"
             case .FANG:
                 imageName = "fang_card"
+            case .GUILE:
+                imageName = "guile_card"
             case .KARIN:
                 imageName = "karin_card"
             case .KEN:
