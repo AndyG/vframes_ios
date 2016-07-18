@@ -98,6 +98,10 @@ class CharactersModelJsonAdapter {
             fileName = "ryu"
         case .ZANGIEF:
             fileName = "zangief"
+        case .IBUKI:
+            fileName = "ibuki"
+        case .BOXER:
+            fileName = "boxer"
         }
         
         return fileName

@@ -82,6 +82,14 @@ extension UIColor {
         return ColorUtils.UIColorFromRGB(0x63291a)
     }
     
+    func ibukiPrimary() -> UIColor {
+        return ColorUtils.UIColorFromRGB(0x301c00)
+    }
+    
+    func boxerPrimary() -> UIColor {
+        return ColorUtils.UIColorFromRGB(0x041173)
+    }
+    
     func highlightedFrameDataEntryColor() -> UIColor {
         return ColorUtils.UIColorFromRGB(0xffebeb)
     }
@@ -124,6 +132,10 @@ extension UIColor {
                 return ryuPrimary()
             case .ZANGIEF:
                 return zangiefPrimary()
+            case .IBUKI:
+                return ibukiPrimary()
+            case .BOXER:
+                return boxerPrimary()
         }
     }
     

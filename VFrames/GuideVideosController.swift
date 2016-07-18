@@ -130,6 +130,10 @@ class GuideVideosController: UIViewController, UITableViewDataSource, UITableVie
             return "ryu"
         case .ZANGIEF:
             return "zangief"
+        case .IBUKI:
+            return "ibuki"
+        case .BOXER:
+            return "boxer"
         }
     }
     

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2126B52AEEF9D9711CF300E1 /* Pods_VFrames.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77FD0C2D238DB39A348EA825 /* Pods_VFrames.framework */; };
+		41FAB7041D335F420011E091 /* default_data_model.json in Resources */ = {isa = PBXBuildFile; fileRef = 41FAB7031D335F420011E091 /* default_data_model.json */; };
 		A126F2041C889371004D4BE8 /* BreadAndButterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A126F2031C889371004D4BE8 /* BreadAndButterCell.swift */; };
 		A126F2091C890854004D4BE8 /* GetGuideVideosTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = A126F2081C890854004D4BE8 /* GetGuideVideosTask.swift */; };
 		A126F20B1C8908B7004D4BE8 /* GetVideosTaskListenerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A126F20A1C8908B7004D4BE8 /* GetVideosTaskListenerProtocol.swift */; };
@@ -38,7 +39,6 @@
 		A13877001C5EB3BF00EA1413 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = A13876FF1C5EB3BF00EA1413 /* Podfile */; };
 		A13CBDBF1CA8BDD9007DAFEB /* GetDataVersionTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13CBDBE1CA8BDD9007DAFEB /* GetDataVersionTask.swift */; };
 		A13CBDC11CA8BFD0007DAFEB /* GetDataVersionTaskListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13CBDC01CA8BFD0007DAFEB /* GetDataVersionTaskListener.swift */; };
-		A13CBDC31CA8E299007DAFEB /* default_data_model.json in Resources */ = {isa = PBXBuildFile; fileRef = A13CBDC21CA8E299007DAFEB /* default_data_model.json */; };
 		A14199AE1CA82BD80012D2EA /* VideoPrtcl.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14199AD1CA82BD80012D2EA /* VideoPrtcl.swift */; };
 		A14199B01CA82C570012D2EA /* GuideVideoPrtcl.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14199AF1CA82C570012D2EA /* GuideVideoPrtcl.swift */; };
 		A14199B21CA82CC60012D2EA /* TournamentVideoPrtcl.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14199B11CA82CC60012D2EA /* TournamentVideoPrtcl.swift */; };
@@ -87,6 +87,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		41FAB7031D335F420011E091 /* default_data_model.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = default_data_model.json; path = VFrames/default_data_model.json; sourceTree = "<group>"; };
 		77FD0C2D238DB39A348EA825 /* Pods_VFrames.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VFrames.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A126F2031C889371004D4BE8 /* BreadAndButterCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BreadAndButterCell.swift; sourceTree = "<group>"; };
 		A126F2081C890854004D4BE8 /* GetGuideVideosTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetGuideVideosTask.swift; sourceTree = "<group>"; };
@@ -257,6 +258,7 @@
 		A13876C31C59ABD800EA1413 = {
 			isa = PBXGroup;
 			children = (
+				41FAB7031D335F420011E091 /* default_data_model.json */,
 				A16454B81C71206000201417 /* Fabric.framework */,
 				A16454B91C71206000201417 /* Crashlytics.framework */,
 				A13876FF1C5EB3BF00EA1413 /* Podfile */,
@@ -554,8 +556,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				41FAB7041D335F420011E091 /* default_data_model.json in Resources */,
 				A13877001C5EB3BF00EA1413 /* Podfile in Resources */,
-				A13CBDC31CA8E299007DAFEB /* default_data_model.json in Resources */,
 				A13876DA1C59ABD800EA1413 /* LaunchScreen.storyboard in Resources */,
 				A13876D71C59ABD800EA1413 /* Assets.xcassets in Resources */,
 				A164548F1C6B0EF900201417 /* Localizable.strings in Resources */,

@@ -1,9 +1,2572 @@
 {
 	"versioning": {
-    	"dataVersion": 1,
-    	"minSupportediOSVersion": 6
+	    "dataVersion": 25,
+	    "minSupportediOSVersion": 8
 	},
     "characters": {
+        "boxer": {
+            "frame_data": {
+                    "normals": [
+                        {
+                            "data": {
+                                "recoveryFrames": 7,
+                                "stunValue": 70,
+                                "damageValue": 30,
+                                "hitAdvantage": 5,
+                                "activeFrames": 2,
+                                "blockAdvantage": 2,
+                                "startupFrames": 4
+                            },
+                            "type": "type_0",
+                            "name": "s.LP"
+                        },
+                        {
+                            "data": {
+                                "recoveryFrames": 13,
+                                "stunValue": 100,
+                                "damageValue": 60,
+                                "hitAdvantage": 2,
+                                "activeFrames": 4,
+                                "blockAdvantage": 0,
+                                "startupFrames": 5
+                            },
+                            "type": "type_0",
+                            "name": "s.MP"
+                        },
+                        {
+                            "data": {
+                                "recoveryFrames": 19,
+                                "stunValue": 150,
+                                "damageValue": 80,
+                                "hitAdvantage": 0,
+                                "activeFrames": 2,
+                                "blockAdvantage": -3,
+                                "startupFrames": 11
+                            },
+                            "type": "type_0",
+                            "name": "s.HP"
+                        },
+                        {
+                            "data": {
+                                "recoveryFrames": 8,
+                                "stunValue": 70,
+                                "damageValue": 30,
+                                "hitAdvantage": 2,
+                                "activeFrames": 2,
+                                "blockAdvantage": 1,
+                                "startupFrames": 3
+                            },
+                            "type": "type_0",
+                            "name": "s.LK"
+                        },
+                        {
+                            "data": {
+                                "recoveryFrames": 12,
+                                "stunValue": 100,
+                                "damageValue": 60,
+                                "hitAdvantage": 5,
+                                "activeFrames": 3,
+                                "blockAdvantage": 2,
+                                "startupFrames": 6
+                            },
+                            "type": "type_0",
+                            "name": "s.MK"
+                        },
+                        {
+                            "data": {
+                                "recoveryFrames": 19,
+                                "stunValue": 150,
+                                "damageValue": 80,
+                                "hitAdvantage": 7,
+                                "activeFrames": 2,
+                                "blockAdvantage": 3,
+                                "startupFrames": 9
+                            },
+                            "type": "type_0",
+                            "name": "s.HK"
+                        },
+                        {
+                            "data": {
+                                "recoveryFrames": 8,
+                                "stunValue": 70,
+                                "damageValue": 30,
+                                "hitAdvantage": 4,
+                                "activeFrames": 2,
+                                "blockAdvantage": 2,
+                                "startupFrames": 4
+                            },
+                            "type": "type_0",
+                            "name": "c.LP"
+                        },
+                        {
+                            "data": {
+                                "recoveryFrames": 14,
+                                "stunValue": 100,
+                                "damageValue": 60,
+                                "hitAdvantage": 1,
+                                "activeFrames": 3,
+                                "blockAdvantage": 0,
+                                "startupFrames": 6
+                            },
+                            "type": "type_0",
+                            "name": "c.MP"
+                        },
+                        {
+                            "data": {
+                                "recoveryFrames": 22,
+                                "stunValue": 150,
+                                "damageValue": 90,
+                                "hitAdvantage": -1,
+                                "blockAdvantage": -5,
+                                "activeFrames": 5,
+                                "startupFrames": 8
+                            },
+                            "type": "type_0",
+                            "name": "c.HP"
+                        },
+                        {
+                            "data": {
+                                "recoveryFrames": 9,
+                                "stunValue": 70,
+                                "damageValue": 20,
+                                "hitAdvantage": 4,
+                                "activeFrames": 2,
+                                "blockAdvantage": 1,
+                                "startupFrames": 4
+                            },
+                            "type": "type_0",
+                            "name": "c.LK"
+                        },
+                        {
+                            "data": {
+                                "recoveryFrames": 17,
+                                "stunValue": 100,
+                                "damageValue": 60,
+                                "hitAdvantage": 2,
+                                "activeFrames": 2,
+                                "blockAdvantage": -2,
+                                "startupFrames": 7
+                            },
+                            "type": "type_0",
+                            "name": "c.MK"
+                        },
+                        {
+                            "data": {
+                                "recoveryFrames": 26,
+                                "activeFrames": 2,
+                                "stunValue": 150,
+                                "damageValue": 90,
+                                "hitAdvantage": 1003,
+                                "startupFrames": 8,
+                                "blockAdvantage": -14
+                            },
+                            "type": "type_0",
+                            "name": "c.HK"
+                        },
+                        {
+                            "data": {
+                                "activeFrames": 6,
+                                "stunValue": 70,
+                                "startupFrames": 4,
+                                "damageValue": 40
+                            },
+                            "type": "type_0",
+                            "name": "j.LP"
+                        },
+                        {
+                            "data": {
+                                "activeFrames": 3,
+                                "stunValue": 100,
+                                "startupFrames": 5,
+                                "damageValue": 70
+                            },
+                            "type": "type_0",
+                            "name": "j.MP"
+                        },
+                        {
+                            "data": {
+                                "activeFrames": 4,
+                                "stunValue": 150,
+                                "startupFrames": 7,
+                                "damageValue": 90
+                            },
+                            "type": "type_0",
+                            "name": "j.HP"
+                        },
+                        {
+                            "data": {
+                                "activeFrames": 8,
+                                "stunValue": 70,
+                                "startupFrames": 3,
+                                "damageValue": 40
+                            },
+                            "type": "type_0",
+                            "name": "j.LK"
+                        },
+                        {
+                            "data": {
+                                "activeFrames": 5,
+                                "stunValue": 100,
+                                "startupFrames": 6,
+                                "damageValue": 70
+                            },
+                            "type": "type_0",
+                            "name": "j.MK"
+                        },
+                        {
+                            "data": {
+                                "activeFrames": 4,
+                                "stunValue": 150,
+                                "startupFrames": 8,
+                                "damageValue": 90
+                            },
+                            "type": "type_0",
+                            "name": "j.HK"
+                        }
+                    ],
+                    "unique_attacks": [
+                    {
+                        "data": {
+                            "stunValue": 172,
+                            "damageValue": 96,
+                            "hitAdvantage": 1003,
+                            "blockAdvantage": -8,
+                            "startupFrames": 6
+                        },
+                        "type": "type_0",
+                        "name": "MK > MP"
+                    },
+                    {
+                        "data": {
+                            "stunValue": 268,
+                            "damageValue": 144,
+                            "hitAdvantage": 1003,
+                            "blockAdvantage": -8,
+                            "startupFrames": 6
+                        },
+                        "type": "type_0",
+                        "name": "MK > MP > V-Skill P"
+                    },
+                    {
+                        "data": {
+                            "stunValue": 268,
+                            "damageValue": 144,
+                            "hitAdvantage": 1003,
+                            "blockAdvantage": -8,
+                            "startupFrames": 6
+                        },
+                        "type": "type_0",
+                        "name": "MK > MP > V-Skill K"
+                    },
+                    {
+                        "data": {
+                            "stunValue": 133,
+                            "damageValue": 66,
+                            "hitAdvantage": 1,
+                            "blockAdvantage": -7,
+                            "startupFrames": 4
+                        },
+                        "type": "type_0",
+                        "name": "LK > MK"
+                    },
+                    {
+                        "data": {
+                            "stunValue": 213,
+                            "damageValue": 122,
+                            "hitAdvantage": 1003,
+                            "blockAdvantage": -8,
+                            "startupFrames": 4
+                        },
+                        "type": "type_0",
+                        "name": "LK > MK > HK"
+                    },
+                    {
+                        "data": {
+                            "stunValue": 172,
+                            "damageValue": 96,
+                            "hitAdvantage": 2,
+                            "blockAdvantage": -6,
+                            "startupFrames": 7
+                        },
+                        "type": "type_0",
+                        "name": "d+MK > d+MK"
+                    }
+                ],
+                "throws": [
+                    {
+                        "data": {
+                            "recoveryFrames": 18,
+                            "hitAdvantage": 1003,
+                            "activeFrames": 2,
+                            "startupFrames": 5,
+                            "damageValue": 120,
+                            "stunValue": 170
+                        },
+                        "type": "type_0",
+                        "name": "Dirty Bomber"
+                    },
+                    {
+                        "data": {
+                            "recoveryFrames": 18,
+                            "hitAdvantage": 1003,
+                            "activeFrames": 2,
+                            "startupFrames": 5,
+                            "damageValue": 130,
+                            "stunValue": 200
+                        },
+                        "type": "type_0",
+                        "name": "Dirty Shot"
+                    }
+                ],
+                "vreversal": [
+                    {
+                        "data": {
+                            "recoveryFrames": 23,
+                            "damageValue": 60,
+                            "hitAdvantage": 1003,
+                            "activeFrames": 3,
+                            "blockAdvantage": -2,
+                            "startupFrames": 15
+                        },
+                        "type": "type_0",
+                        "name": "Buffalo Headbutt"
+                    }
+                ],
+                "vskill": [
+                    {
+                        "data": {
+                            "recoveryFrames": 29
+                        },
+                        "type": "type_0",
+                        "name": "KKB",
+                        "description": "Frames 4-22 projectile invincible."
+                    },
+                    {
+                        "data": {
+                            "startupFrames": 19,
+                            "activeFrames": 2,
+                            "recoveryFrames": 21,
+                            "blockAdvantage": -4,
+                            "hitAdvantage": 2,
+                            "damageValue": 60,
+                            "stunValue": 100
+                        },
+                        "type": "type_0",
+                        "name": "KKB > P"
+                    },
+                    {
+                        "data": {
+                            "startupFrames": 29,
+                            "activeFrames": 2,
+                            "recoveryFrames": 20,
+                            "blockAdvantage": -8,
+                            "hitAdvantage": 5,
+                            "damageValue": 50,
+                            "stunValue": 100
+                        },
+                        "type": "type_0",
+                        "name": "KKB > K"
+                    }
+                ],
+                "specials": [
+                    {
+                        "data": {
+                            "hitAdvantage": 1,
+                            "blockAdvantage": -4,
+                            "activeFrames": 4,
+                            "recoveryFrames": 22,
+                            "startupFrames": 10,
+                            "damageValue": 80,
+                            "stunValue": 150
+                        },
+                        "type": "type_0",
+                        "name": "Dash Straight LP"
+                    },
+                    {
+                        "data": {
+                            "hitAdvantage": 2,
+                            "blockAdvantage": -6,
+                            "activeFrames": 4,
+                            "recoveryFrames": 22,
+                            "startupFrames": 12,
+                            "damageValue": 90,
+                            "stunValue": 150
+                        },
+                        "type": "type_0",
+                        "name": "Dash Straight MP"
+                    },
+                    {
+                        "data": {
+                            "hitAdvantage": 3,
+                            "blockAdvantage": -7,
+                            "activeFrames": 4,
+                            "recoveryFrames": 22,
+                            "startupFrames": 19,
+                            "damageValue": 100,
+                            "stunValue": 150
+                        },
+                        "type": "type_0",
+                        "name": "Dash Straight HP"
+                    },
+                    {
+                        "data": {
+                            "hitAdvantage": 1003,
+                            "blockAdvantage": 1,
+                            "activeFrames": 6,
+                            "recoveryFrames": 29,
+                            "startupFrames": 9,
+                            "damageValue": 150,
+                            "stunValue": 200
+                        },
+                        "type": "type_0",
+                        "name": "Dash Straight EX"
+                    },
+                    {
+                        "data": {
+                            "hitAdvantage": 1003,
+                            "blockAdvantage": -7,
+                            "activeFrames": 2,
+                            "startupFrames": 17,
+                            "recoveryFrames": 26,
+                            "damageValue": 70,
+                            "stunValue": 150
+                        },
+                        "type": "type_0",
+                        "name": "Dash Grand Blow LK"
+                    },
+                    {
+                        "data": {
+                            "hitAdvantage": 1003,
+                            "blockAdvantage": -7,
+                            "activeFrames": 2,
+                            "startupFrames": 18,
+                            "recoveryFrames": 26,
+                            "damageValue": 80,
+                            "stunValue": 150
+                        },
+                        "type": "type_0",
+                        "name": "Dash Grand Blow MK"
+                    },
+                    {
+                        "data": {
+                            "hitAdvantage": 1003,
+                            "blockAdvantage": -7,
+                            "activeFrames": 2,
+                            "startupFrames": 19,
+                            "recoveryFrames": 26,
+                            "damageValue": 90,
+                            "stunValue": 150
+                        },
+                        "type": "type_0",
+                        "name": "Dash Grand Blow HK"
+                    },
+                    {
+                        "data": {
+                            "hitAdvantage": 1003,
+                            "blockAdvantage": -2,
+                            "activeFrames": 2,
+                            "startupFrames": 11,
+                            "recoveryFrames": 23,
+                            "damageValue": 140,
+                            "stunValue": 200
+                        },
+                        "type": "type_0",
+                        "name": "Dash Grand Blow EX"
+                    },
+                    {
+                        "data": {
+                            "hitAdvantage": 1003,
+                            "blockAdvantage": -10,
+                            "activeFrames": 5,
+                            "startupFrames": 13,
+                            "recoveryFrames": 25,
+                            "damageValue": 100,
+                            "stunValue": 150
+                        },
+                        "type": "type_0",
+                        "name": "Screw Smash LK"
+                    },
+                    {
+                        "data": {
+                            "hitAdvantage": 1003,
+                            "blockAdvantage": -10,
+                            "activeFrames": 5,
+                            "startupFrames": 16,
+                            "recoveryFrames": 26,
+                            "damageValue": 110,
+                            "stunValue": 150
+                        },
+                        "type": "type_0",
+                        "name": "Screw Smash MK"
+                    },
+                    {
+                        "data": {
+                            "hitAdvantage": 1003,
+                            "blockAdvantage": -10,
+                            "activeFrames": 5,
+                            "startupFrames": 24,
+                            "recoveryFrames": 23,
+                            "damageValue": 120,
+                            "stunValue": 150
+                        },
+                        "type": "type_0",
+                        "name": "Screw Smash HK"
+                    },
+                    {
+                        "data": {
+                            "hitAdvantage": 1003,
+                            "blockAdvantage": -14,
+                            "activeFrames": 5,
+                            "startupFrames": 12,
+                            "recoveryFrames": 29,
+                            "damageValue": 150,
+                            "stunValue": 200
+                        },
+                        "type": "type_0",
+                        "name": "Screw Smash EX",
+                        "description": "Has armor frames 3-16."
+                    },
+                    {
+                        "data": {
+                            "hitAdvantage": 2,
+                            "blockAdvantage": -2
+                        },
+                        "type": "type_0",
+                        "name": "Charging Buffalo"
+                    },
+                    {
+                        "data": {
+                            "hitAdvantage": 1003,
+                            "blockAdvantage": -13
+                        },
+                        "type": "type_0",
+                        "name": "Charging Buffalo End"
+                    },
+                    {
+                        "data": {
+                            "hitAdvantage": 1003,
+                            "blockAdvantage": -2
+                        },
+                        "type": "type_0",
+                        "name": "Charging Buffalo EX"
+                    },{
+                        "data": {
+                            "hitAdvantage": 2,
+                            "blockAdvantage": -2
+                        },
+                        "type": "type_0",
+                        "name": "Bursting Buffalo"
+                    },
+                    {
+                        "data": {
+                            "hitAdvantage": 1003,
+                            "blockAdvantage": -21
+                        },
+                        "type": "type_0",
+                        "name": "Bursting Buffalo End"
+                    },
+                    {
+                        "data": {
+                            "hitAdvantage": 1003,
+                            "blockAdvantage": -2
+                        },
+                        "type": "type_0",
+                        "name": "Bursting Buffalo EX"
+                    },
+                    {
+                        "data": {
+                            "hitAdvantage": 1,
+                            "blockAdvantage": -2,
+                            "activeFrames": 2,
+                            "startupFrames": 26,
+                            "recoveryFrames": 22
+                        },
+                        "type": "type_0",
+                        "name": "TAP 1-3",
+                        "description": "Upper body and projectile invulnerability frames 3-18. 1: 0.5 sec charge. 2: 2 sec charge. 3: 4 sec charge."
+                    },
+                    {
+                        "data": {
+                            "hitAdvantage": 1003,
+                            "blockAdvantage": -2,
+                            "activeFrames": 2,
+                            "startupFrames": 26,
+                            "recoveryFrames": 22
+                        },
+                        "type": "type_0",
+                        "name": "TAP 4-6",
+                        "description": "Projectile and strike invulnerability frames 3-18. 4: 8 sec charge. 5: 16 sec charge. 6: 24 sec charge."
+                    },
+                    {
+                        "data": {
+                            "hitAdvantage": 1003,
+                            "blockAdvantage": -2,
+                            "activeFrames": 2,
+                            "startupFrames": 26,
+                            "recoveryFrames": 22
+                        },
+                        "type": "type_0",
+                        "name": "TAP 7-9",
+                        "description": "Projectile and strike invulnerability frames 1-18. 7: 32 sec charge. 8: 40 sec charge. 9: 48 sec charge."
+                    },
+                    {
+                        "data": {
+                            "hitAdvantage": 1003,
+                            "blockAdvantage": -2,
+                            "activeFrames": 2,
+                            "startupFrames": 26,
+                            "recoveryFrames": 22,
+                            "damageValue": 500,
+                            "stunValue": 400
+                        },
+                        "type": "type_0",
+                        "name": "TAP Final",
+                        "description": "Invulnerability frames 1-18. 56 sec charge."
+                    }
+                ],
+                "critical_arts": [
+                    {
+                        "data": {
+                            "stunValue": 0,
+                            "damageValue": 330,
+                            "hitAdvantage": 1003,
+                            "recoveryFrames": 60,
+                            "blockAdvantage": -45,
+                            "activeFrames": 10,
+                            "startupFrames": 8
+                        },
+                        "type": "type_0",
+                        "name": "Gigaton Blow",
+                        "description": "Invincible frames 1-10, projectile invincible frames 11-17."
+                    }
+                ]
+            },
+            "move_list": {
+                "vreversal": [
+                    {
+                        "input": "FORWARD|PLUS|ALL_PUNCHES", 
+                        "name": "Buffalo Headbutt", 
+                        "pretext": "(During Guard)"
+                    }
+                ], 
+                "vskill": [
+                    {
+                        "input": "MP|PLUS|MK", 
+                        "name": "KKB",
+                        "description": "Projectile invulnerable."
+                    },
+                    {
+                        "pretext": "(During KKB)",
+                        "input": "PUNCH", 
+                        "name": "Buffalo Swing"
+                    },
+                    {
+                        "pretext": "(During KKB)",
+                        "input": "KICK", 
+                        "name": "Buffalo Pressure",
+                        "description": "Hits overhead."
+                    }
+                ], 
+                "specials": [
+                    {
+                        "input": "CHARGE_BACK|RELEASE_FORWARD|PLUS|KICK", 
+                        "name": "Dash Grand Blow",
+                        "description": "Hits low. Can be cancelled into KKB before connecting."
+                    },
+                    {
+                        "input": "CHARGE_BACK|RELEASE_FORWARD|PLUS|PUNCH", 
+                        "name": "Dash Straight",
+                        "description": "Can be cancelled into KKB before connecting."
+                    },
+                    {
+                        "input": "CHARGE_DOWN|RELEASE_UP|PLUS|KICK", 
+                        "name": "Screw Smash",
+                        "description": "Can be cancelled into KKB before connecting."
+                    },
+                    {
+                        "pretext": "(Hold and release any two punches or kicks)",
+                        "input": "PUNCH|OR|KICK", 
+                        "name": "Turn Punch",
+                        "description": "Can be cancelled into KKB before connecting."
+                    }
+                ], 
+                "critical_arts": [
+                    {
+                        "input": "QCF|QCF|PLUS|PUNCH", 
+                        "name": "Gigaton Blow"
+                    }
+                ], 
+                "unique_attacks": [
+                    {
+                        "input": "MK|ARROW|MP|ARROW|MK|PLUS|MP|ARROW|PUNCH", 
+                        "name": "Hard Smasher"
+                    },
+                    {
+                        "input": "MK|ARROW|MP|ARROW|MK|PLUS|MP|ARROW|KICK", 
+                        "name": "Hard Pressure"
+                    },
+                    {
+                        "input": "LK|ARROW|MK|ARROW|HK", 
+                        "name": "Under Impact"
+                    }, 
+                    {
+                        "input": "DOWN|PLUS|MK|ARROW|DOWN|PLUS|MK", 
+                        "name": "Stomping Combo",
+                        "description": "Stomp the yard!"
+                    }
+                ], 
+                "throws": [
+                    {
+                        "input": "LP|PLUS|LK", 
+                        "name": "Dirty Bomber", 
+                        "pretext": "(Close To Opponent)"
+                    }, 
+                    {
+                        "input": "BACK|PLUS|LP|PLUS|LK", 
+                        "name": "Dirty Shot", 
+                        "pretext": "(Close To Opponent)"
+                    }
+                ], 
+                "vtrigger": [
+                    {
+                        "input": "HP|PLUS|HK", 
+                        "name": "Crazy Rush", 
+                        "description": "Balrog gains the ability to cancel special moves into Charging Buffalo or Bursting Buffalo."
+                    },
+                    {
+                        "input": "FORWARD|PLUS|PUNCH", 
+                        "name": "Charging Buffalo",
+                        "pretext": "(During V-Trigger, during a special move)"
+                    },
+                    {
+                        "input": "FORWARD|PLUS|KICK", 
+                        "name": "Bursting Buffalo",
+                        "pretext": "(During V-Trigger, during a special move)"
+                    }
+                ]
+            }
+        },
+        "ibuki": {
+            "frame_data": {
+                    "normals": [
+                        {
+                            "data": {
+                                "recoveryFrames": 8,
+                                "stunValue": 70,
+                                "damageValue": 30,
+                                "hitAdvantage": 3,
+                                "activeFrames": 2,
+                                "blockAdvantage": 2,
+                                "startupFrames": 3
+                            },
+                            "type": "type_0",
+                            "name": "s.LP",
+                            "description": "This data is incomplete. The rest will be added ASAP!"
+                        },
+                        {
+                            "data": {
+                                "recoveryFrames": 10,
+                                "stunValue": 100,
+                                "damageValue": 60,
+                                "hitAdvantage": 4,
+                                "activeFrames": 3,
+                                "blockAdvantage": 2,
+                                "startupFrames": 5
+                            },
+                            "type": "type_0",
+                            "name": "s.MP"
+                        },
+                        {
+                            "data": {
+                                "recoveryFrames": 19,
+                                "stunValue": 150,
+                                "damageValue": 80,
+                                "hitAdvantage": 0,
+                                "activeFrames": 2,
+                                "blockAdvantage": -5,
+                                "startupFrames": 12
+                            },
+                            "type": "type_0",
+                            "name": "s.HP"
+                        },
+                        {
+                            "data": {
+                                "recoveryFrames": 9,
+                                "stunValue": 70,
+                                "damageValue": 30,
+                                "hitAdvantage": 0,
+                                "activeFrames": 3,
+                                "blockAdvantage": -2,
+                                "startupFrames": 4
+                            },
+                            "type": "type_0",
+                            "name": "s.LK"
+                        },
+                        {
+                            "data": {
+                                "recoveryFrames": 15,
+                                "stunValue": 100,
+                                "damageValue": 60,
+                                "hitAdvantage": 0,
+                                "activeFrames": 2,
+                                "blockAdvantage": -1,
+                                "startupFrames": 5
+                            },
+                            "type": "type_0",
+                            "name": "s.MK"
+                        },
+                        {
+                            "data": {
+                                "recoveryFrames": 16,
+                                "stunValue": 150,
+                                "damageValue": 90,
+                                "hitAdvantage": 1,
+                                "activeFrames": 3,
+                                "blockAdvantage": -2,
+                                "startupFrames": 10
+                            },
+                            "type": "type_0",
+                            "name": "s.HK"
+                        },
+                        {
+                            "data": {
+                                "recoveryFrames": 8,
+                                "stunValue": 70,
+                                "damageValue": 30,
+                                "hitAdvantage": 3,
+                                "activeFrames": 2,
+                                "blockAdvantage": 1,
+                                "startupFrames": 4
+                            },
+                            "type": "type_0",
+                            "name": "c.LP"
+                        },
+                        {
+                            "data": {
+                                "recoveryFrames": 12,
+                                "stunValue": 100,
+                                "damageValue": 60,
+                                "hitAdvantage": 3,
+                                "activeFrames": 3,
+                                "blockAdvantage": -1,
+                                "startupFrames": 6
+                            },
+                            "type": "type_0",
+                            "name": "c.MP"
+                        },
+                        {
+                            "data": {
+                                "recoveryFrames": 16,
+                                "stunValue": 150,
+                                "damageValue": 90,
+                                "hitAdvantage": 2,
+                                "blockAdvantage": -3,
+                                "activeFrames": 4,
+                                "startupFrames": 9
+                            },
+                            "type": "type_0",
+                            "name": "c.HP"
+                        },
+                        {
+                            "data": {
+                                "recoveryFrames": 8,
+                                "stunValue": 70,
+                                "damageValue": 20,
+                                "hitAdvantage": 3,
+                                "activeFrames": 2,
+                                "blockAdvantage": 1,
+                                "startupFrames": 4
+                            },
+                            "type": "type_0",
+                            "name": "c.LK"
+                        },
+                        {
+                            "data": {
+                                "recoveryFrames": 16,
+                                "stunValue": 100,
+                                "damageValue": 60,
+                                "hitAdvantage": 0,
+                                "activeFrames": -3,
+                                "blockAdvantage": -2,
+                                "startupFrames": 6
+                            },
+                            "type": "type_0",
+                            "name": "c.MK"
+                        },
+                        {
+                            "data": {
+                                "recoveryFrames": 24,
+                                "activeFrames": 2,
+                                "stunValue": 150,
+                                "damageValue": 100,
+                                "hitAdvantage": 1003,
+                                "startupFrames": 8,
+                                "blockAdvantage": -12
+                            },
+                            "type": "type_0",
+                            "name": "c.HK"
+                        },
+                        {
+                            "data": {
+                                "activeFrames": 5,
+                                "stunValue": 70,
+                                "startupFrames": 3,
+                                "damageValue": 40
+                            },
+                            "type": "type_0",
+                            "name": "j.LP"
+                        },
+                        {
+                            "data": {
+                                "activeFrames": 6,
+                                "stunValue": 100,
+                                "startupFrames": 5,
+                                "damageValue": 60
+                            },
+                            "type": "type_0",
+                            "name": "j.MP"
+                        },
+                        {
+                            "data": {
+                                "activeFrames": 5,
+                                "stunValue": 150,
+                                "startupFrames": 9,
+                                "damageValue": 90
+                            },
+                            "type": "type_0",
+                            "name": "j.HP"
+                        },
+                        {
+                            "data": {
+                                "activeFrames": 6,
+                                "stunValue": 70,
+                                "startupFrames": 3,
+                                "damageValue": 40
+                            },
+                            "type": "type_0",
+                            "name": "j.LK"
+                        },
+                        {
+                            "data": {
+                                "activeFrames": 6,
+                                "stunValue": 100,
+                                "startupFrames": 6,
+                                "damageValue": 70
+                            },
+                            "type": "type_0",
+                            "name": "j.MK"
+                        },
+                        {
+                            "data": {
+                                "activeFrames": 4,
+                                "stunValue": 150,
+                                "startupFrames": 9,
+                                "damageValue": 90
+                            },
+                            "type": "type_0",
+                            "name": "j.HK"
+                        }
+                    ],
+                    "unique_attacks": [
+                    {
+                        "data": {
+                            "stunValue": 100,
+                            "damageValue": 70,
+                            "hitAdvantage": 3,
+                            "blockAdvantage": -2,
+                            "activeFrames": 2,
+                            "recoveryFrames": 16,
+                            "startupFrames": 28
+                        },
+                        "type": "type_0",
+                        "name": "f+MK"
+                    },
+                    {
+                        "data": {
+                            "stunValue": 150,
+                            "damageValue": 90,
+                            "hitAdvantage": 2,
+                            "blockAdvantage": -3,
+                            "activeFrames": 4,
+                            "recoveryFrames": 16,
+                            "startupFrames": 14
+                        },
+                        "type": "type_0",
+                        "name": "f+HK",
+                        "description": "Launches on crush counter."
+                    },
+                    {
+                        "data": {
+                            "stunValue": 100,
+                            "damageValue": 50,
+                            "hitAdvantage": -6,
+                            "blockAdvantage": -10,
+                            "activeFrames": 11,
+                            "recoveryFrames": 14,
+                            "startupFrames": 7
+                        },
+                        "type": "type_0",
+                        "name": "df+MK"
+                    },
+                    {
+                        "data": {
+                            "stunValue": 70,
+                            "damageValue": 40,
+                            "hitAdvantage": 4,
+                            "blockAdvantage": -1,
+                            "recoveryFrames": 11,
+                            "startupFrames": 7
+                        },
+                        "type": "type_0",
+                        "name": "b+MP"
+                    },
+                    {
+                        "data": {
+                            "blockAdvantage": -8,
+                            "hitAdvantage": -5,
+                            "startupFrames": 3
+                        },
+                        "type": "type_0",
+                        "name": "LP > MP"
+                    },
+                    {
+                        "data": {
+                            "hitAdvantage": 0,
+                            "blockAdvantage": -5,
+                            "startupFrames": 3
+                        },
+                        "type": "type_0",
+                        "name": "LP > MP > HP"
+                    },
+                    {
+                        "data": {
+                            "hitAdvantage": 1003,
+                            "blockAdvantage": -12,
+                            "startupFrames": 5
+                        },
+                        "type": "type_0",
+                        "name": "MK > d+HK"
+                    },
+                    {
+                        "data": {
+                            "hitAdvantage": 0,
+                            "blockAdvantage": -5,
+                            "startupFrames": 6
+                        },
+                        "type": "type_0",
+                        "name": "d+MP > f+HK"
+                    },
+                    {
+                        "data": {
+                            "hitAdvantage": 5,
+                            "blockAdvantage": -2,
+                            "startupFrames": 5
+                        },
+                        "type": "type_0",
+                        "name": "MP > f+MK"
+                    }
+                ],
+                "throws": [
+                    {
+                        "data": {
+                            "recoveryFrames": 18,
+                            "hitAdvantage": 1003,
+                            "activeFrames": 2,
+                            "startupFrames": 5
+                        },
+                        "type": "type_0",
+                        "name": "Yamikazura"
+                    },
+                    {
+                        "data": {
+                            "recoveryFrames": 18,
+                            "hitAdvantage": 1003,
+                            "activeFrames": 2,
+                            "startupFrames": 5
+                        },
+                        "type": "type_0",
+                        "name": "Kubiori"
+                    },
+                    {
+                        "data": {
+                            "recoveryFrames": 18,
+                            "hitAdvantage": 1003,
+                            "activeFrames": 2,
+                            "startupFrames": 5
+                        },
+                        "type": "type_0",
+                        "name": "Tobizaru"
+                    }
+                ],
+                "vreversal": [
+                    {
+                        "data": {
+                            "recoveryFrames": 23,
+                            "hitAdvantage": 1003,
+                            "activeFrames": 3,
+                            "blockAdvantage": -2,
+                            "startupFrames": 15
+                        },
+                        "type": "type_0",
+                        "name": "Hanagasumi"
+                    }
+                ],
+                "vskill": [
+                    {
+                        "data": {
+                            "startupFrames": 15,
+                            "activeFrames": 5,
+                            "recoveryFrames": 20,
+                            "hitAdvantage": 1003,
+                            "blockAdvantage": -5
+                        },
+                        "type": "type_0",
+                        "name": "Tenrai"
+                    },
+                    {
+                        "data": {
+                            "startupFrames": 25,
+                            "activeFrames": 7,
+                            "recoveryFrames": 20,
+                            "hitAdvantage": 1003,
+                            "blockAdvantage": -2
+                        },
+                        "type": "type_0",
+                        "name": "Tenrai (charged)"
+                    }
+                ],
+                "critical_arts": [
+                    {
+                        "data": {
+                            "damageValue": 356,
+                            "hitAdvantage": 1003,
+                            "recoveryFrames": 17,
+                            "blockAdvantage": -20,
+                            "activeFrames": 17,
+                            "startupFrames": 5
+                        },
+                        "type": "type_0",
+                        "name": "Kachofugetsu",
+                        "description": "Invincible frames 1-6."
+                    }
+                ]
+            },
+            "move_list": {
+                "vreversal": [
+                    {
+                        "input": "FORWARD|PLUS|ALL_PUNCHES", 
+                        "name": "Hanagasumi", 
+                        "pretext": "(During Guard)"
+                    }
+                ], 
+                "vskill": [
+                    {
+                        "input": "MP|PLUS|MK", 
+                        "name": "Tenrai", 
+                        "description": "Can be charged."
+                    }
+                ], 
+                "specials": [
+                    {
+                        "input": "QCF|PLUS|KICK", 
+                        "name": "Kasumigake", 
+                        "description": "MK version crosses up, HK version jumps forward."
+                    }, 
+                    {
+                        "input": "SRK|PLUS|KICK", 
+                        "name": "Kazegiri"
+                    }, 
+                    {
+                        "input": "HCB|PLUS|PUNCH", 
+                        "name": "Raida"
+                    }, 
+                    {
+                        "input": "QCF|PLUS|PUNCH", 
+                        "name": "Kunai",
+                        "description": "Can be done in air."
+                    }, 
+                    {
+                        "pretext":"(Hold, then release)",
+                        "input": "PUNCH", 
+                        "name": "Kunai Ikkinage"
+                    }, 
+                    {
+                        "pretext":"(Hold, then release)",
+                        "input": "KICK", 
+                        "name": "Airborne Kunai Ikkinage"
+                    }
+                ], 
+                "critical_arts": [
+                    {
+                        "input": "QCF|QCF|PLUS|PUNCH", 
+                        "name": "Kachofugetsu"
+                    }
+                ], 
+                "unique_attacks": [
+                    {
+                        "input": "BACK|PLUS|MP", 
+                        "name": "Agemen"
+                    },
+                    {
+                        "input": "FORWARD|PLUS|MP", 
+                        "name": "Kobekudaki"
+                    },
+                    {
+                        "input": "DOWN_FORWARD|PLUS|MK", 
+                        "name": "Sazan"
+                    }, 
+                    {
+                        "input": "FORWARD|PLUS|HK", 
+                        "name": "Bonshogeri"
+                    },
+                    {
+                        "input": "KICK|KICK",
+                        "pretext":"(During neutral or forward jump)", 
+                        "name": "Nobusuma"
+                    },
+                    {
+                        "input": "LP|ARROW|MP|ARROW|HP", 
+                        "name": "Shinten"
+                    },
+                    {
+                        "input": "LP|ARROW|MP|ARROW|LK",  
+                        "name": "Yagurakuzushi"
+                    },
+                    {
+                        "input": "MK|ARROW|DOWN|PLUS|MK|ARROW|HK", 
+                        "name": "Gogasha"
+                    },
+                    {
+                        "input": "DOWN|PLUS|MP|ARROW|FORWARD|PLUS|HK", 
+                        "name": "Shakunage"
+                    },
+                    {
+                        "input": "MP|ARROW|FORWARD|PLUS|MK", 
+                        "name": "Sasanaki"
+                    },
+                    {
+                        "pretext":"During jump",
+                        "input": "LP|ARROW|MK", 
+                        "name": "Tobikura"
+                    },
+                    {
+                        "pretext":"During jump",
+                        "input": "HP|ARROW|HK", 
+                        "name": "Aoji"
+                    }
+                ], 
+                "throws": [
+                    {
+                        "input": "LP|PLUS|LK", 
+                        "name": "Yamikazura", 
+                        "pretext": "(Close To Opponent)"
+                    }, 
+                    {
+                        "input": "BACK|PLUS|LP|PLUS|LK", 
+                        "name": "Kubiori", 
+                        "pretext": "(Close To Opponent)"
+                    },
+                    {
+                        "input": "LP|PLUS|LK", 
+                        "name": "Tobizaru", 
+                        "pretext": "(In Air)"
+                    }
+                ], 
+                "vtrigger": [
+                    {
+                        "input": "HP|PLUS|HK", 
+                        "name": "Rokushaku Horokudama (Akebono)",
+                        "description": "Throws a bomb which explodes after about a second. Drains remaining V-meter if already in V-trigger."
+                    },
+                    {
+                        "input": "BACK|PLUS|HP|PLUS|HK", 
+                        "name": "Rokushaku Horokudama (Hizakari)", 
+                        "description": "Throws a bomb which explodes after about 4 seconds. Drains remaining V-meter if already in V-trigger."
+                    },
+                    {
+                        "input": "FORWARD|PLUS|HP|PLUS|HK", 
+                        "name": "Rokushaku Horokudama (Tasogare)", 
+                        "description": "Throws a bomb which explodes after about 6 seconds. Drains remaining V-meter if already in V-trigger."
+                    }
+                ]
+            }
+        },
+        "guile": {
+                "frame_data": {  
+                    "normals": [
+                        {
+                            "data": {
+                                "recoveryFrames": 8, 
+                                "stunValue": 70, 
+                                "damageValue": 30, 
+                                "hitAdvantage": 4, 
+                                "activeFrames": 2, 
+                                "blockAdvantage": 3, 
+                                "startupFrames": 4
+                            },
+                            "type": "type_0", 
+                            "name": "s.LP"
+                        }, 
+                        {
+                            "data": {
+                                "recoveryFrames": 13, 
+                                "stunValue": 100, 
+                                "damageValue": 60, 
+                                "hitAdvantage": 4, 
+                                "activeFrames": 3, 
+                                "blockAdvantage": 3, 
+                                "startupFrames": 5
+                            }, 
+                            "type": "type_0", 
+                            "name": "s.MP"
+                        }, 
+                        {
+                            "data": {
+                                "recoveryFrames": 18, 
+                                "stunValue": 150, 
+                                "damageValue": 80, 
+                                "hitAdvantage": 6, 
+                                "activeFrames": 3, 
+                                "blockAdvantage": -4, 
+                                "startupFrames": 7
+                            }, 
+                            "type": "type_0", 
+                            "name": "s.HP",
+                            "description": "Crush counters (vertical launch)."
+                        }, 
+                        {
+                            "data": {
+                                "recoveryFrames": 9, 
+                                "stunValue": 70, 
+                                "damageValue": 30, 
+                                "hitAdvantage": 4, 
+                                "activeFrames": 3, 
+                                "blockAdvantage": 2, 
+                                "startupFrames": 5
+                            }, 
+                            "type": "type_0", 
+                            "name": "s.LK"
+                        }, 
+                        {
+                            "data": {
+                                "recoveryFrames": 15, 
+                                "stunValue": 100, 
+                                "damageValue": 60, 
+                                "hitAdvantage": 3, 
+                                "activeFrames": 3, 
+                                "blockAdvantage": -1, 
+                                "startupFrames": 7
+                            }, 
+                            "type": "type_0", 
+                            "name": "s.MK"
+                        }, 
+                        {
+                            "data": {
+                                "recoveryFrames": 18, 
+                                "stunValue": 150, 
+                                "damageValue": 80, 
+                                "hitAdvantage": 1, 
+                                "activeFrames": 3, 
+                                "blockAdvantage": -3, 
+                                "startupFrames": 14
+                            }, 
+                            "type": "type_0", 
+                            "name": "s.HK"
+                        }, 
+                        {
+                            "data": {
+                                "recoveryFrames": 8, 
+                                "stunValue": 70, 
+                                "damageValue": 30, 
+                                "hitAdvantage": 4, 
+                                "activeFrames": 2, 
+                                "blockAdvantage": 2, 
+                                "startupFrames": 4
+                            }, 
+                            "type": "type_0", 
+                            "name": "c.LP"
+                        }, 
+                        {
+                            "data": {
+                                "recoveryFrames": 13, 
+                                "stunValue": 100, 
+                                "damageValue": 60, 
+                                "hitAdvantage": 3, 
+                                "activeFrames": 2, 
+                                "blockAdvantage": 1, 
+                                "startupFrames": 6
+                            }, 
+                            "type": "type_0", 
+                            "name": "c.MP"
+                        }, 
+                        {
+                            "data": {
+                                "recoveryFrames": 16, 
+                                "stunValue": 150, 
+                                "damageValue": 90, 
+                                "hitAdvantage": 2,  
+                                "blockAdvantage": -3, 
+                                "activeFrames": 5,
+                                "startupFrames": 8
+                            }, 
+                            "type": "type_0", 
+                            "name": "c.HP"
+                        }, 
+                        {
+                            "data": {
+                                "recoveryFrames": 9, 
+                                "stunValue": 70, 
+                                "damageValue": 20, 
+                                "hitAdvantage": 2, 
+                                "activeFrames": 2, 
+                                "blockAdvantage": 0, 
+                                "startupFrames": 4
+                            }, 
+                            "type": "type_0", 
+                            "name": "c.LK"
+                        }, 
+                        {
+                            "data": {
+                                "recoveryFrames": 15, 
+                                "stunValue": 100, 
+                                "damageValue": 60, 
+                                "hitAdvantage": 1, 
+                                "activeFrames": 2, 
+                                "blockAdvantage": -4, 
+                                "startupFrames": 7
+                            }, 
+                            "type": "type_0", 
+                            "name": "c.MK"
+                        }, 
+                        {
+                            "data": {
+                                "recoveryFrames": 24, 
+                                "stunValue": 150, 
+                                "damageValue": 90, 
+                                "hitAdvantage": 1003, 
+                                "startupFrames": 8,
+                                "blockAdvantage": -13
+                            }, 
+                            "type": "type_0", 
+                            "name": "c.HK"
+                        }, 
+                        {
+                            "data": {
+                                "activeFrames": 5, 
+                                "stunValue": 70, 
+                                "startupFrames": 4, 
+                                "damageValue": 40
+                            }, 
+                            "type": "type_0", 
+                            "name": "j.LP"
+                        }, 
+                        {
+                            "data": {
+                                "activeFrames": 5, 
+                                "stunValue": 100, 
+                                "startupFrames": 5, 
+                                "damageValue": 70
+                            }, 
+                            "type": "type_0", 
+                            "name": "j.MP"
+                        }, 
+                        {
+                            "data": {
+                                "activeFrames": 5, 
+                                "stunValue": 150, 
+                                "startupFrames": 8, 
+                                "damageValue": 90
+                            }, 
+                            "type": "type_0", 
+                            "name": "j.HP"
+                        }, 
+                        {
+                            "data": {
+                                "activeFrames": 5, 
+                                "stunValue": 70, 
+                                "startupFrames": 4, 
+                                "damageValue": 40
+                            }, 
+                            "type": "type_0", 
+                            "name": "j.LK"
+                        }, 
+                        {
+                            "data": {
+                                "activeFrames": 5, 
+                                "stunValue": 100, 
+                                "startupFrames": 7, 
+                                "damageValue": 60
+                            }, 
+                            "type": "type_0", 
+                            "name": "j.MK"
+                        }, 
+                        {
+                            "data": {
+                                "activeFrames": 5, 
+                                "stunValue": 150, 
+                                "startupFrames": 10, 
+                                "damageValue": 90
+                            }, 
+                            "type": "type_0", 
+                            "name": "j.HK"
+                        }
+                    ],
+                    "unique_attacks": [
+                    {
+                        "data": {
+                            "recoveryFrames": 25, 
+                            "stunValue": 150, 
+                            "damageValue": 80,  
+                            "activeFrames": 2, 
+                            "blockAdvantage": -3, 
+                            "startupFrames": 12
+                        }, 
+                        "type": "type_0", 
+                        "name": "df+HK",
+                        "description": "Whiffs on crouching opponents."
+                    },
+                    {
+                        "data": {
+                            "recoveryFrames": 20, 
+                            "stunValue": 150, 
+                            "damageValue": 80, 
+                            "hitAdvantage": 2, 
+                            "activeFrames": 3, 
+                            "blockAdvantage": -1, 
+                            "startupFrames": 8
+                        }, 
+                        "type": "type_0", 
+                        "name": "b+HP",
+                        "description": "Crush counters (horizontal launch)."
+                    },
+                    {
+                        "data": {
+                            "recoveryFrames": 16, 
+                            "stunValue": 150, 
+                            "damageValue": 90, 
+                            "hitAdvantage": 4, 
+                            "activeFrames": 3, 
+                            "blockAdvantage": -1, 
+                            "startupFrames": 10
+                        }, 
+                        "type": "type_0", 
+                        "name": "f+HP",
+                        "description": "Crush counters (spinning). Whiffs on crouching opponents."
+                    },
+                    {
+                        "data": {
+                            "recoveryFrames": 19, 
+                            "stunValue": 100, 
+                            "damageValue": 60, 
+                            "hitAdvantage": 0, 
+                            "activeFrames": 2, 
+                            "blockAdvantage": -4, 
+                            "startupFrames": 21
+                        }, 
+                        "type": "type_0", 
+                        "name": "f+MP"
+                    },
+                    {
+                        "data": {
+                            "recoveryFrames": 17, 
+                            "stunValue": 100, 
+                            "damageValue": 60, 
+                            "hitAdvantage": 2, 
+                            "activeFrames": 2, 
+                            "blockAdvantage": -2, 
+                            "startupFrames": 11
+                        }, 
+                        "type": "type_0", 
+                        "name": "f+MK"
+                    },
+                    {
+                        "data": {
+                            "recoveryFrames": 17, 
+                            "stunValue": 100, 
+                            "damageValue": 60, 
+                            "hitAdvantage": 2, 
+                            "activeFrames": 2, 
+                            "blockAdvantage": -2, 
+                            "startupFrames": 11
+                        }, 
+                        "type": "type_0", 
+                        "name": "b+MK"
+                    },
+                    {
+                        "data": {
+                            "recoveryFrames": 16, 
+                            "stunValue": 100, 
+                            "damageValue": 50, 
+                            "hitAdvantage": -2, 
+                            "activeFrames": 5, 
+                            "blockAdvantage": -6, 
+                            "startupFrames": 8
+                        }, 
+                        "type": "type_0", 
+                        "name": "f+LK"
+                    },
+                    {
+                        "data": {
+                            "recoveryFrames": 18, 
+                            "stunValue": 150, 
+                            "damageValue": 90, 
+                            "hitAdvantage": 3, 
+                            "activeFrames": 3, 
+                            "blockAdvantage": -1, 
+                            "startupFrames": 16
+                        }, 
+                        "type": "type_0", 
+                        "name": "f+HK"
+                    },
+                    {
+                        "data": { 
+                            "hitAdvantage": -1, 
+                            "blockAdvantage": -6
+                        }, 
+                        "type": "type_0", 
+                        "name": "c.LK > s.MP"
+                    },
+                    {
+                        "data": { 
+                            "hitAdvantage": 1003, 
+                            "blockAdvantage": -8
+                        }, 
+                        "type": "type_0", 
+                        "name": "c.LK > s.MP > F+HP"
+                    },
+                    {
+                        "data": { 
+                            "hitAdvantage": 1003, 
+                            "blockAdvantage": -8 
+                        }, 
+                        "type": "type_0", 
+                        "name": "s.MP > F+HP"
+                    },
+                    {
+                        "data": { 
+                            "hitAdvantage": 4, 
+                            "blockAdvantage": -2
+                        }, 
+                        "type": "type_0", 
+                        "name": "s.LK > s.MK"
+                    }
+                ],
+                "throws": [
+                    {
+                        "data": {
+                            "recoveryFrames": 18, 
+                            "hitAdvantage": 1003, 
+                            "activeFrames": 2, 
+                            "startupFrames": 5,
+                            "damageValue": 130,
+                            "stunValue": 200
+                        }, 
+                        "type": "type_0", 
+                        "name": "Dragon Suplex"
+                    }, 
+                    {
+                        "data": {
+                            "recoveryFrames": 18, 
+                            "hitAdvantage": 1003, 
+                            "activeFrames": 2, 
+                            "startupFrames": 5,
+                            "damageValue": 120,
+                            "stunValue": 170
+                        }, 
+                        "type": "type_0", 
+                        "name": "Judo Throw"
+                    },
+                    {
+                        "data": {
+                            "hitAdvantage": 1003, 
+                            "activeFrames": 2, 
+                            "startupFrames": 5,
+                            "damageValue": 130,
+                            "stunValue": 170
+                        }, 
+                        "type": "type_0", 
+                        "name": "Flying Mare"
+                    }, 
+                    {
+                        "data": {
+                            "hitAdvantage": 1003, 
+                            "activeFrames": 2, 
+                            "startupFrames": 5,
+                            "damageValue": 140,
+                            "stunValue": 200
+                        }, 
+                        "type": "type_0", 
+                        "name": "Flying Buster Drop"
+                    }
+                ],
+                "specials": [
+                    {
+                        "data": {
+                            "hitAdvantage": 8, 
+                            "blockAdvantage": 1,
+                            "startupFrames": 13,
+                            "damageValue": 50,
+                            "stunValue": 50
+                        }, 
+                        "type": "type_0", 
+                        "name": "Sonic Boom LP"
+                    }, 
+                    {
+                        "data": {
+                            "hitAdvantage": 8, 
+                            "blockAdvantage": 1,
+                            "startupFrames": 13,
+                            "damageValue": 50,
+                            "stunValue": 50
+                        }, 
+                        "type": "type_0", 
+                        "name": "Sonic Boom MP"
+                    }, 
+                    {
+                        "data": {
+                            "hitAdvantage": 8, 
+                            "blockAdvantage": 1,
+                            "startupFrames": 13,
+                            "damageValue": 50,
+                            "stunValue": 50
+                        }, 
+                        "type": "type_0", 
+                        "name": "Sonic Boom HP"
+                    }, 
+                    {
+                        "data": {
+                            "hitAdvantage": 1003, 
+                            "blockAdvantage": 1,
+                            "startupFrames": 13,
+                            "damageValue": 100,
+                            "stunValue": 100
+                        }, 
+                        "type": "type_0", 
+                        "name": "Sonic Boom EX"
+                    },
+                    {
+                        "data": {
+                            "hitAdvantage": 1003, 
+                            "blockAdvantage": -28,
+                            "activeFrames": 12,
+                            "startupFrames": 4,
+                            "damageValue": 120,
+                            "stunValue": 200
+                        }, 
+                        "type": "type_0", 
+                        "name": "Somersault Kick LK",
+                        "description": "Upper body invinicible frames 1-3. Fully invincible frames 4-6."
+                    }, 
+                    {
+                        "data": {
+                            "hitAdvantage": 1003, 
+                            "blockAdvantage": -28,
+                            "activeFrames": 12,
+                            "startupFrames": 5,
+                            "damageValue": 120,
+                            "stunValue": 200
+                        }, 
+                        "type": "type_0", 
+                        "name": "Somersault Kick MK",
+                        "description": "Upper body invinicible frames 1-4. Fully invincible frames 5-7."
+                    }, 
+                    {
+                        "data": {
+                            "hitAdvantage": 1003, 
+                            "blockAdvantage": -30,
+                            "activeFrames": 12,
+                            "startupFrames": 6,
+                            "damageValue": 120,
+                            "stunValue": 200
+                        }, 
+                        "type": "type_0", 
+                        "name": "Somersault Kick HK",
+                        "description": "Upper body invinicible frames 1-5. Fully invincible frames 6-8."
+                    }, 
+                    {
+                        "data": {
+                            "hitAdvantage": 1003, 
+                            "blockAdvantage": -37,
+                            "activeFrames": 12,
+                            "startupFrames": 4,
+                            "damageValue": 150,
+                            "stunValue": 200
+                        }, 
+                        "type": "type_0", 
+                        "name": "Somersault Kick EX",
+                        "description": "Fully invincible frames 1-9."
+                    }                    
+                ]
+
+            },
+            "move_list": {
+                "vreversal": [
+                    {
+                        "input": "FORWARD|PLUS|ALL_PUNCHES", 
+                        "name": "Reverse Back Knuckle", 
+                        "pretext": "(During Guard)"
+                    }
+                ], 
+                "vskill": [
+                    {
+                        "input": "MP|PLUS|MK", 
+                        "name": "Sonic Blade", 
+                        "description": "Creates a projectile that floats in front of Guile. A Sonic Boom can be thrown through this projectile, creating a stronger Sonic Boom with an additional hit."
+                    }
+                ], 
+                "specials": [
+                    {
+                        "input": "CHARGE_DOWN|RELEASE_UP|PLUS|KICK", 
+                        "name": "Somersault Kick", 
+                        "description": "Traditional somersault kick with a good degree of invincibility."
+                    }, 
+                    {
+                        "input": "CHARGE_BACK|RELEASE_FORWARD|PLUS|PUNCH", 
+                        "name": "Sonic Boom"
+                    }
+                ], 
+                "critical_arts": [
+                    {
+                        "input": "CHARGE_BACK|FORWARD|BACK|FORWARD|PLUS|PUNCH", 
+                        "name": "Sonic Tempest"
+                    }, 
+                    {
+                        "input": "CHARGE_BACK|FORWARD|BACK|FORWARD|PLUS|PUNCH", 
+                        "name": "Sonic Hurricane", 
+                        "pretext": "(During VTrigger)"
+                    }
+                ], 
+                "unique_attacks": [
+                    {
+                        "input": "FORWARD|OR|BACK|PLUS|LK", 
+                        "name": "Knee Bazooka"
+                    },
+                    {
+                        "input": "FORWARD|PLUS|MP", 
+                        "name": "Full Bullet Magnum", 
+                        "description": "Hits overhead."
+                    },
+                    {
+                        "input": "FORWARD|OR|BACK|PLUS|MK", 
+                        "name": "Rolling Sobat"
+                    }, 
+                    {
+                        "input": "FORWARD|PLUS|HP", 
+                        "name": "Spinning Back Knuckle"
+                    },
+                    {
+                        "input": "BACK|PLUS|HP", 
+                        "name": "Burn Straight"
+                    },
+                    {
+                        "input": "FORWARD|PLUS|HK", 
+                        "name": "Reverse Spin Kick"
+                    },
+                    {
+                        "input": "DOWN|PLUS|LK|ARROW|MP", 
+                        "name": "Tall Edge"
+                    },
+                    {
+                        "input": "DOWN|PLUS|LK|ARROW|MP|ARROW|HP", 
+                        "name": "Bullet Revolver"
+                    },
+                    {
+                        "input": "MP|ARROW|FORWARD|PLUS|HP", 
+                        "name": "Swing Out"
+                    },
+                    {
+                        "input": "LK|ARROW|MK", 
+                        "name": "Taurus Combination"
+                    }
+                ], 
+                "throws": [
+                    {
+                        "input": "LP|PLUS|LK", 
+                        "name": "Dragon Suplex", 
+                        "pretext": "(Close To Opponent)"
+                    }, 
+                    {
+                        "input": "BACK|PLUS|LP|PLUS|LK", 
+                        "name": "Judo Throw", 
+                        "pretext": "(Close To Opponent)"
+                    },
+                    {
+                        "input": "LP|PLUS|LK", 
+                        "name": "Flying Mare", 
+                        "pretext": "(In Air)"
+                    }, 
+                    {
+                        "input": "BACK|PLUS|LP|PLUS|LK", 
+                        "name": "Flying Buster Drop", 
+                        "pretext": "(In Air)"
+                    }
+                ], 
+                "vtrigger": [
+                    {
+                        "input": "HP|PLUS|HK", 
+                        "name": "Solid Puncher", 
+                        "description": "Guile gains the ability to follow up Sonic Booms with Sonic Crosses. He can also throw a Sonic Break, even while walking forward."
+                    },
+                    {
+                        "input": "HP|PLUS|HK", 
+                        "name": "Sonic Break",
+                        "pretext": "(During V-Trigger)", 
+                        "description": "Throws a miniature Sonic Boom."
+                    },
+                    {
+                        "input": "PUNCH", 
+                        "name": "Sonic Cross",
+                        "pretext": "(After Sonic Boom or Sonic Cross)",
+                        "description": "Throws a miniature Sonic Boom. Can be followed up by another Sonic Cross, up to 5 total projectiles."
+                    }
+                ]
+            }
+        },
+        "alex": {
+            "frame_data": {  
+                "unique_attacks": [
+                    {
+                        "data": {
+                            "recoveryFrames": 18, 
+                            "stunValue": 100, 
+                            "damageValue": 60, 
+                            "hitAdvantage": 1, 
+                            "activeFrames": 2, 
+                            "blockAdvantage": -4, 
+                            "startupFrames": 22
+                        }, 
+                        "type": "type_0", 
+                        "name": "f+MP"
+                    },
+                    {
+                        "data": {
+                            "recoveryFrames": 17, 
+                            "stunValue": 150, 
+                            "damageValue": 80, 
+                            "hitAdvantage": 5, 
+                            "activeFrames": 3, 
+                            "blockAdvantage": 3, 
+                            "startupFrames": 10
+                        }, 
+                        "type": "type_0", 
+                        "name": "f+HP",
+                        "description": "Crush counters (spinning)"
+                    }
+                ],
+                "specials": [
+                    {
+                        "data": {
+                            "recoveryFrames": 20, 
+                            "hitAdvantage": 2, 
+                            "blockAdvantage": -4,
+                            "activeFrames": 3,
+                            "startupFrames": 13,
+                            "damageValue": 70,
+                            "stunValue": 150
+                        }, 
+                        "type": "type_0", 
+                        "name": "Flash Chop LP"
+                    }, 
+                    {
+                        "data": {
+                            "recoveryFrames": 19, 
+                            "hitAdvantage": 3, 
+                            "blockAdvantage": -4,
+                            "activeFrames": 3,
+                            "startupFrames": 19,
+                            "damageValue": 80,
+                            "stunValue": 150
+                        }, 
+                        "type": "type_0", 
+                        "name": "Flash Chop MP"
+                    }, 
+                    {
+                        "data": {
+                            "recoveryFrames": 21, 
+                            "hitAdvantage": 2, 
+                            "blockAdvantage": -4,
+                            "activeFrames": 3,
+                            "startupFrames": 25,
+                            "damageValue": 90,
+                            "stunValue": 150
+                        }, 
+                        "type": "type_0", 
+                        "name": "Flash Chop HP"
+                    }, 
+                    {
+                        "data": {
+                            "recoveryFrames": 19, 
+                            "hitAdvantage": 1003, 
+                            "blockAdvantage": -2,
+                            "activeFrames": 5,
+                            "startupFrames": 11,
+                            "damageValue": 150,
+                            "stunValue": 200
+                        }, 
+                        "type": "type_0", 
+                        "name": "Flash Chop EX"
+                    },
+                    {
+                        "data": {
+                            "recoveryFrames": 18, 
+                            "hitAdvantage": 3, 
+                            "blockAdvantage": -4,
+                            "activeFrames": 5,
+                            "startupFrames": 14,
+                            "damageValue": 80,
+                            "stunValue": 200
+                        }, 
+                        "type": "type_0", 
+                        "name": "Slash Elbow LK"
+                    }, 
+                    {
+                        "data": {
+                            "recoveryFrames": 19, 
+                            "hitAdvantage": 1003, 
+                            "blockAdvantage": -6,
+                            "activeFrames": 5,
+                            "startupFrames": 19,
+                            "damageValue": 90,
+                            "stunValue": 200
+                        }, 
+                        "type": "type_0", 
+                        "name": "Slash Elbow MK"
+                    }, 
+                    {
+                        "data": {
+                            "recoveryFrames": 20, 
+                            "hitAdvantage": 1003, 
+                            "blockAdvantage": -7,
+                            "activeFrames": 5,
+                            "startupFrames": 24,
+                            "damageValue": 100,
+                            "stunValue": 200
+                        }, 
+                        "type": "type_0", 
+                        "name": "Slash Elbow HK"
+                    }, 
+                    {
+                        "data": {
+                            "recoveryFrames": 29, 
+                            "blockAdvantage": -10,
+                            "hitAdvantage": 1003,
+                            "activeFrames": 3,
+                            "startupFrames": 14,
+                            "damageValue": 150,
+                            "stunValue": 200
+                        }, 
+                        "type": "type_0", 
+                        "name": "Slash Elbow EX"
+                    },
+                    {
+                        "data": {
+                            "recoveryFrames": 18, 
+                            "hitAdvantage": 1003, 
+                            "blockAdvantage": -5,
+                            "activeFrames": 2,
+                            "startupFrames": 27,
+                            "damageValue": 120,
+                            "stunValue": 150
+                        }, 
+                        "type": "type_0", 
+                        "name": "Air Stampede LK"
+                    },
+                    {
+                        "data": {
+                            "recoveryFrames": 22, 
+                            "hitAdvantage": 1003, 
+                            "blockAdvantage": -5,
+                            "activeFrames": 2,
+                            "startupFrames": 30,
+                            "damageValue": 120,
+                            "stunValue": 150
+                        }, 
+                        "type": "type_0", 
+                        "name": "Air Stampede MK"
+                    },
+                    {
+                        "data": {
+                            "recoveryFrames": 23, 
+                            "hitAdvantage": 1003, 
+                            "blockAdvantage": -5,
+                            "activeFrames": 2,
+                            "startupFrames": 33,
+                            "damageValue": 120,
+                            "stunValue": 150
+                        }, 
+                        "type": "type_0", 
+                        "name": "Air Stampede HK"
+                    },
+                    {
+                        "data": {
+                            "recoveryFrames": 19, 
+                            "hitAdvantage": 1003, 
+                            "blockAdvantage": 2,
+                            "activeFrames": 2,
+                            "startupFrames": 29,
+                            "damageValue": 140,
+                            "stunValue": 200
+                        }, 
+                        "type": "type_0", 
+                        "name": "Air Stampede EX",
+                        "description": "Projectile invincible frames 3-30."
+                    },
+                    {
+                        "data": {
+                            "recoveryFrames": 44, 
+                            "hitAdvantage": 3, 
+                            "activeFrames": 2,
+                            "startupFrames": 36,
+                            "damageValue": 160,
+                            "stunValue": 250
+                        }, 
+                        "type": "type_0", 
+                        "name": "Head Crush LP"
+                    },
+                    {
+                        "data": {
+                            "recoveryFrames": 50, 
+                            "hitAdvantage": 3, 
+                            "activeFrames": 2,
+                            "startupFrames": 40,
+                            "damageValue": 160,
+                            "stunValue": 250
+                        }, 
+                        "type": "type_0", 
+                        "name": "Head Crush MP"
+                    },
+                    {
+                        "data": {
+                            "recoveryFrames": 56, 
+                            "hitAdvantage": 3, 
+                            "activeFrames": 2,
+                            "startupFrames": 44,
+                            "damageValue": 160,
+                            "stunValue": 250
+                        }, 
+                        "type": "type_0", 
+                        "name": "Head Crush HP"
+                    },
+                    {
+                        "data": {
+                            "recoveryFrames": 50, 
+                            "hitAdvantage": 3, 
+                            "activeFrames": 2,
+                            "startupFrames": 30,
+                            "damageValue": 180,
+                            "stunValue": 350
+                        }, 
+                        "type": "type_0", 
+                        "name": "Head Crush EX"
+                    },
+                    {
+                        "data": {
+                            "recoveryFrames": 52, 
+                            "hitAdvantage": 1003, 
+                            "activeFrames": 2,
+                            "startupFrames": 6,
+                            "damageValue": 160,
+                            "stunValue": 220
+                        }, 
+                        "type": "type_0", 
+                        "name": "Power Bomb LP"
+                    },
+                    {
+                        "data": {
+                            "recoveryFrames": 52, 
+                            "hitAdvantage": 1003, 
+                            "activeFrames": 2,
+                            "startupFrames": 6,
+                            "damageValue": 170,
+                            "stunValue": 220
+                        }, 
+                        "type": "type_0", 
+                        "name": "Power Bomb MP"
+                    },
+                    {
+                        "data": {
+                            "recoveryFrames": 52, 
+                            "hitAdvantage": 1003, 
+                            "activeFrames": 2,
+                            "startupFrames": 6,
+                            "damageValue": 180,
+                            "stunValue": 220
+                        }, 
+                        "type": "type_0", 
+                        "name": "Power Bomb HP"
+                    },
+                    {
+                        "data": {
+                            "recoveryFrames": 52, 
+                            "hitAdvantage": 1003, 
+                            "activeFrames": 2,
+                            "startupFrames": 6,
+                            "damageValue": 220,
+                            "stunValue": 250
+                        }, 
+                        "type": "type_0", 
+                        "name": "Power Bomb EX"
+                    }
+                ],
+                "normals": [
+                    {
+                        "data": {
+                            "recoveryFrames": 7, 
+                            "stunValue": 70, 
+                            "damageValue": 30, 
+                            "hitAdvantage": 4, 
+                            "activeFrames": 3, 
+                            "blockAdvantage": 2, 
+                            "startupFrames": 4
+                        }, 
+                        "type": "type_0", 
+                        "name": "s.LP"
+                    }, 
+                    {
+                        "data": {
+                            "recoveryFrames": 12, 
+                            "stunValue": 100, 
+                            "damageValue": 60, 
+                            "hitAdvantage": 5, 
+                            "activeFrames": 2, 
+                            "blockAdvantage": 2, 
+                            "startupFrames": 6
+                        }, 
+                        "type": "type_0", 
+                        "name": "s.MP"
+                    }, 
+                    {
+                        "data": {
+                            "recoveryFrames": 22, 
+                            "stunValue": 150, 
+                            "damageValue": 90, 
+                            "hitAdvantage": -1, 
+                            "activeFrames": 3, 
+                            "blockAdvantage": -3, 
+                            "startupFrames": 10
+                        }, 
+                        "type": "type_0", 
+                        "name": "s.HP"
+                    }, 
+                    {
+                        "data": {
+                            "recoveryFrames": 8, 
+                            "stunValue": 70, 
+                            "damageValue": 40, 
+                            "hitAdvantage": 2, 
+                            "activeFrames": 3, 
+                            "blockAdvantage": -1, 
+                            "startupFrames": 5
+                        }, 
+                        "type": "type_0", 
+                        "name": "s.LK"
+                    }, 
+                    {
+                        "data": {
+                            "recoveryFrames": 15, 
+                            "stunValue": 100, 
+                            "damageValue": 80, 
+                            "hitAdvantage": 2, 
+                            "activeFrames": 3, 
+                            "blockAdvantage": -2, 
+                            "startupFrames": 8
+                        }, 
+                        "type": "type_0", 
+                        "name": "s.MK"
+                    }, 
+                    {
+                        "data": {
+                            "recoveryFrames": 25, 
+                            "stunValue": 150, 
+                            "damageValue": 90, 
+                            "hitAdvantage": -4, 
+                            "activeFrames": 3, 
+                            "blockAdvantage": -4, 
+                            "startupFrames": 17
+                        }, 
+                        "type": "type_0", 
+                        "name": "s.HK",
+                        "description": "Crumples on counter hit."
+                    }, 
+                    {
+                        "data": {
+                            "recoveryFrames": 7, 
+                            "stunValue": 70, 
+                            "damageValue": 30, 
+                            "hitAdvantage": 4, 
+                            "activeFrames": 2, 
+                            "blockAdvantage": 2, 
+                            "startupFrames": 4
+                        }, 
+                        "type": "type_0", 
+                        "name": "c.LP"
+                    }, 
+                    {
+                        "data": {
+                            "recoveryFrames": 15, 
+                            "stunValue": 100, 
+                            "damageValue": 60, 
+                            "hitAdvantage": 2, 
+                            "activeFrames": 3, 
+                            "blockAdvantage": -1, 
+                            "startupFrames": 7
+                        }, 
+                        "type": "type_0", 
+                        "name": "c.MP"
+                    }, 
+                    {
+                        "data": {
+                            "recoveryFrames": 23, 
+                            "stunValue": 150, 
+                            "damageValue": 90, 
+                            "hitAdvantage": 1003,  
+                            "blockAdvantage": -8, 
+                            "startupFrames": 12
+                        }, 
+                        "type": "type_0", 
+                        "name": "c.HP"
+                    }, 
+                    {
+                        "data": {
+                            "recoveryFrames": 6, 
+                            "stunValue": 70, 
+                            "damageValue": 20, 
+                            "hitAdvantage": 4, 
+                            "activeFrames": 3, 
+                            "blockAdvantage": 0, 
+                            "startupFrames": 4
+                        }, 
+                        "type": "type_0", 
+                        "name": "c.LK"
+                    }, 
+                    {
+                        "data": {
+                            "recoveryFrames": 18, 
+                            "stunValue": 100, 
+                            "damageValue": 60, 
+                            "hitAdvantage": 0, 
+                            "activeFrames": 2, 
+                            "blockAdvantage": -3, 
+                            "startupFrames": 8
+                        }, 
+                        "type": "type_0", 
+                        "name": "c.MK"
+                    }, 
+                    {
+                        "data": {
+                            "recoveryFrames": 24, 
+                            "stunValue": 150, 
+                            "damageValue": 100, 
+                            "hitAdvantage": 1003, 
+                            "activeFrames": 2, 
+                            "blockAdvantage": -12, 
+                            "startupFrames": 11
+                        }, 
+                        "type": "type_0", 
+                        "name": "c.HK"
+                    }, 
+                    {
+                        "data": {
+                            "activeFrames": 5, 
+                            "stunValue": 70, 
+                            "startupFrames": 4, 
+                            "damageValue": 40
+                        }, 
+                        "type": "type_0", 
+                        "name": "j.LP"
+                    }, 
+                    {
+                        "data": {
+                            "activeFrames": 7, 
+                            "stunValue": 100, 
+                            "startupFrames": 6, 
+                            "damageValue": 70
+                        }, 
+                        "type": "type_0", 
+                        "name": "j.MP"
+                    }, 
+                    {
+                        "data": {
+                            "activeFrames": 3, 
+                            "stunValue": 150, 
+                            "startupFrames": 8, 
+                            "damageValue": 90
+                        }, 
+                        "type": "type_0", 
+                        "name": "j.HP"
+                    }, 
+                    {
+                        "data": {
+                            "activeFrames": 5, 
+                            "stunValue": 70, 
+                            "startupFrames": 4, 
+                            "damageValue": 40
+                        }, 
+                        "type": "type_0", 
+                        "name": "j.LK"
+                    }, 
+                    {
+                        "data": {
+                            "activeFrames": 6, 
+                            "stunValue": 100, 
+                            "startupFrames": 6, 
+                            "damageValue": 70
+                        }, 
+                        "type": "type_0", 
+                        "name": "j.MK"
+                    }, 
+                    {
+                        "data": {
+                            "activeFrames": 5, 
+                            "stunValue": 150, 
+                            "startupFrames": 9, 
+                            "damageValue": 90
+                        }, 
+                        "type": "type_0", 
+                        "name": "j.HK"
+                    }
+                ], 
+                "throws": [
+                    {
+                        "data": {
+                            "recoveryFrames": 18, 
+                            "hitAdvantage": 1003, 
+                            "activeFrames": 2, 
+                            "startupFrames": 5
+                        }, 
+                        "type": "type_0", 
+                        "name": "Face-Crush Chop"
+                    }, 
+                    {
+                        "data": {
+                            "recoveryFrames": 18, 
+                            "hitAdvantage": 1003, 
+                            "activeFrames": 2, 
+                            "startupFrames": 5
+                        }, 
+                        "type": "type_0", 
+                        "name": "Leg Tomahawk"
+                    }
+                ],
+                "critical_arts": [
+                    {
+                        "data": {                             
+                            "stunValue": 0, 
+                            "damageValue": 350, 
+                            "hitAdvantage": 1003, 
+                            "activeFrames": 2, 
+                            "startupFrames": 5
+                        }, 
+                        "type": "type_0", 
+                        "name": "Heavy Hammer 1st",
+                        "description": "Invincible frames 1-6."
+                    },
+                    {
+                        "data": { 
+                            "recoveryFrames": 46,
+                            "blockAdvantage": -25,
+                            "hitAdvantage": 1003,
+                            "stunValue": 0, 
+                            "damageValue": 230, 
+                            "hitAdvantage": 1003
+                        }, 
+                        "type": "type_0", 
+                        "name": "Heavy Hammer Followup",
+                        "description": "Performed if the first hit whiffs."
+                    }
+                ]
+            },
+            "move_list": {
+                "throws": [
+                    {
+                        "input": "LP|PLUS|LK", 
+                        "name": "Face-Crush Chop", 
+                        "pretext": "(Close To Opponent)"
+                    }, 
+                    {
+                        "input": "BACK|PLUS|LP|PLUS|LK", 
+                        "name": "Leg Tomahawk", 
+                        "pretext": "(Close To Opponent)"
+                    }
+                ],
+                "unique_attacks": [
+                    {
+                        "input": "FORWARD|PLUS|MP", 
+                        "name": "Chop",
+                        "posttext": "Hits overhead."                        
+                    },
+                    {
+                        "input": "FORWARD|PLUS|HP", 
+                        "name": "Lariat"                        
+                    },
+                    {
+                        "pretext": "(During Forward Jump)",
+                        "input": "DOWN|PLUS|HP", 
+                        "name": "Flying Cross Chop"                        
+                    }
+                ],
+                "vreversal": [
+                    {
+                        "pretext": "(During Guard)",
+                        "input": "FORWARD|PLUS|ALL_KICKS", 
+                        "name": "Big Boot"
+                    }
+                ],
+                "vskill": [
+                    {
+                        "input": "MP|PLUS|MK", 
+                        "name": "Overhaul", 
+                        "description": "The next hit that connects gains counterhit properties. The buff is lost if the opponent hits Alex."
+                    }
+                ], 
+                "specials": [
+                    {
+                        "input": "QCF|PLUS|PUNCH", 
+                        "name": "Flash Chop"
+                    }, 
+                    {
+                        "pretext": "(Near Opponent)",
+                        "input": "HCB|PLUS|PUNCH", 
+                        "name": "Power Bomb"
+                    }, 
+                    {
+                        "input": "SRK|PLUS|KICK", 
+                        "name": "Air Knee Smash"
+                    }, 
+                    {
+                        "input": "CHARGE_BACK|FORWARD|PLUS|KICK", 
+                        "name": "Slash Elbow"
+                    },
+                    {
+                       "input": "CHARGE_DOWN|UP|PLUS|KICK", 
+                        "name": "Air Stampede" 
+                    },
+                    {
+                       "input": "CHARGE_DOWN|UP|PLUS|PUNCH", 
+                        "name": "Head Crush" 
+                    },
+                    {
+                        "pretext": "(During V-Trigger)",
+                        "input": "HP|PLUS|HK",
+                        "name": "Sledge Hammer",
+                        "description": "Can be held to charge. Level 2 can parry an attack, level 3 breaks guard."
+                    }
+                ], 
+                "critical_arts": [
+                    {
+                        "input": "QCF|QCF|PLUS|PUNCH", 
+                        "name": "Heavy Hammer"
+                    }
+                ],
+                "vtrigger": [
+                    {
+                        "input": "HP|PLUS|HK", 
+                        "name": "Rage Shift", 
+                        "description": "Gains access to Sledge Hammer."
+                    }
+                ]
+            }
+        },
         "ken": {
             "frame_data": {
                 "vreversal": [
@@ -614,10 +3177,10 @@
                             "damageValue": 60, 
                             "hitAdvantage": 0, 
                             "activeFrames": 3, 
-                            "blockAdvantage": -4, 
+                            "blockAdvantage": -4,
                             "startupFrames": 21
-                        }, 
-                        "type": "type_0", 
+                        },
+                        "type": "type_0",
                         "name": "b+MK"
                     }, 
                     {
@@ -875,7 +3438,7 @@
                     }, 
                     {
                         "data": {
-                            "recoveryFrames": 10, 
+                            "recoveryFrames": 12, 
                             "stunValue": 100, 
                             "damageValue": 60, 
                             "hitAdvantage": 7, 
@@ -981,7 +3544,7 @@
                     }, 
                     {
                         "data": {
-                            "recoveryFrames": 17, 
+                            "recoveryFrames": 18, 
                             "stunValue": 150, 
                             "damageValue": 80, 
                             "hitAdvantage": -2, 
@@ -1761,7 +4324,7 @@
                         "data": {
                             "recoveryFrames": 51, 
                             "stunValue": 160, 
-                            "damageValue": 140, 
+                            "damageValue": 180, 
                             "hitAdvantage": 1003, 
                             "activeFrames": 2, 
                             "startupFrames": 5
@@ -1773,7 +4336,7 @@
                         "data": {
                             "recoveryFrames": 51, 
                             "stunValue": 140, 
-                            "damageValue": 130, 
+                            "damageValue": 190, 
                             "hitAdvantage": 1003, 
                             "activeFrames": 2, 
                             "startupFrames": 5
@@ -1785,7 +4348,7 @@
                         "data": {
                             "recoveryFrames": 51, 
                             "stunValue": 120, 
-                            "damageValue": 120, 
+                            "damageValue": 200, 
                             "hitAdvantage": 1003, 
                             "activeFrames": 2, 
                             "startupFrames": 5
@@ -1797,13 +4360,14 @@
                         "data": {
                             "recoveryFrames": 51, 
                             "stunValue": 90, 
-                            "damageValue": 140, 
+                            "damageValue": 220, 
                             "hitAdvantage": 1003, 
                             "activeFrames": 2, 
                             "startupFrames": 5
                         }, 
                         "type": "type_0", 
-                        "name": "Killing Head EX"
+                        "name": "Killing Head EX",
+                        "description": "Throw invincible frames 1-6."
                     }, 
                     {
                         "data": {
@@ -5576,7 +8140,7 @@
                         "data": {
                             "damageValue": 330, 
                             "hitAdvantage": 1003, 
-                            "startupFrames": 5, 
+                            "startupFrames": 3, 
                             "stunValue": 0, 
                             "description": "Invincible frames 1-2, projectile invincible frames 3-11."
                         }, 
@@ -6262,7 +8826,7 @@
                             "damageValue": 90, 
                             "hitAdvantage": 3, 
                             "activeFrames": 4, 
-                            "blockAdvantage": -2, 
+                            "blockAdvantage": -4, 
                             "startupFrames": 12
                         }
                     }, 
@@ -7902,7 +10466,7 @@
                             "stunValue": 100, 
                             "damageValue": 60, 
                             "hitAdvantage": 6, 
-                            "activeFrames": 2, 
+                            "activeFrames": 3, 
                             "blockAdvantage": 2, 
                             "startupFrames": 7
                         }, 
