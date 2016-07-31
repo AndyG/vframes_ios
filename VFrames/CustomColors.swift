@@ -90,6 +90,10 @@ extension UIColor {
         return ColorUtils.UIColorFromRGB(0x041173)
     }
     
+    func juriPrimary() -> UIColor {
+        return ColorUtils.UIColorFromRGB(0x790a4c)
+    }
+    
     func highlightedFrameDataEntryColor() -> UIColor {
         return ColorUtils.UIColorFromRGB(0xffebeb)
     }
@@ -136,6 +140,8 @@ extension UIColor {
                 return ibukiPrimary()
             case .BOXER:
                 return boxerPrimary()
+            case .JURI:
+                return juriPrimary()
         }
     }
     

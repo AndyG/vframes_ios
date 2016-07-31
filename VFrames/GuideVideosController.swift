@@ -134,6 +134,8 @@ class GuideVideosController: UIViewController, UITableViewDataSource, UITableVie
             return "ibuki"
         case .BOXER:
             return "boxer"
+        case .JURI:
+            return "juri"
         }
     }
     

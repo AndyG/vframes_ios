@@ -28,9 +28,10 @@ public enum CharacterID: String {
     ALEX = "Alex",
     GUILE = "Guile",
     BOXER = "Boxer",
-    IBUKI = "Ibuki"
+    IBUKI = "Ibuki",
+    JURI = "Juri"
     
-    static let allValuesAlphabetic = [ALEX, BOXER, BIRDIE, CAMMY, CHUN, DHALSIM, FANG, GUILE, IBUKI, KARIN, KEN, LAURA, DICTATOR, NASH, NECALLI, MIKA, RASHID, RYU, CLAW, ZANGIEF]
+    static let allValuesAlphabetic = [ALEX, BOXER, BIRDIE, CAMMY, CHUN, DHALSIM, FANG, GUILE, IBUKI, JURI, KARIN, KEN, LAURA, DICTATOR, NASH, NECALLI, MIKA, RASHID, RYU, CLAW, ZANGIEF]
     
     static func toString(characterId: CharacterID) -> String {
         switch(characterId) {
@@ -74,6 +75,8 @@ public enum CharacterID: String {
                 return "Balrog"
             case .IBUKI:
                 return "Ibuki"
+            case .JURI:
+                return "Juri"
         }
     }
     
@@ -119,6 +122,8 @@ public enum CharacterID: String {
             return .IBUKI
         case "boxer":
             return .BOXER
+        case "juri":
+            return .JURI
         default:
             return nil
         }

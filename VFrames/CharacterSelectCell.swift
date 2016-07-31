@@ -65,6 +65,8 @@ class CharacterSelectCell: UICollectionViewCell {
                 imageName = "ibuki_card"
             case .BOXER:
                 imageName = "boxer_card"
+            case .JURI:
+                imageName = "juri_card"
         }
         
         characterImage.image = UIImage(named: imageName)

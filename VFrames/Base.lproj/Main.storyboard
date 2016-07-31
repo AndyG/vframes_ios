@@ -611,7 +611,6 @@
                                     <tabBarItem title="Frame Data" image="frame_data_icon_30" id="1xv-1R-GTF"/>
                                     <tabBarItem tag="1" title="Moves List" image="moves_icon_30" id="Pm7-Xe-2W9"/>
                                     <tabBarItem tag="2" title="Combos" image="combos_icon_50" id="iEA-Lj-J1S"/>
-                                    <tabBarItem tag="3" title="Notes" image="notes_icon_50" id="rY5-sI-Oyg"/>
                                 </items>
                                 <color key="barTintColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
@@ -638,9 +637,6 @@
                             </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GAV-fC-EaG" userLabel="Notes Container">
                                 <rect key="frame" x="0.0" y="64" width="600" height="487"/>
-                                <connections>
-                                    <segue destination="Mk4-Fd-mzR" kind="embed" identifier="embedNotes" id="ILi-pM-I2o"/>
-                                </connections>
                             </containerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1333,47 +1329,6 @@
             </objects>
             <point key="canvasLocation" x="2203" y="1427.5"/>
         </scene>
-        <!--Notes View Controller-->
-        <scene sceneID="qwq-Sv-87B">
-            <objects>
-                <viewController storyboardIdentifier="notesViewController" id="Mk4-Fd-mzR" customClass="NotesViewController" customModule="VFrames" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="avg-Z2-zlK"/>
-                        <viewControllerLayoutGuide type="bottom" id="4Xr-d5-R7i"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="7ZW-eZ-kF4">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="487"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2H7-4l-SCM">
-                                <rect key="frame" x="20" y="8" width="560" height="33"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notes (and much more) is on the way to VFrames! Sorry for the wait, and thank you for your patience!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NTq-JH-o2f">
-                                <rect key="frame" x="20" y="215" width="560" height="58"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
-                        <constraints>
-                            <constraint firstItem="2H7-4l-SCM" firstAttribute="top" secondItem="avg-Z2-zlK" secondAttribute="bottom" constant="8" id="9o1-ZS-FDP"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="2H7-4l-SCM" secondAttribute="trailing" id="FCm-C1-7XT"/>
-                            <constraint firstItem="NTq-JH-o2f" firstAttribute="centerY" secondItem="7ZW-eZ-kF4" secondAttribute="centerY" id="GHW-cR-8kI"/>
-                            <constraint firstItem="2H7-4l-SCM" firstAttribute="leading" secondItem="7ZW-eZ-kF4" secondAttribute="leadingMargin" id="JQe-23-OvY"/>
-                            <constraint firstItem="NTq-JH-o2f" firstAttribute="centerX" secondItem="7ZW-eZ-kF4" secondAttribute="centerX" id="N17-U6-oL4"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="NTq-JH-o2f" secondAttribute="trailing" id="eep-3k-DAG"/>
-                            <constraint firstItem="NTq-JH-o2f" firstAttribute="leading" secondItem="7ZW-eZ-kF4" secondAttribute="leadingMargin" id="puR-Ks-z5u"/>
-                        </constraints>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="bex-eM-asd" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4863" y="-130.5"/>
-        </scene>
         <!--Navigation Controller-->
         <scene sceneID="66C-9A-Ian">
             <objects>
@@ -1671,7 +1626,6 @@
         <image name="frame_data_icon_30" width="30" height="30"/>
         <image name="input_direction_back" width="105" height="105"/>
         <image name="moves_icon_30" width="30" height="30"/>
-        <image name="notes_icon_50" width="30" height="30"/>
         <image name="streams_icon@1x" width="30" height="30"/>
         <image name="twitch_dead" width="1000" height="1000"/>
         <image name="videos_icon_30" width="30" height="30"/>

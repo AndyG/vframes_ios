@@ -132,6 +132,8 @@ class TournamentVideosController: UIViewController, UITableViewDataSource, UITab
             return "ibuki"
         case .BOXER:
             return "boxer"
+        case .JURI:
+            return "juri"
         }
     }
     
